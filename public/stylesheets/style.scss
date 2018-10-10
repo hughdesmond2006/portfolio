@@ -1,7 +1,7 @@
 //$trim1: #58abd2;
 $trim1: #e49b2e;
 
-//mobile site coming soon..
+//mobile site coming soon.. normal site is 960px
 @media only screen and (min-width:500px) {
   /* For desktop: */
   .comingsoon {
@@ -10,6 +10,7 @@ $trim1: #e49b2e;
 }
 
 .comingsoon{
+  display: none;    //TODO turn off this line for production
   position: fixed;
   background-color: #292929;
   height: 100%;
@@ -95,6 +96,10 @@ header,section,footer,aside,nav,article,hgroup,img{
   color:#ddd;
 }
 
+#section2{
+  overflow: hidden;
+}
+
 #hugh1{
   display: table;
   position: absolute;
@@ -104,6 +109,22 @@ header,section,footer,aside,nav,article,hgroup,img{
   margin-top: -100px;
 }
 
+#hugh2{
+  display: table;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: 535px;    //1280px/2 = 640 - (image width / 2) =  535
+  margin-top: -200px;
+  transform-origin: 105px 200px;
+  transform: scale(.7);
+  opacity: 0;
+}
+
+.make_orange{
+  background: orange;
+}
+
 /* ==BODY== */
 .body{
   background-image: url('../images/body.png');
@@ -111,6 +132,9 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 210px;
   height: 164px;
   position: relative;   //attach parts relative from the top left of the body
+}
+
+#hugh1 .body{
   animation: body-jump 2.5s infinite;
 }
 
@@ -122,12 +146,10 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   top: 12px;
   left: 73px;
-  animation: head-jump 2.5s infinite;
-  //animation: head-shakex 2.5s infinite ;
 }
 
-.head_container {
-  //animation: head-shakey 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+#hugh1 .head{
+  animation: head-jump 2.5s infinite;
 }
 
 /* ==HAIR== */
@@ -217,18 +239,16 @@ header,section,footer,aside,nav,article,hgroup,img{
   top: 84px;
 }
 
-.arm_container {
-  //animation: wavey 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
-}
-
 .arm#left{
   left:17px;
-  animation: left-arm-jump 2.5s infinite;
-  //animation: wavex 2.5s infinite;
 }
 
 .arm#right{
   left:146px;
+}
+
+#hugh1 .arm#left{
+  animation: left-arm-jump 2.5s infinite;
 }
 
 /* ==SHOES== */
@@ -242,11 +262,17 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .shoe#left{
   left:33px;
-  animation: left-shoe-jump 2.5s infinite;
 }
 
 .shoe#right{
   left:115px;
+}
+
+#hugh1 .shoe#left{
+  animation: left-shoe-jump 2.5s infinite;
+}
+
+#hugh1 .shoe#right{
   animation: right-shoe-jump 2.5s infinite;
 }
 
@@ -277,6 +303,103 @@ header,section,footer,aside,nav,article,hgroup,img{
   background-image: url('../images/wheel_right.png');
   left:149px;
 }
+
+.turtle_container{
+  display: table;
+  position: absolute;
+  width: 632px;
+  left: 50%;
+  top: 50%;
+  padding: 0;
+  margin-left: -316px;
+  margin-top: -86px;
+  transform-origin: bottom center;
+  transform: scale(.7);
+}
+
+#turtle1{
+  float: left;
+}
+
+#turtle2{
+  float: left;
+  margin-left: 8px;
+}
+
+#turtle3{
+  float: left;
+  margin-left: 8px;
+}
+
+#turtle4{
+  float: left;
+  margin-left: 8px;
+}
+
+#turtle5{
+  float: left;
+  margin-left: 8px;
+}
+
+/* ==TBODY== */
+.tbody{
+  background-image: url('../images/tbody.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 120px;
+  height: 86px;
+  position: relative;   //attach parts relative from the top left of the body
+  //animation: body-jump 2.5s infinite;
+}
+
+/* ==THEAD== */
+.thead{
+  background-image: url('../images/thead.png');
+  width: 50px;
+  height: 43px;
+  position: absolute;
+  top: 23px;
+  left: 35px;
+  //animation: head-jump 2.5s infinite;
+  //animation: head-shakex 2.5s infinite ;
+}
+
+/* ==TEYES== */
+.teye{
+  background-image: url('../images/teye.png');
+  width: 6px;
+  height: 17px;
+  position: absolute;
+  top:12px;
+}
+
+.teye#left{
+  left:12px;
+}
+
+.teye#right{
+  left:38px;
+}
+
+/* ==TFEET== */
+.tfoot{
+  background-image: url('../images/tfoot.png');
+  width: 52px;
+  height: 26px;
+  position: absolute;
+  top:60px;
+}
+
+.tfoot#left{
+  left:0px;
+  animation: left-shoe-jump 2.5s infinite;
+}
+
+.tfoot#right{
+  left:68px;
+  animation: right-shoe-jump 2.5s infinite;
+}
+
 
 /* ==ANIMATIONS== */
 
@@ -613,7 +736,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   }
   12% {
     animation-timing-function: ease-out;
-    transform: translateY(-80px);
+    transform: translateY(-60px);
   }
   18% {
     animation-timing-function: ease-in;

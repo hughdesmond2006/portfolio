@@ -26,6 +26,9 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//host node modules...
+app.use(express.static(path.join(__dirname, 'node_modules')));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
