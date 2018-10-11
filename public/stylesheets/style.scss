@@ -101,7 +101,15 @@ header,section,footer,aside,nav,article,hgroup,img{
   overflow-x: hidden;
 }
 
+#section3{
+  overflow-x: hidden;
+}
+
 #scene1{
+  position: relative;
+}
+
+#scene2{
   position: relative;
 }
 
@@ -140,6 +148,17 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #hugh2{
+  display: table;
+  position: absolute;
+  left: 50%;
+  top: 55px;
+  margin-left: 535px;    //1280px/2 = 640 - (image width / 2) =  535
+  transform-origin: 105px 200px;
+  transform: scale(.7);
+  opacity: 0;
+}
+
+#hugh3{
   display: table;
   position: absolute;
   left: 50%;
@@ -295,17 +314,18 @@ header,section,footer,aside,nav,article,hgroup,img{
   left:146px;
 }
 
+//intro hugh waves at us
 #hugh1 .arm#left{
   animation: left-arm-jump 2.5s infinite;
 }
 
-//start hugh2 arms higher for balance anim
-#hugh2 .arm{
+//start turtle jumping hugh's arms higher for balance anim
+#hugh2 .arm, #hugh3 .arm{
   top: 70px;
   animation: arm-balance 1s infinite;
 }
 
-#hugh2 .arm#right{
+#hugh2 .arm#right, #hugh3 .arm#right{
   animation-delay: .5s;
 }
 
@@ -370,6 +390,18 @@ header,section,footer,aside,nav,article,hgroup,img{
   top: 170px;
   padding: 0;
   margin-left: -316px;
+  transform-origin: bottom center;
+  transform: scale(.7);
+}
+
+.turtle_container2{
+  display: table;
+  position: absolute;
+  width: 504px;
+  left: 50%;
+  top: 170px;
+  padding: 0;
+  margin-left: -252px;
   transform-origin: bottom center;
   transform: scale(.7);
 }

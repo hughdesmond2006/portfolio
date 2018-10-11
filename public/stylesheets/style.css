@@ -81,7 +81,13 @@ header, section, footer, aside, nav, article, hgroup, img {
 #section2 {
   overflow-x: hidden; }
 
+#section3 {
+  overflow-x: hidden; }
+
 #scene1 {
+  position: relative; }
+
+#scene2 {
   position: relative; }
 
 .big_heading {
@@ -112,6 +118,16 @@ header, section, footer, aside, nav, article, hgroup, img {
   margin-top: -100px; }
 
 #hugh2 {
+  display: table;
+  position: absolute;
+  left: 50%;
+  top: 55px;
+  margin-left: 535px;
+  transform-origin: 105px 200px;
+  transform: scale(0.7);
+  opacity: 0; }
+
+#hugh3 {
   display: table;
   position: absolute;
   left: 50%;
@@ -242,11 +258,11 @@ header, section, footer, aside, nav, article, hgroup, img {
 #hugh1 .arm#left {
   animation: left-arm-jump 2.5s infinite; }
 
-#hugh2 .arm {
+#hugh2 .arm, #hugh3 .arm {
   top: 70px;
   animation: arm-balance 1s infinite; }
 
-#hugh2 .arm#right {
+#hugh2 .arm#right, #hugh3 .arm#right {
   animation-delay: .5s; }
 
 /* ==SHOES== */
@@ -300,6 +316,17 @@ header, section, footer, aside, nav, article, hgroup, img {
   top: 170px;
   padding: 0;
   margin-left: -316px;
+  transform-origin: bottom center;
+  transform: scale(0.7); }
+
+.turtle_container2 {
+  display: table;
+  position: absolute;
+  width: 504px;
+  left: 50%;
+  top: 170px;
+  padding: 0;
+  margin-left: -252px;
   transform-origin: bottom center;
   transform: scale(0.7); }
 

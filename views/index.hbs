@@ -59,7 +59,7 @@
 </div>
 
 <section id="section2" class="section section-dark" >
-    <div class="scene1"></div>
+    <div class="scene1">
         <div class="turtle_container">
             <div class="turtle" id="turtle1" >
                 <div class="count" data-aos="flip-right"
@@ -156,16 +156,118 @@
     </div>
 </section>
 
+<div class="pimg3">
+    <div class="ptext">
+        <span class="border">
+            Back-End
+        </span>
+    </div>
+</div>
+
+<section id="section3" class="section section-dark">
+    <div class="scene2">
+        <div class="turtle_container2">
+            <div class="turtle" id="turtle1" >
+                <div class="count" data-aos="flip-left"
+                     data-aos-offset="345">1</div>
+                <div class="tbody">
+                    <div class="thead">
+                        <div class="teye anim_blink" id="left"></div>
+                        <div class="teye anim_blink" id="right"></div>
+                    </div>
+                    <div class="tfoot" id="left"></div>
+                    <div class="tfoot" id="right"></div>
+                </div>
+            </div>
+            <div class="turtle" id="turtle2" >
+                <div class="count" data-aos="flip-left"
+                     data-aos-offset="375">2</div>
+                <div class="tbody">
+                    <div class="thead">
+                        <div class="teye anim_blink" id="left"></div>
+                        <div class="teye anim_blink" id="right"></div>
+                    </div>
+                    <div class="tfoot" id="left"></div>
+                    <div class="tfoot" id="right"></div>
+                </div>
+            </div>
+            <div class="turtle" id="turtle3" >
+                <div class="count" data-aos="flip-left"
+                     data-aos-offset="400">3</div>
+                <div class="tbody">
+                    <div class="thead">
+                        <div class="teye anim_blink" id="left"></div>
+                        <div class="teye anim_blink" id="right"></div>
+                    </div>
+                    <div class="tfoot" id="left"></div>
+                    <div class="tfoot" id="right"></div>
+                </div>
+            </div>
+            <div class="turtle" id="turtle4" >
+                <div class="count" data-aos="flip-left"
+                     data-aos-offset="425">4</div>
+                <div class="tbody">
+                    <div class="thead">
+                        <div class="teye anim_blink" id="left"></div>
+                        <div class="teye anim_blink" id="right"></div>
+                    </div>
+                    <div class="tfoot" id="left"></div>
+                    <div class="tfoot" id="right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="big_heading" id="years">Years</div>
+        <div class="big_heading" id="in">in</div>
+        <div class="big_heading" id="university">Industry</div>
+        <div id="hugh3" >
+            <div class="body">
+                <div class="head_container">
+                    <div class="head">
+                        <div class="hairs">
+                            <div class="hair one anim_blow"></div>
+                            <div class="hair two anim_blow"></div>
+                            <div class="hair three anim_blow"></div>
+                            <div class="hair four anim_blow"></div>
+                            <div class="hair five anim_blow"></div>
+                            <div class="hair six anim_blow"></div>
+                            <div class="hair seven anim_blow"></div>
+                            <div class="hair eight anim_blow"></div>
+                        </div>
+                        <div class="eye anim_blink" id="left"></div>
+                        <div class="eye anim_blink" id="right"></div>
+                    </div>
+                </div>
+                <div class="shoe" id="left"></div>
+                <div class="shoe" id="right"></div>
+                <div class="arm" id="left"></div>
+                <div class="arm" id="right"></div>
+            </div>
+            <div class="board">
+                <div class="wheel" id="left"></div>
+                <div class="wheel" id="right"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="pimg1">
+    <div class="ptext">
+        <span class="border">
+            Hugh Desmond
+        </span>
+    </div>
+</div>
+
 <script>
     $(function () { // wait for document ready
         // init
         var controller = new ScrollMagic.Controller();
 
         //build skate jump tween
-        var skateTween = TweenMax.to("#hugh2",8,{bezier:{type:"soft", values:[{x:-320, y:0, opacity: 1}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0, opacity: 0} /**, {x:-1440, y:0}**/ ], autoRotate:180}, ease:Power0.easeNone});
+        var skateTween = TweenMax.to("#hugh2",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0} /**, {x:-1440, y:0}**/ ], autoRotate:180}, ease:Power0.easeNone});
 
         //build skate jump scene
-        var scene = new ScrollMagic.Scene({triggerElement: ".turtle_container", duration: 400, offset: -200})
+        new ScrollMagic.Scene({triggerElement: ".turtle_container", duration: 400, offset: -200})
                 .setTween(skateTween)
                 //.setPin("#hugh2", {pushFollowers: false})
                 .addTo(controller);
@@ -176,28 +278,45 @@
                 .to("#hugh2" , 4, {  opacity:1 })
                 .to("#hugh2" , 4.5, {  opacity:0 , ease:Power4.easeIn});
 
-        var scene = new ScrollMagic.Scene({triggerElement: ".turtle_container", duration: 400, offset: -200})
+        new ScrollMagic.Scene({triggerElement: ".turtle_container", duration: 400, offset: -200})
                 .setTween(tl)
                 .addTo(controller);
 
         //wheel spin
         var wheelSpinTween = TweenMax.to("#hugh2 .wheel",8,{rotation: -2160, ease:Power0.easeNone});
 
-        var scene = new ScrollMagic.Scene({triggerElement: ".turtle_container", duration: 400, offset: -200})
+        new ScrollMagic.Scene({triggerElement: ".turtle_container", duration: 400, offset: -200})
                 .setTween(wheelSpinTween)
                 .addTo(controller);
 
-        //count animations
-        //var countTween = TweenMax.to("#turtle5 .count",8,{  ,  ease:Power0.easeNone});
+        //2nd skate jump tween & scene
+        var skateTween2 = TweenMax.to("#hugh3",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0} /**, {x:-1440, y:0}**/ ], autoRotate:180}, ease:Power0.easeNone});
+        skateTween2.reverse();
 
-        //var scene = new ScrollMagic.Scene({triggerElement: ".turtle_container", duration: 400, offset: -200})
-                //.setTween(wheelSpinTween)
-                //.addIndicators()
-                //.addTo(controller);
+        new ScrollMagic.Scene({triggerElement: ".turtle_container2", duration: 400, offset: -200})
+                .setTween(skateTween2)
+                .addTo(controller);
 
+        //reversed letter fades
+        var t2 = new TimelineMax();
+        t2.to("#hugh3" , .5, { opacity:1 , ease:Power4.easeIn })
+        .to("#hugh3" , 4, {  opacity:1 })
+        .to("#hugh3" , 4.5, {  opacity:0 , ease:Power4.easeIn});
+
+        new ScrollMagic.Scene({triggerElement: ".turtle_container2", duration: 400, offset: -200})
+        .setTween(t2)
+        .addTo(controller);
+
+        //wheel spin
+        var wheelSpinTween2 = TweenMax.to("#hugh3 .wheel",8,{rotation: -2160, ease:Power0.easeNone});
+        wheelSpinTween2.reverse();
+
+        new ScrollMagic.Scene({triggerElement: ".turtle_container2", duration: 400, offset: -200})
+        .setTween(wheelSpinTween2)
+        .addTo(controller);
     });
 
-    /*
+    /* USEFUL STUFF MAYBE?
     //custom trigger anim
     var controller = new ScrollMagic.Controller();
 
@@ -231,32 +350,3 @@
     */
 </script>
 
-<div class="pimg3">
-    <div class="ptext">
-        <span class="border">
-            Back-End
-        </span>
-    </div>
-</div>
-
-<section class="section section-dark">
-    <h2>I turn coffee into code!</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Consectetur consequatur debitis doloremque excepturi mollitia
-        nisi quis sunt. Ipsam, iste itaque neque quae repudiandae sunt
-        ullam voluptatum. A ab aliquam assumenda aut consequatur dignissimos,
-        dolorem doloremque dolorum eius enim eos esse exercitationem explicabo
-        facere, id maxime minus modi obcaecati officia officiis placeat possimus
-        quis recusandae reiciendis repudiandae, sapiente sequi sit sunt tempora
-        vero?
-    </p>
-</section>
-
-<div class="pimg1">
-    <div class="ptext">
-        <span class="border">
-            Hugh Desmond
-        </span>
-    </div>
-</div>
