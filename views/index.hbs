@@ -266,25 +266,25 @@
                 <div class="line" id="part3"></div>
                 <div class="line" id="part2"></div>
                 <div class="line" id="part1"></div>
-                <div class="end"></div>
+                <div class="bulb"></div>
             </div>
             <div class="stump"></div>
         </div>
         <div class="pad">
             <div class="arrow_wrapper">
-                <div class="arrow" id="up"></div>
-                <div class="arrow" id="left"></div>
-                <div class="arrow" id="right"></div>
-                <div class="arrow" id="down"></div>
+                <div class="arrow clicky" id="up"></div>
+                <div class="arrow clicky" id="left"></div>
+                <div class="arrow clicky" id="right"></div>
+                <div class="arrow clicky" id="down"></div>
             </div>
             <div class="controls_wrapper">
                 <div class="buttons_wrapper">
-                    <div class="button" id="left"></div>
-                    <div class="button" id="right"></div>
+                    <div class="button b_l clicky" id="left"></div>
+                    <div class="button b_r clicky" id="right"></div>
                 </div>
                 <div class="slider_wrapper">
-                    <div class="line"></div>
-                    <div class="knob"></div>
+                    <div class="line" id="slider_line"></div>
+                    <div class="knob clicky" id="slider_knob"></div>
                 </div>
             </div>
         </div>
@@ -355,6 +355,92 @@
         new ScrollMagic.Scene({triggerElement: ".turtle_container2", duration: 400, offset: -200})
         .setTween(wheelSpinTween2)
         .addTo(controller);
+
+        //set trigger for robot section grows
+        const roboTrigger = "#section4";
+        const offsetValue = 200;
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle(".pad","grow_pad")
+                //.addIndicators()
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#left","grow_arrow_left")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#up","grow_arrow_up")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#right","grow_arrow_right")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#down","grow_arrow_down")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle(".b_l","grow_button_left")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle(".b_r","grow_button_right")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#slider_line","grow_slider_line")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#slider_knob","grow_slider_knob")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle(".stump","grow_stump")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#part1","grow_aerial_part1")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#part2","grow_aerial_part2")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#part3","grow_aerial_part3")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#part4","grow_aerial_part4")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle(".line_wrapper","spring_aerial")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle(".bulb","grow_bulb")
+                .reverse(false)
+                .addTo(controller);
+
     });
 
     /* USEFUL STUFF MAYBE?

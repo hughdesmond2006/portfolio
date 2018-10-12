@@ -156,7 +156,8 @@ header,section,footer,aside,nav,article,hgroup,img{
   bottom: 56px;    //TODO temp positioning
   left: 3px;
   box-shadow: 10px 10px #978a55;
-  animation: grow-y 1s 0s 1 ease-out forwards;
+  transform: scale(0);   //start off hidden
+  cursor: pointer;
 }
 
 .arrow_wrapper{
@@ -183,24 +184,21 @@ header,section,footer,aside,nav,article,hgroup,img{
   box-shadow: 3px -3px #653e3e;
 }
 
-.arrow#down{
-  bottom: 0;
-  animation:grow 1s .15s 1 ease forwards;
+.clicky:hover{
+  filter: brightness(130%)
 }
 
-.arrow#left{
-  animation:grow 1s .3s 1 ease forwards;
+.arrow#down{
+  bottom: 0;
 }
 
 .arrow#up{
   right: 0;
-  animation:grow 1s .45s 1 ease forwards;
 }
 
 .arrow#right{
   right: 0;
   bottom: 0;
-  animation:grow 1s .6s 1 ease forwards;
 }
 
 .controls_wrapper{
@@ -229,14 +227,12 @@ header,section,footer,aside,nav,article,hgroup,img{
 .button#left{
   background: #2e9a42;
   left: 14px;
-  animation:grow 1s 0.75s 1 ease forwards;
   box-shadow: 3px 0px #217a2d;
 }
 
 .button#right{
   background: #c08431;
   right: 14px;
-  animation:grow 1s 0.9s 1 ease forwards;
   box-shadow: 3px 0px #976525;
 }
 
@@ -258,7 +254,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   margin-top: -2px;
   transform: scale(0);   //start off hidden
   transform-origin: left;
-  animation: line-grow 1s 0.15s 1 ease-out forwards;
 }
 
 .slider_wrapper .knob{
@@ -270,7 +265,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 30px;
   box-shadow: 3px 0px #653e3e;
   transform: scale(0);   //start off hidden
-  animation: grow-y 1s 1.05s 1 ease forwards;
 }
 
 .aerial_wrapper{
@@ -295,7 +289,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   margin-left: -30px;
   margin-bottom: -30px;
   transform: scale(0);   //start off hidden
-  animation: grow 1s 0.8s 1 ease forwards;
 }
 
 .aerial_wrapper .line{
@@ -314,7 +307,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 100%;
   height: 100%;
   transform-origin: center 270px;
-  animation: spring 1s 1.75s 1 ease forwards;
 }
 
 .line#part1{
@@ -322,7 +314,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   left:50%;
   bottom: 20px;
   transform: rotate(-37deg);
-  animation: aerial-grow1 .25s 1s 1 linear forwards;
 }
 
 @keyframes aerial-grow1
@@ -334,7 +325,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 100%;
   bottom: 80px;
   transform: rotate(198deg);
-  animation: aerial-grow2 .25s 1.25s 1 linear forwards;
 }
 
 @keyframes aerial-grow2{
@@ -345,7 +335,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 26px;
   bottom: 125px;
   transform: rotate(-20deg);
-  animation: aerial-grow3 .25s 1.5s 1 linear forwards;
 }
 
 @keyframes aerial-grow3{
@@ -356,14 +345,13 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 146px;
   bottom: 168px;
   transform: rotate(235deg);
-  animation: aerial-grow4 .25s 1.75s 1 linear forwards;
 }
 
 @keyframes aerial-grow4{
   to {width:100px;}
 }
 
-.aerial_wrapper .end{
+.aerial_wrapper .bulb{
   background: #ffffff;
   position: absolute;
   border-radius: 100%;
@@ -372,13 +360,76 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 65px;
   bottom: 240px;
   opacity: 0;
-  animation: appear 1ms 2.15s 1 forwards;
 }
 
 @keyframes appear{
   to {opacity: 1}
 }
 
+/* ==SCROLL TRIGGERED ANIMATIONS== */
+.grow_pad{
+  animation: grow-y 1s 0s 1 ease-out forwards;
+}
+
+.grow_arrow_down{
+  animation:grow 1s .15s 1 ease forwards;
+}
+
+.grow_arrow_left{
+  animation:grow 1s .3s 1 ease forwards;
+}
+
+.grow_arrow_up{
+  animation:grow 1s .45s 1 ease forwards;
+}
+
+.grow_arrow_right{
+  animation:grow 1s .6s 1 ease forwards;
+}
+
+.grow_button_left{
+  animation:grow 1s 0.75s 1 ease forwards;
+}
+
+.grow_button_right{
+  animation:grow 1s 0.9s 1 ease forwards;
+}
+
+.grow_slider_line{
+  animation: line-grow 1s 0.15s 1 ease-out forwards;
+}
+
+.grow_slider_knob{
+  animation: grow-y 1s 1.05s 1 ease forwards;
+}
+
+.grow_stump{
+  animation: grow 1s 0.5s 1 ease forwards;
+}
+
+.grow_aerial_part1{
+  animation: aerial-grow1 .25s 1s 1 linear forwards;
+}
+
+.grow_aerial_part2{
+  animation: aerial-grow2 .25s 1.25s 1 linear forwards;
+}
+
+.grow_aerial_part3{
+  animation: aerial-grow3 .25s 1.5s 1 linear forwards;
+}
+
+.grow_aerial_part4{
+  animation: aerial-grow4 .25s 1.75s 1 linear forwards;
+}
+
+.spring_aerial{
+  animation: spring 1s 1.75s 1 ease forwards;
+}
+
+.grow_bulb{
+  animation: appear 1ms 2.15s 1 forwards;
+}
 
 #hugh1{
   display: table;
@@ -409,10 +460,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   transform-origin: 105px 200px;
   transform: scale(.7);
   opacity: 0;
-}
-
-.make_orange{
-  background: orange;
 }
 
 /* ==BODY== */
