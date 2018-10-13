@@ -367,6 +367,11 @@
                 .addTo(controller);
 
         new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle(".arrow_wrapper","rotate_arrows")
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
                 .setClassToggle("#left","grow_arrow_left")
                 .reverse(false)
                 .addTo(controller);
