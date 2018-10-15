@@ -259,6 +259,87 @@
 </div>
 
 <section id="section4" class="section section-dark">
+    <div id="warehouse">
+        <div id="table">
+            <div class="tr">
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+            </div>
+            <div class="tr">
+                <div class="td"><div class="ball"></div></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td rack"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+            </div>
+            <div class="tr">
+                <div class="td rack"></div>
+                <div class="td"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td"></div>
+                <div class="td rack"></div>
+            </div>
+            <div class="tr">
+                <div class="td rack"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td rack"></div>
+            </div>
+            <div class="tr">
+                <div class="td rack"></div>
+                <div class="td"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td"></div>
+                <div class="td rack"></div>
+            </div>
+            <div class="tr">
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td rack"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+                <div class="td"></div>
+            </div>
+            <div class="tr">
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+                <div class="td rack"></div>
+            </div>
+        </div>
+        <div id="robot">
+            <div id="robo_arm">
+                <div class="stem"></div>
+                <div class="finger_wrapper">
+                    <div class="finger f1" id="left"></div>
+                    <div class="finger f2" id="left"></div>
+                    <div class="finger f1" id="right"></div>
+                    <div class="finger f2" id="right"></div>
+                </div>
+            </div>
+            <div class="tracks">
+                <div class="chassis"></div>
+            </div>
+        </div>
+    </div>
     <div id="controller">
         <div class="aerial_wrapper">
             <div class="line_wrapper">
@@ -272,10 +353,10 @@
         </div>
         <div class="pad">
             <div class="arrow_wrapper">
-                <div class="arrow clicky" id="up"></div>
-                <div class="arrow clicky" id="left"></div>
-                <div class="arrow clicky" id="right"></div>
-                <div class="arrow clicky" id="down"></div>
+                <div class="arrow clicky" id="a_up" onclick="move(direction.up)"></div>
+                <div class="arrow clicky" id="a_left" onclick="move(direction.left)"></div>
+                <div class="arrow clicky" id="a_right" onclick="move(direction.right)"></div>
+                <div class="arrow clicky" id="a_down" onclick="move(direction.down)"></div>
             </div>
             <div class="controls_wrapper">
                 <div class="buttons_wrapper">
@@ -372,22 +453,22 @@
                 .addTo(controller);
 
         new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
-                .setClassToggle("#left","grow_arrow_left")
+                .setClassToggle("#a_left","grow_arrow_left")
                 .reverse(false)
                 .addTo(controller);
 
         new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
-                .setClassToggle("#up","grow_arrow_up")
+                .setClassToggle("#a_up","grow_arrow_up")
                 .reverse(false)
                 .addTo(controller);
 
         new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
-                .setClassToggle("#right","grow_arrow_right")
+                .setClassToggle("#a_right","grow_arrow_right")
                 .reverse(false)
                 .addTo(controller);
 
         new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
-                .setClassToggle("#down","grow_arrow_down")
+                .setClassToggle("#a_down","grow_arrow_down")
                 .reverse(false)
                 .addTo(controller);
 
@@ -445,8 +526,137 @@
                 .setClassToggle(".bulb","grow_bulb")
                 .reverse(false)
                 .addTo(controller);
-
     });
+
+    //robo game code
+    const robotDiv = document.getElementsByClassName("tracks");
+    const armDiv = document.getElementById("robo_arm");
+    const direction = Object.freeze({"left":1, "up":2, "right":3, "down":4});
+    let roboPosX = 3;
+    let roboPosY = 3;
+    let tween;
+
+    //init empty tween
+    tween = TweenLite.to(robotDiv, 0, {opacity: 1});
+
+    //data representation of warehouse map layout
+    const map = [
+        [1,1,1,1,1,1,1],
+        [1,0,0,1,0,0,0],
+        [1,0,1,1,1,0,1],
+        [1,0,0,0,0,0,1],
+        [1,0,1,1,1,0,1],
+        [0,0,0,1,0,0,0],
+        [1,1,1,1,1,1,1]
+    ];
+
+    console.log("MAP: ", map);
+
+    function move(direction){
+        let oldPosX = roboPosX;
+        let oldPosY = roboPosY;
+        let translateCode;
+        let rotateCode;
+
+        switch (direction){
+            case 1:{
+                roboPosX--;
+                translateCode = {x:"-=62"};
+                rotateCode = {rotation: "180_short"};
+                break;
+            }
+            case 2:{
+                roboPosY--;
+                translateCode = {y:"-=62"};
+                rotateCode = {rotation: "270_short"};
+                break;
+            }
+            case 3:{
+                roboPosX++;
+                translateCode = {x:"+=62"};
+                rotateCode = {rotation: "0_short"};
+                break;
+            }
+            case 4:{
+                roboPosY++;
+                translateCode = {y:"+=62"};
+                rotateCode = {rotation: "90_short"};
+                break;
+            }
+        }
+        console.log("robo position: x" + roboPosX + " y" + roboPosY);
+
+        //if new tile is clear and anim not still running then move
+        if(!tween.isActive()){
+            tween = TweenLite.to(robotDiv, .2,  rotateCode);
+
+            if(map[roboPosY][roboPosX] === 0){
+                tween = TweenLite.to(robotDiv, .2,  translateCode);
+                tween = TweenLite.to(armDiv, .2,  translateCode);
+            }else{
+                roboPosX = oldPosX;
+                roboPosY = oldPosY;
+            }
+        }else{
+            roboPosX = oldPosX;
+            roboPosY = oldPosY;
+        }
+    }
+
+    const robotArmDiv = document.getElementById("robo_arm");
+    let line = document.getElementById("slider_line");
+
+    // Make the slider draggable:
+    dragElement(document.getElementById("slider_knob"));
+
+    function dragElement(elmnt) {
+        var pos1 = 0, pos3 = 0;
+
+        //move the DIV from anywhere inside the DIV:
+        elmnt.onmousedown = dragMouseDown;
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+
+            let lineWidth = line.offsetWidth - elmnt.offsetWidth;
+            let rotationDegrees = 360/(150/elmnt.offsetLeft);
+
+            //clean up calculation
+            if(rotationDegrees < 0 || rotationDegrees > 359){
+                rotationDegrees = 0;
+            }
+
+            //only drag if still on slider line
+            if((elmnt.offsetLeft >= 0 || (pos3 - e.clientX) <= 0) &&
+                    (elmnt.offsetLeft < lineWidth|| (pos3 - e.clientX) >= 0)){
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos3 = e.clientX;
+
+                // set the element's new position:
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                TweenLite.to(robotArmDiv, 0, {rotation: rotationDegrees});
+            }
+        }
+
+        function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+
 
     /* USEFUL STUFF MAYBE?
     //custom trigger anim

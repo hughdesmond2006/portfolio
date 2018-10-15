@@ -148,6 +148,11 @@
   animation: appear 1ms 2.15s 1 forwards;
 }
 
+/* ==CLICK TRIGGERED ANIMATIONS== */
+.rleft{
+  //animation: rleft 1s 1 forwards;
+}
+
 /* ==KEYFRAMES== */
 
 @keyframes appear{
@@ -643,5 +648,12 @@
   }
   100% {
     transform: scaleY(1);
+  }
+}
+
+@keyframes rleft
+{
+  100% {
+    transform: translateX(-62px);
   }
 }
