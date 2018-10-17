@@ -275,24 +275,6 @@
                     <div class="td"><div id="ball"></div></div>
                     <div class="td"></div>
                     <div class="td"></div>
-                    <div class="td rack"></div>
-                    <div class="td"></div>
-                    <div class="td"></div>
-                    <div class="td"></div>
-                </div>
-                <div class="tr">
-                    <div class="td rack"></div>
-                    <div class="td"></div>
-                    <div class="td rack"></div>
-                    <div class="td rack"></div>
-                    <div class="td rack"></div>
-                    <div class="td"></div>
-                    <div class="td rack"></div>
-                </div>
-                <div class="tr">
-                    <div class="td rack"></div>
-                    <div class="td"></div>
-                    <div class="td"></div>
                     <div class="td"></div>
                     <div class="td"></div>
                     <div class="td"></div>
@@ -302,16 +284,34 @@
                     <div class="td rack"></div>
                     <div class="td"></div>
                     <div class="td rack"></div>
-                    <div class="td rack"></div>
+                    <div class="td"></div>
                     <div class="td rack"></div>
                     <div class="td"></div>
                     <div class="td rack"></div>
                 </div>
                 <div class="tr">
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
                     <div class="td"></div>
                     <div class="td"></div>
                     <div class="td"></div>
                     <div class="td rack"></div>
+                </div>
+                <div class="tr">
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                </div>
+                <div class="tr">
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
                     <div class="td"></div>
                     <div class="td"></div>
                     <div class="td"></div>
@@ -576,11 +576,11 @@
     //data representation of warehouse map layout
     const map = [
         [1,1,1,1,1,1,1],
-        [1,0,0,1,0,0,0],
-        [1,0,1,1,1,0,1],
         [1,0,0,0,0,0,1],
-        [1,0,1,1,1,0,1],
-        [0,0,0,1,0,0,0],
+        [1,0,1,0,1,0,1],
+        [1,0,0,0,0,0,1],
+        [1,0,1,0,1,0,1],
+        [1,0,0,0,0,0,0],
         [1,1,1,1,1,1,1]
     ];
 
@@ -708,6 +708,8 @@
         if(roboPosX === 1 && roboPosY === 1 && !hasBall && rotationDegrees < 190 && rotationDegrees > 160) {
             ballPlaceHolderDiv.appendChild(ballDiv);
             hasBall = true;
+            //remove ball collision
+            map[1][0] = 0;
         }
     }
 
