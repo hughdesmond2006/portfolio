@@ -259,114 +259,122 @@
 </div>
 
 <section id="section4" class="section section-dark">
-    <div id="warehouse">
-        <div id="table">
-            <div class="tr">
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-            </div>
-            <div class="tr">
-                <div class="td"><div class="ball"></div></div>
-                <div class="td"></div>
-                <div class="td"></div>
-                <div class="td rack"></div>
-                <div class="td"></div>
-                <div class="td"></div>
-                <div class="td"></div>
-            </div>
-            <div class="tr">
-                <div class="td rack"></div>
-                <div class="td"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td"></div>
-                <div class="td rack"></div>
-            </div>
-            <div class="tr">
-                <div class="td rack"></div>
-                <div class="td"></div>
-                <div class="td"></div>
-                <div class="td"></div>
-                <div class="td"></div>
-                <div class="td"></div>
-                <div class="td rack"></div>
-            </div>
-            <div class="tr">
-                <div class="td rack"></div>
-                <div class="td"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td"></div>
-                <div class="td rack"></div>
-            </div>
-            <div class="tr">
-                <div class="td"></div>
-                <div class="td"></div>
-                <div class="td"></div>
-                <div class="td rack"></div>
-                <div class="td"></div>
-                <div class="td"></div>
-                <div class="td"></div>
-            </div>
-            <div class="tr">
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-                <div class="td rack"></div>
-            </div>
-        </div>
-        <div id="robot">
-            <div id="robo_arm">
-                <div class="stem"></div>
-                <div class="finger_wrapper">
-                    <div class="finger f1" id="left"></div>
-                    <div class="finger f2" id="left"></div>
-                    <div class="finger f1" id="right"></div>
-                    <div class="finger f2" id="right"></div>
+    <div class="scene3">
+        <div id="warehouse">
+            <div id="table">
+                <div class="tr">
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                </div>
+                <div class="tr">
+                    <div class="td"><div id="ball"></div></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                </div>
+                <div class="tr">
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                </div>
+                <div class="tr">
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                </div>
+                <div class="tr">
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                </div>
+                <div class="tr">
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td rack"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                    <div class="td"></div>
+                </div>
+                <div class="tr">
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
+                    <div class="td rack"></div>
                 </div>
             </div>
-            <div class="tracks">
-                <div class="chassis"></div>
+            <div id="goal">
+                <div id="pulsating-circle"></div>
+                <div id="ballPlaceHolder2"></div>
+            </div>
+            <div id="robot">
+                <div id="robo_arm">
+                    <div class="stem"></div>
+                    <div class="finger_wrapper">
+                        <div class="finger f1" id="left"></div>
+                        <div class="finger f2" id="left"></div>
+                        <div class="finger f1" id="right"></div>
+                        <div class="finger f2" id="right"></div>
+                        <div id="ballPlaceHolder"></div>
+                    </div>
+                </div>
+                <div class="tracks">
+                    <div class="chassis"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="controller">
-        <div class="aerial_wrapper">
-            <div class="line_wrapper">
-                <div class="line" id="part4"></div>
-                <div class="line" id="part3"></div>
-                <div class="line" id="part2"></div>
-                <div class="line" id="part1"></div>
-                <div class="bulb"></div>
-            </div>
-            <div class="stump"></div>
-        </div>
-        <div class="pad">
-            <div class="arrow_wrapper">
-                <div class="arrow clicky" id="a_up" onclick="move(direction.up)"></div>
-                <div class="arrow clicky" id="a_left" onclick="move(direction.left)"></div>
-                <div class="arrow clicky" id="a_right" onclick="move(direction.right)"></div>
-                <div class="arrow clicky" id="a_down" onclick="move(direction.down)"></div>
-            </div>
-            <div class="controls_wrapper">
-                <div class="buttons_wrapper">
-                    <div class="button b_l clicky" id="left"></div>
-                    <div class="button b_r clicky" id="right"></div>
+        <div id="controller">
+            <div class="aerial_wrapper">
+                <div class="line_wrapper">
+                    <div class="line" id="part4"></div>
+                    <div class="line" id="part3"></div>
+                    <div class="line" id="part2"></div>
+                    <div class="line" id="part1"></div>
+                    <div class="bulb"></div>
                 </div>
-                <div class="slider_wrapper">
-                    <div class="line" id="slider_line"></div>
-                    <div class="knob clicky" id="slider_knob"></div>
+                <div class="stump"></div>
+            </div>
+            <div class="pad">
+                <div class="arrow_wrapper">
+                    <div class="arrow clicky" id="a_up" onclick="move(direction.up)"></div>
+                    <div class="arrow clicky" id="a_left" onclick="move(direction.left)"></div>
+                    <div class="arrow clicky" id="a_right" onclick="move(direction.right)"></div>
+                    <div class="arrow clicky" id="a_down" onclick="move(direction.down)"></div>
                 </div>
+                <div class="controls_wrapper">
+                    <div class="buttons_wrapper">
+                        <div class="button b_l clicky" id="left" onclick="grab()"></div>
+                        <div class="button b_r clicky" id="right" onclick="drop()"></div>
+                    </div>
+                    <div class="slider_wrapper">
+                        <div class="line" id="slider_line"></div>
+                        <div class="knob clicky" id="slider_knob"></div>
+                    </div>
+                </div>
+                <div id="click_me">Click me!</div>
             </div>
         </div>
     </div>
@@ -526,6 +534,32 @@
                 .setClassToggle(".bulb","grow_bulb")
                 .reverse(false)
                 .addTo(controller);
+
+        let itemsFade = TweenMax.allTo(["#ball", "#robot", "#goal"], 0.5, {opacity:1, delay:1.5});
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setTween(itemsFade)
+                .reverse(false)
+                .addTo(controller);
+
+        let clickMeFade = TweenMax.allTo(["#click_me"], 0.25, {opacity:1, delay:2.5});
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setTween(clickMeFade)
+                .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setClassToggle("#click_me","click_me_anim")
+                .reverse(false)
+                .addTo(controller);
+
+        let tileAnim = TweenMax.staggerFrom(".td", 0.03, {opacity:0}, 0.03);
+
+        new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
+                .setTween(tileAnim)
+                .reverse(false)
+                .addTo(controller);
     });
 
     //robo game code
@@ -558,6 +592,8 @@
         let translateCode;
         let rotateCode;
 
+        TweenMax.to("#click_me", 0, {opacity:0});
+
         switch (direction){
             case 1:{
                 roboPosX--;
@@ -584,7 +620,6 @@
                 break;
             }
         }
-        console.log("robo position: x" + roboPosX + " y" + roboPosY);
 
         //if new tile is clear and anim not still running then move
         if(!tween.isActive()){
@@ -605,12 +640,15 @@
 
     const robotArmDiv = document.getElementById("robo_arm");
     let line = document.getElementById("slider_line");
+    let rotationDegrees = 0;
 
     // Make the slider draggable:
     dragElement(document.getElementById("slider_knob"));
 
     function dragElement(elmnt) {
         var pos1 = 0, pos3 = 0;
+
+        TweenMax.to("#click_me", 0, {opacity:0});
 
         //move the DIV from anywhere inside the DIV:
         elmnt.onmousedown = dragMouseDown;
@@ -630,7 +668,7 @@
             e.preventDefault();
 
             let lineWidth = line.offsetWidth - elmnt.offsetWidth;
-            let rotationDegrees = 360/(150/elmnt.offsetLeft);
+            rotationDegrees = 360/(150/elmnt.offsetLeft);
 
             //clean up calculation
             if(rotationDegrees < 0 || rotationDegrees > 359){
@@ -654,6 +692,36 @@
             // stop moving when mouse button is released:
             document.onmouseup = null;
             document.onmousemove = null;
+        }
+    }
+
+    const ballPlaceHolderDiv = document.getElementById("ballPlaceHolder");
+    const ballPlaceHolder2Div = document.getElementById("ballPlaceHolder2");
+    const ballDiv = document.getElementById("ball");
+    const marker = document.getElementById("pulsating-circle");
+    let hasBall = false;
+
+    //move ball into robot arm
+    function grab(){
+        TweenMax.to("#click_me", 0, {opacity:0});
+
+        if(roboPosX === 1 && roboPosY === 1 && !hasBall && rotationDegrees < 190 && rotationDegrees > 160) {
+            ballPlaceHolderDiv.appendChild(ballDiv);
+            hasBall = true;
+        }
+    }
+
+    //drop ball to goal
+    function drop(){
+        TweenMax.to("#click_me", 0.2, {opacity:0});
+
+        console.log("robo position: x" + roboPosX + " y" + roboPosY);
+        console.log("rotateion: " + rotationDegrees);
+
+        if(roboPosX === 6 && roboPosY === 5 && hasBall && (rotationDegrees < 20 || rotationDegrees > 340)) {
+            ballPlaceHolder2Div.appendChild(ballDiv);
+            marker.remove();
+            hasBall = false;
         }
     }
 

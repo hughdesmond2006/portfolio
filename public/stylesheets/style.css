@@ -57,57 +57,62 @@
 
 /* ==SCROLL TRIGGERED ANIMATIONS== */
 .grow_pad {
-  animation: grow-y 1s 0s 1 ease-out forwards; }
+  animation: grow-y 1s 1s 1 ease-out forwards; }
 
 .rotate_arrows {
-  animation: rotate 1.5s 0s 1 ease-out forwards; }
+  animation: rotate 1.5s 1s 1 ease-out forwards; }
 
 .grow_arrow_down {
-  animation: grow 1s .15s 1 ease forwards; }
+  animation: grow 1s 1.15s 1 ease forwards; }
 
 .grow_arrow_left {
-  animation: grow 1s .3s 1 ease forwards; }
+  animation: grow 1s 1.3s 1 ease forwards; }
 
 .grow_arrow_up {
-  animation: grow 1s .45s 1 ease forwards; }
+  animation: grow 1s 1.45s 1 ease forwards; }
 
 .grow_arrow_right {
-  animation: grow 1s .6s 1 ease forwards; }
+  animation: grow 1s 1.6s 1 ease forwards; }
 
 .grow_button_left {
-  animation: grow 1s 0.75s 1 ease forwards; }
+  animation: grow 1s 1.75s 1 ease forwards; }
 
 .grow_button_right {
-  animation: grow 1s 0.9s 1 ease forwards; }
+  animation: grow 1s 1.9s 1 ease forwards; }
 
 .grow_slider_line {
-  animation: line-grow 1s 0.15s 1 ease-out forwards; }
+  animation: line-grow 1s 1.15s 1 ease-out forwards; }
 
 .grow_slider_knob {
-  animation: grow-y 1s 1.05s 1 ease forwards; }
+  animation: grow-y 1s 2.05s 1 ease forwards; }
 
 .grow_stump {
-  animation: grow 1s 0.5s 1 ease forwards; }
+  animation: grow 1s 1.5s 1 ease forwards; }
 
 .grow_aerial_part1 {
-  animation: aerial-grow1 .25s 1s 1 linear forwards; }
+  animation: aerial-grow1 .25s 2s 1 linear forwards; }
 
 .grow_aerial_part2 {
-  animation: aerial-grow2 .25s 1.25s 1 linear forwards; }
+  animation: aerial-grow2 .25s 2.25s 1 linear forwards; }
 
 .grow_aerial_part3 {
-  animation: aerial-grow3 .25s 1.5s 1 linear forwards; }
+  animation: aerial-grow3 .25s 2.5s 1 linear forwards; }
 
 .grow_aerial_part4 {
-  animation: aerial-grow4 .25s 1.75s 1 linear forwards; }
+  animation: aerial-grow4 .25s 2.75s 1 linear forwards; }
 
 .spring_aerial {
-  animation: spring 1s 1.75s 1 ease forwards; }
+  animation: spring 1s 2.75s 1 ease forwards; }
 
 .grow_bulb {
-  animation: appear 1ms 2.15s 1 forwards; }
+  animation: appear 1ms 3.15s 1 forwards; }
 
-/* ==CLICK TRIGGERED ANIMATIONS== */
+.click_me_fade {
+  animation: appear .5s 2s forwards; }
+
+.click_me_anim {
+  animation: bounce 1.5s 2.5s infinite; }
+
 /* ==KEYFRAMES== */
 @keyframes appear {
   to {
@@ -463,6 +468,20 @@
   100% {
     transform: translateX(-62px); } }
 
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33); }
+  80%, 100% {
+    opacity: 0; } }
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.8); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0.8); } }
+
 @media only screen and (min-width: 500px) {
   /* For desktop: */
   .comingsoon {
@@ -552,11 +571,20 @@ header, section, footer, aside, nav, article, hgroup, img {
 #section4 {
   overflow: hidden; }
 
-#scene1 {
+.scene1 {
   position: relative; }
 
-#scene2 {
+.scene2 {
   position: relative; }
+
+.scene3 {
+  position: absolute;
+  width: 800px;
+  height: 436px;
+  top: 50%;
+  left: 50%;
+  margin-top: -216px;
+  margin-left: -400px; }
 
 .big_heading {
   position: absolute;
@@ -578,15 +606,16 @@ header, section, footer, aside, nav, article, hgroup, img {
   color: #e49b2e; }
 
 #controller {
+  position: absolute;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  transform: scale(0.8); }
+  transform-origin: center bottom;
+  transform: scale(0.8);
+  bottom: -40px; }
 
 #warehouse {
   position: absolute;
-  top: 0;
-  right: 0;
+  right: 20px;
+  margin-left: -216px;
   width: 436px;
   height: 436px; }
 
@@ -607,21 +636,23 @@ header, section, footer, aside, nav, article, hgroup, img {
 .rack {
   background: #855555; }
 
-.ball {
+#ball {
   position: absolute;
   width: 60px;
   height: 60px;
   background-image: url("../images/ball.png");
   background-repeat: no-repeat;
   background-size: 53px 51px;
-  background-position: center; }
+  background-position: center;
+  opacity: 0; }
 
 #robot {
   position: absolute;
   width: 60px;
   height: 60px;
   left: 188px;
-  top: 188px; }
+  top: 188px;
+  opacity: 0; }
 
 .tracks {
   position: absolute;
@@ -690,13 +721,79 @@ header, section, footer, aside, nav, article, hgroup, img {
 .finger.f2#left {
   top: 48px; }
 
+#ballPlaceHolder {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px; }
+
+#ballPlaceHolder2 {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px; }
+
+#goal {
+  position: relative;
+  top: 341px;
+  left: 436px;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  opacity: 0; }
+
+#pulsating-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 40px;
+  height: 40px; }
+  #pulsating-circle:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 300%;
+    height: 300%;
+    box-sizing: border-box;
+    margin-left: -100%;
+    margin-top: -100%;
+    border-radius: 100%;
+    background-color: #e90700;
+    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+  #pulsating-circle:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ff1205;
+    border-radius: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite; }
+
+#click_me {
+  position: absolute;
+  font-size: 26px;
+  font-family: "Lato", sans-serif;
+  font-weight: bolder;
+  margin-top: -23.5px;
+  margin-left: 24px;
+  transform-origin: left center;
+  opacity: 0; }
+
 .pad {
   position: absolute;
   background: #d7ca8f;
   width: 480px;
   height: 240px;
   border-radius: 16px;
-  bottom: 56px;
+  bottom: 0px;
   left: 3px;
   box-shadow: 10px 10px #978a55;
   transform: scale(0);
@@ -798,7 +895,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   display: table;
   width: 164px;
   height: 294px;
-  bottom: 296px;
+  bottom: 240px;
   left: 240px;
   margin-left: -82px;
   transform-origin: bottom; }

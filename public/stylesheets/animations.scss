@@ -81,76 +81,79 @@
 
 /* ==SCROLL TRIGGERED ANIMATIONS== */
 .grow_pad{
-  animation: grow-y 1s 0s 1 ease-out forwards;
+  animation: grow-y 1s 1s 1 ease-out forwards;
 }
 
 .rotate_arrows{
-  animation: rotate 1.5s 0s 1 ease-out forwards;
+  animation: rotate 1.5s 1s 1 ease-out forwards;
 }
 
 .grow_arrow_down{
-  animation:grow 1s .15s 1 ease forwards;
+  animation:grow 1s 1.15s 1 ease forwards;
 }
 
 .grow_arrow_left{
-  animation:grow 1s .3s 1 ease forwards;
+  animation:grow 1s 1.3s 1 ease forwards;
 }
 
 .grow_arrow_up{
-  animation:grow 1s .45s 1 ease forwards;
+  animation:grow 1s 1.45s 1 ease forwards;
 }
 
 .grow_arrow_right{
-  animation:grow 1s .6s 1 ease forwards;
+  animation:grow 1s 1.6s 1 ease forwards;
 }
 
 .grow_button_left{
-  animation:grow 1s 0.75s 1 ease forwards;
+  animation:grow 1s 1.75s 1 ease forwards;
 }
 
 .grow_button_right{
-  animation:grow 1s 0.9s 1 ease forwards;
+  animation:grow 1s 1.9s 1 ease forwards;
 }
 
 .grow_slider_line{
-  animation: line-grow 1s 0.15s 1 ease-out forwards;
+  animation: line-grow 1s 1.15s 1 ease-out forwards;
 }
 
 .grow_slider_knob{
-  animation: grow-y 1s 1.05s 1 ease forwards;
+  animation: grow-y 1s 2.05s 1 ease forwards;
 }
 
 .grow_stump{
-  animation: grow 1s 0.5s 1 ease forwards;
+  animation: grow 1s 1.5s 1 ease forwards;
 }
 
 .grow_aerial_part1{
-  animation: aerial-grow1 .25s 1s 1 linear forwards;
+  animation: aerial-grow1 .25s 2s 1 linear forwards;
 }
 
 .grow_aerial_part2{
-  animation: aerial-grow2 .25s 1.25s 1 linear forwards;
+  animation: aerial-grow2 .25s 2.25s 1 linear forwards;
 }
 
 .grow_aerial_part3{
-  animation: aerial-grow3 .25s 1.5s 1 linear forwards;
+  animation: aerial-grow3 .25s 2.5s 1 linear forwards;
 }
 
 .grow_aerial_part4{
-  animation: aerial-grow4 .25s 1.75s 1 linear forwards;
+  animation: aerial-grow4 .25s 2.75s 1 linear forwards;
 }
 
 .spring_aerial{
-  animation: spring 1s 1.75s 1 ease forwards;
+  animation: spring 1s 2.75s 1 ease forwards;
 }
 
 .grow_bulb{
-  animation: appear 1ms 2.15s 1 forwards;
+  animation: appear 1ms 3.15s 1 forwards;
 }
 
-/* ==CLICK TRIGGERED ANIMATIONS== */
-.rleft{
-  //animation: rleft 1s 1 forwards;
+.click_me_fade{
+  animation: appear .5s 2s forwards;
+}
+
+.click_me_anim{
+  animation: bounce 1.5s 2.5s infinite;
 }
 
 /* ==KEYFRAMES== */
@@ -655,5 +658,28 @@
 {
   100% {
     transform: translateX(-62px);
+  }
+}
+
+
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(.33);
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.8);
   }
 }
