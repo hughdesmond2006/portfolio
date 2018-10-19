@@ -111,6 +111,11 @@ header,section,footer,aside,nav,article,hgroup,img{
   overflow: hidden;
 }
 
+#section5{
+  overflow: hidden;
+  background-color: #e7e0f4;
+}
+
 .scene1{
   position: relative;
 }
@@ -127,6 +132,13 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 50%;
   margin-top: -216px;
   margin-left: -400px;
+}
+
+.scene4{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border: 1px solid blue;
 }
 
 .big_heading{
@@ -602,6 +614,23 @@ header,section,footer,aside,nav,article,hgroup,img{
   opacity: 0;
 }
 
+#jim{
+  display: table;
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+  //margin-top: -82px;
+  bottom: 0;
+}
+
+#tim{
+  display: table;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  bottom: 0;
+}
+
 /* ==BODY== */
 .body{
   background-image: url('../images/body.png');
@@ -609,6 +638,14 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 210px;
   height: 164px;
   position: relative;   //attach parts relative from the top left of the body
+}
+
+#jim .body{
+  background-image: url('../images/jim_body.png');
+}
+
+#tim .body{
+  background-image: url('../images/tim_body.png');
 }
 
 /* ==HEAD== */
@@ -625,6 +662,10 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 59px;
 }
 
+#tim .head{
+  left: 52px;
+}
+
 /* ==HAIR== */
 .hairs {
   position: relative;
@@ -636,6 +677,24 @@ header,section,footer,aside,nav,article,hgroup,img{
 #hugh2 .hairs {
   left: -12px;
   transform: scaleX(-1);
+}
+
+#jim .hairs{
+  background-image: url('../images/jim_hair.png');
+  width: 30px;
+  height: 9px;
+  position: absolute;
+  top: -5px;
+  left: 28px;
+}
+
+#tim .hairs{
+  background-image: url('../images/tim_hair.png');
+  width: 50px;
+  height: 8px;
+  position: absolute;
+  top: -4px;
+  left: 16px;
 }
 
 .hair {
@@ -710,12 +769,12 @@ header,section,footer,aside,nav,article,hgroup,img{
   left:64px;
 }
 
-//hugh2 faces left
-#hugh2 .eye#left{
+//hugh2 and tim face left
+#hugh2 .eye#left, #tim .eye#left{
   left:10px;
 }
 
-#hugh2 .eye#right{
+#hugh2 .eye#right, #tim .eye#right{
   left:54px;
 }
 
@@ -728,12 +787,47 @@ header,section,footer,aside,nav,article,hgroup,img{
   top: 84px;
 }
 
+#tim .arm{
+  background-image: url('../images/tim_arm.png');
+  width: 50px;
+}
+
 .arm#left{
   left:17px;
 }
 
 .arm#right{
   left:146px;
+}
+
+#tim .arm#left{
+  transform: rotate(90deg);
+  left:13px;
+  top: 80px;
+}
+
+#tim .arm#right{
+  transform: rotate(330deg);
+  left: 138px;
+}
+
+.cup{
+  background-image: url('../images/cup.png');
+  width: 24px;
+  height: 28px;
+  position: absolute;
+  top: -14px;
+  left: 40%;
+}
+
+.tablet{
+  background-image: url('../images/tablet.png');
+  width: 74px;
+  height: 44px;
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  transform: rotate(270deg) skewX(20deg) scaleX(.7);
 }
 
 //hugh3 and hugh3 arms start higher for balance anim
@@ -748,6 +842,14 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 32px;
   position: absolute;
   top:132px;
+}
+
+#jim .shoe{
+  background-image: url('../images/jim_shoe.png');
+}
+
+#tim .shoe{
+  background-image: url('../images/tim_shoe.png');
 }
 
 .shoe#left{
@@ -895,6 +997,15 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .tfoot#right{
   left:68px;
+}
+
+#lemonade_stand{
+  background-image: url('../images/lemonade_stand.png');
+  width: 160px;
+  height: 188px;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
 }
 
 

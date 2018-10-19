@@ -79,6 +79,12 @@
   animation: turtle-stomp 1s infinite;
 }
 
+//stagger tim and jims blinks
+#tim .eye{
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
 /* ==SCROLL TRIGGERED ANIMATIONS== */
 .grow_pad{
   animation: grow-y 1s 1s 1 ease-out forwards;
