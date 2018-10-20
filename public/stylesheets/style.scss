@@ -114,6 +114,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 #section5{
   overflow: hidden;
   background-color: #e7e0f4;
+  height: 800px;
 }
 
 .scene1{
@@ -135,10 +136,11 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .scene4{
-  height: 100%;
-  width: 100%;
-  position: relative;
-  border: 1px solid blue;
+  height: 200px;
+  width: 640px;
+  position: absolute;
+  left: 50%;
+  margin-left: -320px;
 }
 
 .big_heading{
@@ -617,17 +619,14 @@ header,section,footer,aside,nav,article,hgroup,img{
 #jim{
   display: table;
   position: absolute;
-  left: 50%;
-  margin-left: -250px;
-  //margin-top: -82px;
+  left: 90px;
   bottom: 0;
 }
 
 #tim{
   display: table;
   position: absolute;
-  left: 50%;
-  margin-left: -10px;
+  right: 90px;
   bottom: 0;
 }
 
@@ -999,14 +998,56 @@ header,section,footer,aside,nav,article,hgroup,img{
   left:68px;
 }
 
+//special scene4 stuff
 #lemonade_stand{
   background-image: url('../images/lemonade_stand.png');
   width: 160px;
   height: 188px;
   position: absolute;
-  left: 20%;
+  left: 0;
   bottom: 0;
 }
+
+#slideshow{
+  position: absolute;
+  width: 860px;
+  height: 520px;
+  left: 50%;
+  top: 230px;
+  margin-left: -430px;
+  background: black;
+  border-radius: 36px;
+  overflow: hidden;
+}
+
+.slide{
+  position: absolute;
+  width: 768px;
+  height: 480px;
+  left: 50%;
+  top: 50%;
+  margin-left: -384px;
+  margin-top: -240px;
+}
+
+.slide.s1{
+  background-image: url('../images/screen_history.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  height: 400%;
+  width: 700%;;
+  position: absolute;
+  border-radius: 1000px;
+  top: -320%;
+  left: -590%;
+  /* This adds the nice overlay. */
+  background: rgba(255,255,255,0.2);
+}
+
+
 
 
 
