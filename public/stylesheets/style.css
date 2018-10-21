@@ -486,6 +486,50 @@
   100% {
     transform: scale(0.8); } }
 
+@keyframes drink {
+  50% {
+    transform: rotate(0deg); }
+  60% {
+    transition-timing-function: ease-in;
+    transform: rotate(-75deg) translate(50px, -5px); }
+  90% {
+    transition-timing-function: ease-out;
+    transform: rotate(-75deg) translate(50px, -5px); } }
+
+@keyframes viola {
+  0% {
+    transform: rotate(330deg); }
+  20% {
+    transition-timing-function: ease-out;
+    transform: rotate(250deg) translate(10px, 5px); }
+  30% {
+    transform: rotate(250deg) translate(10px, 5px); }
+  60% {
+    transition-timing-function: ease-in;
+    transform: rotate(330deg); } }
+
+@keyframes scratch {
+  80% {
+    transform: rotate(0deg); }
+  84% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(25deg); }
+  86% {
+    transition-timing-function: linear;
+    transform: rotate(22deg); }
+  88% {
+    transition-timing-function: linear;
+    transform: rotate(25deg); }
+  90% {
+    transition-timing-function: linear;
+    transform: rotate(22deg); }
+  92% {
+    transition-timing-function: linear;
+    transform: rotate(25deg); }
+  96% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg); } }
+
 @media only screen and (min-width: 500px) {
   /* For desktop: */
   .comingsoon {
@@ -1161,7 +1205,17 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 #tim .arm#right {
   transform: rotate(330deg);
-  left: 138px; }
+  left: 138px;
+  transform-origin: center 15px;
+  animation: viola 1.7s infinite; }
+
+#jim .arm#left {
+  transform-origin: 200px center;
+  animation: scratch 5.5s infinite; }
+
+#jim .arm#right {
+  transform-origin: center bottom;
+  animation: drink 3s infinite; }
 
 .cup {
   background-image: url("../images/cup.png");
@@ -1169,7 +1223,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   height: 28px;
   position: absolute;
   top: -14px;
-  left: 40%; }
+  left: 30%; }
 
 .tablet {
   background-image: url("../images/tablet.png");
@@ -1353,6 +1407,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   overflow-x: hidden; }
 
 .slide_reel {
+  position: absolute;
   height: 100%;
   width: 3072px; }
 

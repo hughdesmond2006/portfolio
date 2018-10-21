@@ -809,6 +809,18 @@ header,section,footer,aside,nav,article,hgroup,img{
 #tim .arm#right{
   transform: rotate(330deg);
   left: 138px;
+  transform-origin: center 15px;
+  animation: viola 1.7s infinite;
+}
+
+#jim .arm#left{
+  transform-origin: 200px center;
+  animation: scratch 5.5s infinite;
+}
+
+#jim .arm#right{
+  transform-origin: center bottom;
+  animation: drink 3s infinite;
 }
 
 .cup{
@@ -817,7 +829,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 28px;
   position: absolute;
   top: -14px;
-  left: 40%;
+  left: 30%;
 }
 
 .tablet{
@@ -1034,6 +1046,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .slide_reel{
+  position: absolute;
   height: 100%;
   width: 3072px;
 }
