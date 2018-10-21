@@ -577,8 +577,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 #section5 {
   overflow: hidden;
-  background-color: #e7e0f4;
-  height: 800px; }
+  background-color: #e7e0f4; }
 
 .scene1 {
   position: relative; }
@@ -600,7 +599,9 @@ header, section, footer, aside, nav, article, hgroup, img {
   width: 640px;
   position: absolute;
   left: 50%;
-  margin-left: -320px; }
+  top: 50%;
+  margin-left: -320px;
+  margin-top: -200px; }
 
 .big_heading {
   position: absolute;
@@ -1332,27 +1333,65 @@ header, section, footer, aside, nav, article, hgroup, img {
 #slideshow {
   position: absolute;
   width: 860px;
-  height: 520px;
+  height: 550px;
   left: 50%;
-  top: 230px;
+  top: 50%;
   margin-left: -430px;
+  margin-top: -275px;
   background: black;
   border-radius: 36px;
   overflow: hidden; }
 
-.slide {
+.slide_container {
   position: absolute;
   width: 768px;
-  height: 480px;
+  height: 451px;
   left: 50%;
   top: 50%;
   margin-left: -384px;
-  margin-top: -240px; }
+  margin-top: -235px;
+  overflow-x: hidden; }
+
+.slide_reel {
+  height: 100%;
+  width: 3072px; }
+
+.slide {
+  position: relative;
+  width: 768px;
+  height: 100%;
+  float: left; }
 
 .slide.s1 {
+  background-image: url("../images/screen_home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.slide.s2 {
   background-image: url("../images/screen_history.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
+
+.slide.s3 {
+  background-image: url("../images/screen_calls.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.slide.s4 {
+  background-image: url("../images/screen_orders.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.bar {
+  background-image: url("../images/screen_bar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 768px;
+  height: 29px;
+  left: 50%;
+  bottom: 28px;
+  margin-left: -384px; }
 
 .overlay {
   height: 400%;

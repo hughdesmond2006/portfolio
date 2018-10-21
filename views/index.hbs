@@ -420,14 +420,22 @@
                 <div class="shoe" id="left"></div>
                 <div class="shoe" id="right"></div>
                 <div class="arm" id="left">
-                    <div class="tablet"></div>
+                    <!--<div class="tablet"></div>-->
                 </div>
                 <div class="arm" id="right"></div>
             </div>
         </div>
     </div>
     <div id="slideshow">
-        <div class="slide s1"></div>
+        <div class="slide_container">
+            <div class="slide_reel">
+                <div class="slide s1"></div>
+                <div class="slide s2"></div>
+                <div class="slide s3"></div>
+                <div class="slide s4"></div>
+            </div>
+        </div>
+        <div class="bar"></div>
         <div class="overlay"></div>
     </div>
 </section>
@@ -612,6 +620,50 @@
                 .setTween(tileAnim)
                 .reverse(false)
                 .addTo(controller);
+
+        //throw tablet to fullscreen
+        let tabletAnim = TweenMax.from("#slideshow", .7, {scaleX: .07, scaleY: .085, skewX: 20, x:14, y: -82, ease:Power2.easeOut}, 1);
+
+        new ScrollMagic.Scene({triggerElement: "#section5", offset: 300})
+                .setTween(tabletAnim)
+                .addTo(controller);
+
+        //pin section5 until slideshow ends
+        new ScrollMagic.Scene({triggerElement: "#section5", duration: 1000})
+                .setPin("#section5")
+                //.addIndicators()
+                .triggerHook(0)
+                .addTo(controller);
+
+        //screenshot slide anim
+        let slideAnim = TweenMax.to(".slide_reel", .5, {x: "-=768", ease:Power4.easeInOut});
+        let slideAnim2 = TweenMax.to(".slide_reel", .5, {x: "-=768", ease:Power4.easeInOut});
+        let slideAnim3 = TweenMax.to(".slide_reel", .5, {x: "-=768", ease:Power4.easeInOut});
+
+        //timeline
+        /**let slideTimeLine = new TimelineMax();
+        slideTimeLine.to(".slide_reel" , 1, {x: "-=768", ease:Power1.easeInOut})
+                .to(".slide_reel" , 2, {x: "-=768", ease:Power1.easeInOut})
+                .to(".slide_reel" , 3, {x: "-=768", ease:Power1.easeInOut});**/
+
+        new ScrollMagic.Scene({triggerElement: "#section5", offset: 250})
+                .setTween(slideAnim)
+                //.addIndicators()
+                .triggerHook(0)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: "#section5", offset: 500})
+                .setTween(slideAnim2)
+                //.addIndicators()
+                .triggerHook(0)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: "#section5", offset: 750})
+                .setTween(slideAnim3)
+                //.addIndicators()
+                .triggerHook(0)
+                .addTo(controller);
+
     });
 
     //robo game code
