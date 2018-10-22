@@ -810,17 +810,17 @@ header,section,footer,aside,nav,article,hgroup,img{
   transform: rotate(330deg);
   left: 138px;
   transform-origin: center 15px;
-  animation: viola 1.7s infinite;
+  animation: viola 2.5s infinite;
 }
 
 #jim .arm#left{
   transform-origin: 200px center;
-  animation: scratch 5.5s infinite;
+  animation: scratch 7s infinite;
 }
 
 #jim .arm#right{
   transform-origin: center bottom;
-  animation: drink 3s infinite;
+  animation: drink 5s infinite;
 }
 
 .cup{
@@ -1032,6 +1032,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   background: black;
   border-radius: 36px;
   overflow: hidden;
+  opacity: 0;
 }
 
 .slide_container{
@@ -1103,6 +1104,20 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: -590%;
   /* This adds the nice overlay. */
   background: rgba(255,255,255,0.2);
+}
+
+.swipe_hand{
+  position: absolute;
+  background-image: url('../images/swipe_hand.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 290px;
+  height: 294px;
+  left: 50%;
+  bottom: -50px;
+  margin-left: -145px;
+  transform: rotate(-20deg);
+  opacity: 0;
 }
 
 

@@ -487,9 +487,9 @@
     transform: scale(0.8); } }
 
 @keyframes drink {
-  50% {
-    transform: rotate(0deg); }
   60% {
+    transform: rotate(0deg); }
+  70% {
     transition-timing-function: ease-in;
     transform: rotate(-75deg) translate(50px, -5px); }
   90% {
@@ -499,10 +499,10 @@
 @keyframes viola {
   0% {
     transform: rotate(330deg); }
-  20% {
+  10% {
     transition-timing-function: ease-out;
     transform: rotate(250deg) translate(10px, 5px); }
-  30% {
+  50% {
     transform: rotate(250deg) translate(10px, 5px); }
   60% {
     transition-timing-function: ease-in;
@@ -1207,15 +1207,15 @@ header, section, footer, aside, nav, article, hgroup, img {
   transform: rotate(330deg);
   left: 138px;
   transform-origin: center 15px;
-  animation: viola 1.7s infinite; }
+  animation: viola 2.5s infinite; }
 
 #jim .arm#left {
   transform-origin: 200px center;
-  animation: scratch 5.5s infinite; }
+  animation: scratch 7s infinite; }
 
 #jim .arm#right {
   transform-origin: center bottom;
-  animation: drink 3s infinite; }
+  animation: drink 5s infinite; }
 
 .cup {
   background-image: url("../images/cup.png");
@@ -1394,7 +1394,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   margin-top: -275px;
   background: black;
   border-radius: 36px;
-  overflow: hidden; }
+  overflow: hidden;
+  opacity: 0; }
 
 .slide_container {
   position: absolute;
@@ -1457,5 +1458,18 @@ header, section, footer, aside, nav, article, hgroup, img {
   left: -590%;
   /* This adds the nice overlay. */
   background: rgba(255, 255, 255, 0.2); }
+
+.swipe_hand {
+  position: absolute;
+  background-image: url("../images/swipe_hand.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 290px;
+  height: 294px;
+  left: 50%;
+  bottom: -50px;
+  margin-left: -145px;
+  transform: rotate(-20deg);
+  opacity: 0; }
 
 /*# sourceMappingURL=style.css.map */

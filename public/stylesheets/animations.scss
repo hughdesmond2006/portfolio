@@ -691,10 +691,10 @@
 }
 
 @keyframes drink {
-  50% {
+  60% {
     transform: rotate(0deg);
   }
-  60% {
+  70% {
     transition-timing-function: ease-in;
     transform: rotate(-75deg) translate(50px, -5px);
   }
@@ -708,11 +708,11 @@
   0% {
     transform: rotate(330deg);
   }
-  20% {
+  10% {
     transition-timing-function: ease-out;
     transform: rotate(250deg) translate(10px, 5px);
   }
-  30% {
+  50% {
     transform: rotate(250deg) translate(10px, 5px);
   }
   60% {

@@ -438,6 +438,7 @@
         <div class="bar"></div>
         <div class="overlay"></div>
     </div>
+    <div class="swipe_hand"></div>
 </section>
 
 <div class="pimg1">
@@ -452,6 +453,14 @@
     $(function () { // wait for document ready
         // init
         var controller = new ScrollMagic.Controller();
+
+        //throw tablet to fullscreen
+        TweenMax.to("#slideshow", 0, {opacity: 1});
+        let tabletAnim = TweenMax.from("#slideshow", 1.2, {opacity: 1, scaleX: .07, scaleY: .085, skewX: 20, x:14, y: -82, ease:Power1.easeOut}, 1);
+
+        new ScrollMagic.Scene({triggerElement: "#section5", offset: 300})
+                .setTween(tabletAnim)
+                .addTo(controller);
 
         //build skate jump tween
         var skateTween = TweenMax.to("#hugh2",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0} /**, {x:-1440, y:0}**/ ], autoRotate:180}, ease:Power0.easeNone});
@@ -621,13 +630,6 @@
                 .reverse(false)
                 .addTo(controller);
 
-        //throw tablet to fullscreen
-        let tabletAnim = TweenMax.from("#slideshow", .7, {scaleX: .07, scaleY: .085, skewX: 20, x:14, y: -82, ease:Power2.easeOut}, 1);
-
-        new ScrollMagic.Scene({triggerElement: "#section5", offset: 300})
-                .setTween(tabletAnim)
-                .addTo(controller);
-
         //pin section5 until slideshow ends
         new ScrollMagic.Scene({triggerElement: "#section5", duration: 1000})
                 .setPin("#section5")
@@ -667,6 +669,21 @@
                 //.addIndicators()
                 .triggerHook(0)
                 .addTo(controller);**/
+
+        let swipeTimeLine = new TimelineMax();
+        swipeTimeLine.to(".swipe_hand" , .5, {opacity: 1, x: 384})
+                .to(".swipe_hand" , 1, {x: -500, ease:Power1.easeInOut})
+                .to(".swipe_hand" , 2, {x: 384, ease:Power1.easeOut})
+                .to(".swipe_hand" , 2.5, {x: -500, ease:Power1.easeInOut})
+                .to(".swipe_hand" , 3.5, {x: 384, ease:Power1.easeOut})
+                .to(".swipe_hand" , 4, {x: -500, ease:Power1.easeInOut})
+                .to(".swipe_hand" , 5, {opacity: 0, x: 384, ease:Power1.easeOut});
+
+        new ScrollMagic.Scene({triggerElement: "#section5", duration: 1000, offset: 100})
+                .setTween(swipeTimeLine)
+                //.addIndicators()
+                .triggerHook(0)
+                .addTo(controller);
 
     });
 
