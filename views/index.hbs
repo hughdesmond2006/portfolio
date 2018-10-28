@@ -441,6 +441,67 @@
     <div class="swipe_hand"></div>
 </section>
 
+<div class="pimg3">
+    <div class="ptext">
+        <span class="border">
+            Back-End
+        </span>
+    </div>
+</div>
+
+<section id="section6" class="section">
+    <div class="scene5">
+        <canvas id="canvas">
+            dont see this please
+        </canvas>
+        <div class="drone">
+            <div class="skill_wrapper">
+                <div class="rope"></div>
+                <div class="skill">React</div>
+            </div>
+            <div class="dbody">
+                <div class="dwing" id="left"></div>
+                <div class="dwing" id="right"></div>
+            </div>
+        </div>
+        <div class="drone2">
+            <div class="skill_wrapper">
+                <div class="rope"></div>
+                <div class="skill">CSS3</div>
+            </div>
+            <div class="dbody">
+                <div class="dwing" id="left"></div>
+                <div class="dwing" id="right"></div>
+            </div>
+        </div>
+        <div class="gun"></div>
+    </div>
+</section>
+
+
+<div class="pimg3">
+    <div class="ptext">
+        <span class="border">
+            Back-End
+        </span>
+    </div>
+</div>
+
+<section id="section7" class="section">
+    <div class="scene6">
+        <div class="video_wrapper">
+            <video id="game_video" muted autoplay loop>
+                <source src="../images/trailer1.mp4">
+            </video>
+            <a href="#" class="speaker">
+                <span></span>
+            </a>
+            <div class="game_cover"></div>
+        </div>
+    </div>
+</section>
+
+
 <div class="pimg1">
     <div class="ptext">
         <span class="border">
@@ -852,6 +913,54 @@
         }
     }
 
+    let game = document.querySelector('#section6');
+    console.log('---' + game.getBoundingClientRect().y);
+
+    game.addEventListener('mousemove', (e) => {
+        let gun = document.querySelector('.gun');
+        let mouseX = (gun.getBoundingClientRect().left);
+        let mouseY = (gun.getBoundingClientRect().top);
+        let radianDegrees = Math.atan2(e.pageX - mouseX, (e.pageY - game.getBoundingClientRect().y) - mouseY);
+        let rotationDegrees = (radianDegrees * (180/ Math.PI) * -1) + 180;
+        console.log("deg: " + rotationDegrees +
+                "\nrad: " + radianDegrees +
+                "\nmousex: " + mouseX +
+                "\nmousey: " + mouseY +
+                "\nclientbounds: " + (gun.getBoundingClientRect().left) + "|" +  (gun.getBoundingClientRect().top) +
+                "\npagex: " + e.pageX +
+                "\npagey: " + e.pageY +
+                "\np-m" + (e.pageX - mouseX) + " " + (e.pageY - mouseY));
+        gun.style.transform = `rotate(${rotationDegrees}deg)`
+    });
+/**
+    let gun=$(".gun");
+    let boxCenter=[gun.offset().left + gun.width() / 2, gun.offset().top + gun.height() / 2];
+
+    $(document).mousemove(function(e){
+        let angle = Math.atan2(e.pageX - boxCenter[0],- (e.pageY - boxCenter[1]))*(180/Math.PI);
+
+        gun.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});
+        gun.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
+        gun.css({ 'transform': 'rotate(' + angle + 'deg)'});
+    });**/
+
+    let video = document.getElementById('game_video');
+    let speaker = document.getElementsByClassName('.speaker');
+
+    video.volume = 0.5;
+
+    //start video muted
+    $('.speaker').click(function(e) {
+        e.preventDefault();
+
+        video.muted = !video.muted;
+
+        $(this).toggleClass('mute');
+    }).addClass('mute');
+
+
+
+
 
     /* USEFUL STUFF MAYBE?
     //custom trigger anim
@@ -887,3 +996,34 @@
     */
 </script>
 
+<script type="text/babel">
+    React = require('react');
+    ReactDOM = require('react-dom');
+
+    let Bacon = React.createClass({
+        render: function () { //this function can only render one tag
+            return (
+                <div>
+                    <h3>This is a simple component</h3>
+                    <p>more text</p>
+                </div>
+            );
+        }
+    });
+
+     //injecting react class
+     ReactDOM.render(
+     <div>
+     <Bacon/>
+     <Bacon/>
+     <Bacon/>
+     </div>,
+     document.getElementById('.gun')
+     );
+
+     //directly injecting html
+     ReactDOM.render(
+     <h1>hi im hugh!</h1>,
+     document.getElementById('.gun')
+     );
+</script>

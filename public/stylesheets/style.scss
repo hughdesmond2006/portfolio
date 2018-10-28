@@ -113,7 +113,17 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 #section5{
   overflow: hidden;
-  background-color: #e7e0f4;
+  background-color: #88e7b0;
+}
+
+#section6{
+  overflow: hidden;
+  background-color: #bfdef4;
+}
+
+#section7{
+  overflow: hidden;
+  background-color: #d19bfd;
 }
 
 .scene1{
@@ -142,6 +152,18 @@ header,section,footer,aside,nav,article,hgroup,img{
   top: 50%;
   margin-left: -320px;
   margin-top: -200px;
+}
+
+.scene5{
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  cursor: url('../images/crosshair.png') 40 40,auto;
+}
+
+.scene6{
+  height: 100%;
+  width: 100%;
 }
 
 .big_heading{
@@ -788,7 +810,6 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #tim .arm{
-  background-image: url('../images/tim_arm.png');
   width: 50px;
 }
 
@@ -801,12 +822,14 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #tim .arm#left{
+  background-image: url('../images/tim_arml.png');
   transform: rotate(90deg);
   left:13px;
   top: 80px;
 }
 
 #tim .arm#right{
+  background-image: url('../images/tim_armr.png');
   transform: rotate(330deg);
   left: 138px;
   transform-origin: center 15px;
@@ -1114,10 +1137,203 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 290px;
   height: 294px;
   left: 50%;
-  bottom: -50px;
+  top: 50%;
   margin-left: -145px;
+  margin-top: 50px;
   transform: rotate(-20deg);
   opacity: 0;
+}
+
+#canvas{
+  width: 100%;
+  height: 100%;
+}
+
+.drone{
+  display: table;
+  position: absolute;
+  width: 168px;
+  height: 160px;
+  left: 50%;
+  top: 50px;
+  margin-left: -84px;
+  border: 1px solid red;
+  text-align: center;
+  animation: fly 3s infinite;
+}
+
+.drone2{
+  display: table;
+  position: absolute;
+  width: 168px;
+  height: 160px;
+  left: 70%;
+  top: 200px;
+  margin-left: -84px;
+  border: 1px solid red;
+  text-align: center;
+  animation: fly 3s infinite;
+}
+
+.dbody{
+  background-image: url('../images/dbody.png');
+  background-repeat: no-repeat;
+  width: 168px;
+  height: 52px;
+  position: absolute;
+  transform-origin: center bottom;
+  animation: lean 3s infinite;
+}
+
+.dwing{
+  background-image: url('../images/dwing.png');
+  width: 55px;
+  height: 5px;
+  position: absolute;
+  top: 3px;
+  animation: chopper .15s infinite;
+}
+
+.dwing#left{
+  left: -14px;
+}
+
+.dwing#right{
+  left: 127px;
+}
+
+.skill_wrapper{
+  position: absolute;
+  border: 1px solid blue;
+  width: 100%;
+  top: 60px;
+}
+
+.rope{
+  position: absolute;
+  background: #000000;
+  border-radius: 3px;
+  width: 4px;
+  height: 20px;
+  top: -20px;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.skill{
+  //position: absolute;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 6px;
+  //left: 50%;
+  //top: 50%;
+  padding: 6px;
+  font-size: 16px;
+  font-family: "Ariel", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.gun{
+  position: absolute;
+  background: #e49b2e;
+  left:80%;
+  bottom:20px;
+  width: 20px;
+  height: 90px;
+  border-radius: 10px;
+  transform-origin: center center;
+}
+
+/** ==GAME STUFF==**/
+#game_video{
+  width: 800px;
+  height: 450px;
+  border-radius: 8px;
+}
+
+.video_wrapper{
+  position: absolute;
+  width: 800px;
+  height: 450px;
+  margin-left: -300px;
+  margin-top: -225px;
+  left: 50%;
+  top: 50%;
+}
+
+.game_cover{
+  background-image: url('../images/xbox_cover.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 243px;
+  height: 340px;
+  position: absolute;
+  top: 50%;
+  margin-left:-200px;
+  margin-top:-175px;
+  border-radius: 4px;
+  animation: hover 15s infinite linear;
+}
+
+.speaker {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  overflow: hidden;
+  display: inline-block;
+  z-index: 5;
+
+  span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    margin: 11px 0 0 2px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent #fff transparent transparent;
+      border-width: 10px 14px 10px 15px;
+      left: -13px;
+      top: 5px;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+      border-radius: 0 50px 0 0;
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-style: double;
+      border-color: #fff;
+      border-width: 7px 7px 0 0;
+      left: 18px;
+      top: 9px;
+      transition: all 0.2s ease-out;
+    }
+  }
+
+  &:hover {
+
+    span:before {
+      transform: scale(.8) translate(-3px, 0) rotate(42deg);
+    }
+  }
+
+  &.mute {
+    span:before {
+      transform: scale(.5) translate(-15px, 0) rotate(36deg);
+      opacity: 0;
+    }
+  }
 }
 
 
