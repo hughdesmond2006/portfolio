@@ -541,32 +541,162 @@
 @keyframes fly {
   0% {
     transition-timing-function: ease-in-out;
-    transform: translateX(0px); }
+    transform: translate(0px, 0px); }
+  10% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 200px); }
+  20% {
+    transition-timing-function: ease-in-out;
+    transform: translate(200px, 200px); }
+  30% {
+    transition-timing-function: ease-in-out;
+    transform: translate(200px, 400px); }
+  40% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 400px); }
   50% {
     transition-timing-function: ease-in-out;
-    transform: translateX(-300px); } }
+    transform: translate(0px, 600px); }
+  60% {
+    transition-timing-function: ease-in-out;
+    transform: translate(200px, 600px); }
+  70% {
+    transition-timing-function: ease-in-out;
+    transform: translate(200px, 800px); }
+  80% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 800px); }
+  90% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 1000px); }
+  100% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 1000px); } }
 
 @keyframes lean {
   0% {
     transition-timing-function: ease-in-out;
     transform: rotate(0deg); }
-  8% {
+  10% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg); }
+  12% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(15deg); }
+  18% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(15deg); }
+  20% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg); }
+  30% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg); }
+  32% {
     transition-timing-function: ease-in-out;
     transform: rotate(-15deg); }
-  42% {
+  38% {
     transition-timing-function: ease-in-out;
     transform: rotate(-15deg); }
+  40% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg); }
   50% {
     transition-timing-function: ease-in-out;
     transform: rotate(0deg); }
+  52% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(15deg); }
   58% {
     transition-timing-function: ease-in-out;
     transform: rotate(15deg); }
-  92% {
+  60% {
     transition-timing-function: ease-in-out;
-    transform: rotate(15deg); }
+    transform: rotate(0deg); }
+  70% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg); }
+  72% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(-15deg); }
+  78% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(-15deg); }
+  80% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg); }
   100% {
     transition-timing-function: ease-in-out;
+    transform: rotate(0deg); } }
+
+@keyframes rock {
+  0% {
+    transform: rotate(0deg); }
+  10% {
+    transform: rotate(0deg); }
+  13% {
+    transition-timing-function: ease-in;
+    transform: rotate(10deg); }
+  17% {
+    transform: rotate(10deg); }
+  22% {
+    transition-timing-function: linear;
+    transform: rotate(-14deg); }
+  24% {
+    transition-timing-function: linear;
+    transform: rotate(9deg); }
+  26% {
+    transition-timing-function: linear;
+    transform: rotate(0deg); }
+  30% {
+    transform: rotate(0deg); }
+  33% {
+    transition-timing-function: ease-in;
+    transform: rotate(-10deg); }
+  37% {
+    transform: rotate(-10deg); }
+  42% {
+    transition-timing-function: linear;
+    transform: rotate(14deg); }
+  44% {
+    transition-timing-function: linear;
+    transform: rotate(-9deg); }
+  46% {
+    transition-timing-function: linear;
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(0deg); }
+  53% {
+    transition-timing-function: ease-in;
+    transform: rotate(10deg); }
+  57% {
+    transform: rotate(10deg); }
+  62% {
+    transition-timing-function: linear;
+    transform: rotate(-14deg); }
+  64% {
+    transition-timing-function: linear;
+    transform: rotate(9deg); }
+  66% {
+    transition-timing-function: linear;
+    transform: rotate(0deg); }
+  70% {
+    transform: rotate(0deg); }
+  73% {
+    transition-timing-function: ease-in;
+    transform: rotate(-10deg); }
+  77% {
+    transform: rotate(-10deg); }
+  82% {
+    transition-timing-function: linear;
+    transform: rotate(14deg); }
+  84% {
+    transition-timing-function: linear;
+    transform: rotate(-9deg); }
+  86% {
+    transition-timing-function: linear;
+    transform: rotate(0deg); }
+  100% {
     transform: rotate(0deg); } }
 
 @keyframes hover {
@@ -681,7 +811,9 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 #section6 {
   overflow: hidden;
-  background-color: #bfdef4; }
+  background-color: #000000;
+  height: 800px;
+  cursor: none; }
 
 #section7 {
   overflow: hidden;
@@ -712,10 +844,14 @@ header, section, footer, aside, nav, article, hgroup, img {
   margin-top: -200px; }
 
 .scene5 {
-  height: 100%;
+  height: 1000px;
   width: 100%;
-  cursor: pointer;
-  cursor: url("../images/crosshair.png") 40 40, auto; }
+  background-image: url("../images/skills_bg.png");
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover; }
 
 .scene6 {
   height: 100%;
@@ -955,6 +1091,9 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .clicky:hover {
   filter: brightness(130%); }
+
+.highlight {
+  filter: brightness(300%); }
 
 .arrow#a_left {
   bottom: 0; }
@@ -1548,6 +1687,17 @@ header, section, footer, aside, nav, article, hgroup, img {
   transform: rotate(-20deg);
   opacity: 0; }
 
+/** ==SKILLS GAME STUFF== **/
+.crosshair {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.67);
+  left: 50px;
+  top: 200px;
+  border-radius: 4px;
+  filter: brightness(300%); }
+
 #canvas {
   width: 100%;
   height: 100%; }
@@ -1557,24 +1707,70 @@ header, section, footer, aside, nav, article, hgroup, img {
   position: absolute;
   width: 168px;
   height: 160px;
-  left: 50%;
-  top: 50px;
-  margin-left: -84px;
-  border: 1px solid red;
+  margin-top: -160px;
   text-align: center;
-  animation: fly 3s infinite; }
+  top: 0;
+  left: 50%; }
 
-.drone2 {
-  display: table;
-  position: absolute;
-  width: 168px;
-  height: 160px;
-  left: 70%;
-  top: 200px;
-  margin-left: -84px;
-  border: 1px solid red;
-  text-align: center;
-  animation: fly 3s infinite; }
+.d1 {
+  margin-left: 15px;
+  animation: fly 10s infinite; }
+  .d1 .dbody {
+    animation: lean 10s infinite; }
+  .d1 .skill_wrapper {
+    animation: rock 10s infinite; }
+  .d1 .skill {
+    background-color: #e483b5; }
+
+.d2 {
+  margin-left: 15px;
+  animation: fly 10s infinite 1s; }
+  .d2 .dbody {
+    animation: lean 10s infinite 1s; }
+  .d2 .skill_wrapper {
+    animation: rock 10s infinite 1s; }
+  .d2 .skill {
+    background-color: #8372e4; }
+
+.d3 {
+  margin-left: 15px;
+  animation: fly 10s infinite 2s; }
+  .d3 .dbody {
+    animation: lean 10s infinite 2s; }
+  .d3 .skill_wrapper {
+    animation: rock 10s infinite 2s; }
+  .d3 .skill {
+    background-color: #5ee423; }
+
+.d4 {
+  margin-left: -383px;
+  animation: fly 10s infinite; }
+  .d4 .dbody {
+    animation: lean 10s infinite; }
+  .d4 .skill_wrapper {
+    animation: rock 10s infinite; }
+  .d4 .skill {
+    background-color: #e4a066; }
+
+.d5 {
+  margin-left: -383px;
+  animation: fly 10s infinite 1s; }
+  .d5 .dbody {
+    animation: lean 10s infinite 1s; }
+  .d5 .skill_wrapper {
+    animation: rock 10s infinite 1s; }
+  .d5 .skill {
+    background-color: #1edbb2; }
+
+.d6 {
+  margin-left: -383px;
+  animation: fly 10s infinite 2s; }
+  .d6 .dbody {
+    animation: lean 10s infinite 2s; }
+  .d6 .skill_wrapper {
+    animation: rock 10s infinite 2s; }
+  .d6 .skill {
+    background-color: #e47330; }
 
 .dbody {
   background-image: url("../images/dbody.png");
@@ -1582,8 +1778,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   width: 168px;
   height: 52px;
   position: absolute;
-  transform-origin: center bottom;
-  animation: lean 3s infinite; }
+  transform-origin: center bottom; }
 
 .dwing {
   background-image: url("../images/dwing.png");
@@ -1601,9 +1796,9 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .skill_wrapper {
   position: absolute;
-  border: 1px solid blue;
   width: 100%;
-  top: 60px; }
+  top: 60px;
+  transform-origin: center -30px; }
 
 .rope {
   position: absolute;
@@ -1617,25 +1812,74 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .skill {
   display: inline-block;
-  background: #ffffff;
   border-radius: 6px;
   padding: 6px;
   font-size: 16px;
   font-family: "Ariel", sans-serif;
-  font-weight: bolder;
-  text-transform: uppercase; }
+  color: #f1f1f1; }
 
-.gun {
+/** ==SKILLS MASK STUFF== **/
+.full-size {
+  height: 100%;
+  width: 100%;
   position: absolute;
-  background: #e49b2e;
-  left: 80%;
-  bottom: 20px;
-  width: 20px;
-  height: 90px;
-  border-radius: 10px;
-  transform-origin: center center; }
+  top: 0;
+  left: 0; }
 
-/** ==GAME STUFF==**/
+.blend-multiply {
+  mix-blend-mode: multiply; }
+
+.blend-screen {
+  mix-blend-mode: screen; }
+
+.animated-bg {
+  background-image: url("http://hmongouachon.com/assets/gif/timelapse.gif");
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover; }
+
+.element-mask {
+  background-color: #fff; }
+
+.circle-follow {
+  position: absolute;
+  overflow: hidden;
+  background-color: black;
+  width: 480px;
+  height: 480px;
+  top: 50%;
+  left: 50%;
+  -webkit-border-radius: 240px;
+  border-radius: 240px;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
+  transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
+  opacity: 1; }
+
+.circle-follow::before {
+  content: ' ';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.circle-follow.moving {
+  opacity: 0; }
+
+/* hack to detect ie11 and above - blend mode not supported */
+_:-ms-fullscreen, :root .letter-mask {
+  background-color: transparent; }
+
+_:-ms-fullscreen, :root .animated-bg {
+  opacity: 0.2; }
+
+_:-ms-fullscreen, :root .circle-follow {
+  background-color: #ffffff;
+  opacity: 0.2; }
+
+/** ==XBOX GAME STUFF==**/
 #game_video {
   width: 800px;
   height: 450px;

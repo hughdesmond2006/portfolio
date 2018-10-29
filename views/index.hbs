@@ -450,32 +450,86 @@
 </div>
 
 <section id="section6" class="section">
-    <div class="scene5">
+    <div class="scene5" onmouseover="highlightOn()">
         <canvas id="canvas">
             dont see this please
         </canvas>
-        <div class="drone">
+        <div class="drone d1">
             <div class="skill_wrapper">
                 <div class="rope"></div>
-                <div class="skill">React</div>
+                <div class="skill" onmouseover="highlightOn()" onmouseout="highlightOff()" onclick="shoot(this)">React</div>
             </div>
             <div class="dbody">
                 <div class="dwing" id="left"></div>
                 <div class="dwing" id="right"></div>
             </div>
         </div>
-        <div class="drone2">
+        <div class="drone d2">
             <div class="skill_wrapper">
                 <div class="rope"></div>
-                <div class="skill">CSS3</div>
+                <div class="skill" onmouseover="highlightOn()" onmouseout="highlightOff()" onclick="shoot(this)">CSS3</div>
             </div>
             <div class="dbody">
                 <div class="dwing" id="left"></div>
                 <div class="dwing" id="right"></div>
             </div>
         </div>
-        <div class="gun"></div>
+        <div class="drone d3">
+            <div class="skill_wrapper">
+                <div class="rope"></div>
+                <div class="skill" onmouseover="highlightOn()" onmouseout="highlightOff()" onclick="shoot(this)">OOP</div>
+            </div>
+            <div class="dbody">
+                <div class="dwing" id="left"></div>
+                <div class="dwing" id="right"></div>
+            </div>
+        </div>
+        <div class="drone d4">
+            <div class="skill_wrapper">
+                <div class="rope"></div>
+                <div class="skill" onmouseover="highlightOn()" onmouseout="highlightOff()" onclick="shoot(this)">REST</div>
+            </div>
+            <div class="dbody">
+                <div class="dwing" id="left"></div>
+                <div class="dwing" id="right"></div>
+            </div>
+        </div>
+        <div class="drone d5">
+            <div class="skill_wrapper">
+                <div class="rope"></div>
+                <div class="skill" onmouseover="highlightOn()" onmouseout="highlightOff()" onclick="shoot(this)">Android</div>
+            </div>
+            <div class="dbody">
+                <div class="dwing" id="left"></div>
+                <div class="dwing" id="right"></div>
+            </div>
+        </div>
+        <div class="drone d6">
+            <div class="skill_wrapper">
+                <div class="rope"></div>
+                <div class="skill" onmouseover="highlightOn()" onmouseout="highlightOff()" onclick="shoot(this)">Java</div>
+            </div>
+            <div class="dbody">
+                <div class="dwing" id="left"></div>
+                <div class="dwing" id="right"></div>
+            </div>
+        </div>
     </div>
+    <div class="wrapper full-size">
+        <!-- This div handle the mask foreground color -->
+        <div class="mask-bg-color full-size"></div>
+        <!-- This div  wrap all other elements with blend-mode multiply apply -->
+        <div class="blend-multiply full-size">
+
+            <!-- This div wrap the masked element with blend-mode screen apply and background-color set as #ffffff = white background -->
+            <div class="blend-screen element-mask full-size">
+                <!-- This span display the masked element-->
+                <span id="circle" class="circle-follow moving">
+			        </span>
+            </div>
+        </div>
+    </div>
+    <div class="crosshair"></div>
 </section>
 
 
@@ -746,6 +800,37 @@
                 .triggerHook(0)
                 .addTo(controller);
 
+        //------skill game sniper mask stuff--------
+        /**let timer;
+        let mouseX = 0, mouseY = 0;
+        let xp = 0, yp =0;
+        let circle = $("#circle");
+
+        function mouseStopped(){
+            // if mouse stop moving remove class moving
+            // it will hide the circle with opacity transition
+            //circle.removeClass('moving');
+        }
+
+        $(document).mousemove(function(e){
+            // if mouse start moving add class moving
+            // it will show the circle with opacity transition
+            //circle.addClass('moving');
+            // get the mouse position minus 160px to center the circle
+            mouseX = e.clientX - 160;
+            mouseY = e.clientY - 160;
+            // if mouse stop moving clear timer and call mouseStopped function
+            clearTimeout(timer);
+            timer=setTimeout(mouseStopped,3000);
+        });
+
+        // set the momentum with setInterval function
+        let loop = setInterval(function(){
+            // change 12 to alter damping higher is slower
+            xp += ((mouseX - xp)/6);
+            yp += ((mouseY - yp)/6);
+            circle.css({left: xp +'px', top: yp +'px'});  //
+        }, 30);**/
     });
 
     //robo game code
@@ -913,37 +998,6 @@
         }
     }
 
-    let game = document.querySelector('#section6');
-    console.log('---' + game.getBoundingClientRect().y);
-
-    game.addEventListener('mousemove', (e) => {
-        let gun = document.querySelector('.gun');
-        let mouseX = (gun.getBoundingClientRect().left);
-        let mouseY = (gun.getBoundingClientRect().top);
-        let radianDegrees = Math.atan2(e.pageX - mouseX, (e.pageY - game.getBoundingClientRect().y) - mouseY);
-        let rotationDegrees = (radianDegrees * (180/ Math.PI) * -1) + 180;
-        console.log("deg: " + rotationDegrees +
-                "\nrad: " + radianDegrees +
-                "\nmousex: " + mouseX +
-                "\nmousey: " + mouseY +
-                "\nclientbounds: " + (gun.getBoundingClientRect().left) + "|" +  (gun.getBoundingClientRect().top) +
-                "\npagex: " + e.pageX +
-                "\npagey: " + e.pageY +
-                "\np-m" + (e.pageX - mouseX) + " " + (e.pageY - mouseY));
-        gun.style.transform = `rotate(${rotationDegrees}deg)`
-    });
-/**
-    let gun=$(".gun");
-    let boxCenter=[gun.offset().left + gun.width() / 2, gun.offset().top + gun.height() / 2];
-
-    $(document).mousemove(function(e){
-        let angle = Math.atan2(e.pageX - boxCenter[0],- (e.pageY - boxCenter[1]))*(180/Math.PI);
-
-        gun.css({ "-webkit-transform": 'rotate(' + angle + 'deg)'});
-        gun.css({ '-moz-transform': 'rotate(' + angle + 'deg)'});
-        gun.css({ 'transform': 'rotate(' + angle + 'deg)'});
-    });**/
-
     let video = document.getElementById('game_video');
     let speaker = document.getElementsByClassName('.speaker');
 
@@ -958,6 +1012,39 @@
         $(this).toggleClass('mute');
     }).addClass('mute');
 
+    let skillsSection = document.querySelector('#section6')
+    let skillsScene = document.querySelector('.scene5');
+    let crosshair = document.querySelector('.crosshair');
+    const RADIUS = 200;
+    const crosshairOffset = 4;
+    const sectionPageYOffset = 6660;
+
+    $(document).mousemove(function(e){
+        let x = e.pageX - crosshairOffset;
+        let y = (e.clientY - skillsSection.getBoundingClientRect().y) - crosshairOffset;
+
+        console.log(e.clientY + "   " + e.pageY + " skills: " + (skillsSection.getBoundingClientRect().y));
+
+        let circle = `circle(${RADIUS}px at ${x}px ${y}px)`;
+        //skillsScene.style['-webkit-clip-path'] = circle;
+        //skillsScene.style['clip-path'] = circle;
+
+        crosshair.style.top = y + 'px';
+        crosshair.style.left = x + 'px';
+    });
+
+    function highlightOn(){
+        //crosshair.style.backgroundColor = colors.cyan;
+        alert('sfsdf');
+    }
+
+    function highlightOff(){
+        //crosshair.style.backgroundColor = colors.red;
+    }
+
+    function shoot(e){
+        alert('bang');
+    }
 
 
 
@@ -994,36 +1081,4 @@
         }
     });
     */
-</script>
-
-<script type="text/babel">
-    React = require('react');
-    ReactDOM = require('react-dom');
-
-    let Bacon = React.createClass({
-        render: function () { //this function can only render one tag
-            return (
-                <div>
-                    <h3>This is a simple component</h3>
-                    <p>more text</p>
-                </div>
-            );
-        }
-    });
-
-     //injecting react class
-     ReactDOM.render(
-     <div>
-     <Bacon/>
-     <Bacon/>
-     <Bacon/>
-     </div>,
-     document.getElementById('.gun')
-     );
-
-     //directly injecting html
-     ReactDOM.render(
-     <h1>hi im hugh!</h1>,
-     document.getElementById('.gun')
-     );
 </script>

@@ -765,11 +765,47 @@
 @keyframes fly {
   0% {
     transition-timing-function: ease-in-out;
-    transform: translateX(0px);
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 200px);
+  }
+  20% {
+    transition-timing-function: ease-in-out;
+    transform: translate(200px, 200px);
+  }
+  30% {
+    transition-timing-function: ease-in-out;
+    transform: translate(200px, 400px);
+  }
+  40% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 400px);
   }
   50% {
     transition-timing-function: ease-in-out;
-    transform: translateX(-300px);
+    transform: translate(0px, 600px);
+  }
+  60% {
+    transition-timing-function: ease-in-out;
+    transform: translate(200px, 600px);
+  }
+  70% {
+    transition-timing-function: ease-in-out;
+    transform: translate(200px, 800px);
+  }
+  80% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 800px);
+  }
+  90% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 1000px);
+  }
+  100% {
+    transition-timing-function: ease-in-out;
+    transform: translate(0px, 1000px);
   }
 }
 
@@ -778,28 +814,169 @@
     transition-timing-function: ease-in-out;
     transform: rotate(0deg);
   }
-  8% {
+  10% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg);
+  }
+  12% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(15deg);
+  }
+  18% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(15deg);
+  }
+  20% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg);
+  }
+  30% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg);
+  }
+  32% {
     transition-timing-function: ease-in-out;
     transform: rotate(-15deg);
   }
-  42% {
+  38% {
     transition-timing-function: ease-in-out;
     transform: rotate(-15deg);
+  }
+  40% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg);
   }
   50% {
     transition-timing-function: ease-in-out;
     transform: rotate(0deg);
   }
+  52% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(15deg);
+  }
   58% {
     transition-timing-function: ease-in-out;
     transform: rotate(15deg);
   }
-  92% {
+  60% {
     transition-timing-function: ease-in-out;
-    transform: rotate(15deg);
+    transform: rotate(0deg);
+  }
+  70% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg);
+  }
+  72% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(-15deg);
+  }
+  78% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(-15deg);
+  }
+  80% {
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg);
   }
   100% {
     transition-timing-function: ease-in-out;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  13% {
+    transition-timing-function: ease-in;
+    transform: rotate(10deg);
+  }
+  17% {
+    transform: rotate(10deg);
+  }
+  22% {
+    transition-timing-function: linear;
+    transform: rotate(-14deg);
+  }
+  24% {
+    transition-timing-function: linear;
+    transform: rotate(9deg);
+  }
+  26% {
+    transition-timing-function: linear;
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transition-timing-function: ease-in;
+    transform: rotate(-10deg);
+  }
+  37% {
+    transform: rotate(-10deg);
+  }
+  42% {
+    transition-timing-function: linear;
+    transform: rotate(14deg);
+  }
+  44% {
+    transition-timing-function: linear;
+    transform: rotate(-9deg);
+  }
+  46% {
+    transition-timing-function: linear;
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  53% {
+    transition-timing-function: ease-in;
+    transform: rotate(10deg);
+  }
+  57% {
+    transform: rotate(10deg);
+  }
+  62% {
+    transition-timing-function: linear;
+    transform: rotate(-14deg);
+  }
+  64% {
+    transition-timing-function: linear;
+    transform: rotate(9deg);
+  }
+  66% {
+    transition-timing-function: linear;
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  73% {
+    transition-timing-function: ease-in;
+    transform: rotate(-10deg);
+  }
+  77% {
+    transform: rotate(-10deg);
+  }
+  82% {
+    transition-timing-function: linear;
+    transform: rotate(14deg);
+  }
+  84% {
+    transition-timing-function: linear;
+    transform: rotate(-9deg);
+  }
+  86% {
+    transition-timing-function: linear;
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(0deg);
   }
 }
