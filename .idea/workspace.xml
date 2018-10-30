@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b751d7e2-f7a1-414b-8907-73dc7a66c096" name="Default" comment="eliminate crap!">
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
+    <list default="true" id="b751d7e2-f7a1-414b-8907-73dc7a66c096" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/animations.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterDir="false" />
@@ -32,8 +29,8 @@
       <file leaf-file-name="index.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="452" column="52" lean-forward="true" selection-start-line="452" selection-start-column="52" selection-end-line="452" selection-end-column="52" />
+            <state relative-caret-position="243">
+              <caret line="1164" column="21" lean-forward="true" selection-start-line="1164" selection-start-column="21" selection-end-line="1164" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -42,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="158">
-              <caret line="1091" column="1" selection-start-line="1091" selection-start-column="1" selection-end-line="1091" selection-end-column="1" />
+              <caret line="1109" column="1" selection-start-line="1109" selection-start-column="1" selection-end-line="1109" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -77,8 +74,8 @@
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="1167" column="27" selection-start-line="1167" selection-start-column="27" selection-end-line="1167" selection-end-column="27" />
+            <state relative-caret-position="374">
+              <caret line="1442" lean-forward="true" selection-start-line="1442" selection-end-line="1442" />
             </state>
           </provider>
         </entry>
@@ -86,8 +83,8 @@
       <file leaf-file-name="animations.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/animations.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="924" column="29" lean-forward="true" selection-start-line="924" selection-start-column="29" selection-end-line="924" selection-end-column="29" />
+            <state relative-caret-position="158">
+              <caret line="697" column="12" selection-start-line="697" selection-start-column="12" selection-end-line="697" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -96,36 +93,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>moving</find>
-      <find>blend</find>
-      <find>circle</find>
-      <find>scene</find>
-      <find>section5</find>
-      <find>crosshair</find>
-      <find>clip</find>
-      <find>lean</find>
-      <find>section6</find>
-      <find>d1</find>
-      <find>border:</find>
-      <find>mouse</find>
-      <find>gun</find>
-      <find>back</find>
-      <find>scene5</find>
-      <find>dbody</find>
-      <find>drone</find>
-      <find>cross</find>
-      <find>button</find>
-      <find>section</find>
-      <find>skills</find>
-      <find>skill</find>
-      <find>highligh</find>
-      <find>highlight</find>
-      <find>shoot</find>
-      <find>default</find>
-      <find>clicky</find>
-      <find>high</find>
       <find>crossh</find>
       <find>highlightOn</find>
+      <find>skills</find>
+      <find>highlight</find>
+      <find>high</find>
+      <find>click</find>
+      <find>drop</find>
+      <find>cursor</find>
+      <find>cros</find>
+      <find>z-i</find>
+      <find>curso</find>
+      <find>anima</find>
+      <find>forwa</find>
+      <find>skill_</find>
+      <find>#</find>
+      <find>rock</find>
+      <find>ball</find>
+      <find>crossha</find>
+      <find>cross</find>
+      <find>audio</find>
+      <find>sectio</find>
+      <find>scene5</find>
+      <find>clip</find>
+      <find>shoot</find>
+      <find>shot</find>
+      <find>co</find>
+      <find>skill</find>
+      <find>d1</find>
+      <find>colour</find>
+      <find>drone</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -173,8 +170,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="700" />
-    <option name="width" value="1229" />
+    <option name="x" value="565" />
+    <option name="width" value="1365" />
     <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -412,14 +409,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540799235713</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="skills section 85% complete &#10;(needs kill anim, highlight, kill sound, shoot shake and more skills) optional: more detailed scope..">
+      <created>1540840998213</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1540840998213</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370001000" />
+    <option name="totallyTimeSpent" value="394086000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="467" y="0" width="819" height="687" extended-state="0" />
+    <frame x="377" y="0" width="910" height="687" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910554" weight="0.32480818" />
@@ -427,7 +431,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5009881" side_tool="true" weight="0.6123188" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49901184" weight="0.42210144" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.307971" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30671507" />
       <window_info id="npm" order="2" sideWeight="0.5008944" side_tool="true" weight="0.24960254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.38586956" />
@@ -505,7 +509,8 @@
     <MESSAGE value="game section 100%" />
     <MESSAGE value="clear out some shite!!" />
     <MESSAGE value="eliminate crap!" />
-    <option name="LAST_COMMIT_MESSAGE" value="eliminate crap!" />
+    <MESSAGE value="skills section 85% complete &#10;(needs kill anim, highlight, kill sound, shoot shake and more skills) optional: more detailed scope.." />
+    <option name="LAST_COMMIT_MESSAGE" value="skills section 85% complete &#10;(needs kill anim, highlight, kill sound, shoot shake and more skills) optional: more detailed scope.." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -865,31 +870,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/animations.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="924" column="29" lean-forward="true" selection-start-line="924" selection-start-column="29" selection-end-line="924" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
-          <caret line="1091" column="1" selection-start-line="1091" selection-start-column="1" selection-end-line="1091" selection-end-column="1" />
+          <caret line="1109" column="1" selection-start-line="1109" selection-start-column="1" selection-end-line="1109" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/animations.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="697" column="12" selection-start-line="697" selection-start-column="12" selection-end-line="697" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="1167" column="27" selection-start-line="1167" selection-start-column="27" selection-end-line="1167" selection-end-column="27" />
+        <state relative-caret-position="374">
+          <caret line="1442" lean-forward="true" selection-start-line="1442" selection-end-line="1442" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="452" column="52" lean-forward="true" selection-start-line="452" selection-start-column="52" selection-end-line="452" selection-end-column="52" />
+        <state relative-caret-position="243">
+          <caret line="1164" column="21" lean-forward="true" selection-start-line="1164" selection-start-column="21" selection-end-line="1164" selection-end-column="21" />
         </state>
       </provider>
     </entry>

@@ -117,6 +117,10 @@
 .click_me_anim {
   animation: bounce 1.5s 2.5s infinite; }
 
+.shot {
+  transform-origin: center center;
+  animation: shot .5s ease-in forwards; }
+
 /* ==KEYFRAMES== */
 @keyframes appear {
   to {
@@ -716,6 +720,18 @@
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translatey(0px) rotate(0deg) scale(1); } }
 
+@keyframes shot {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1; }
+  80% {
+    transition-timing-function: ease-in;
+    opacity: 1; }
+  100% {
+    transition-timing-function: ease-in;
+    transform: translateY(300px) rotate(311deg);
+    opacity: 0; } }
+
 @media only screen and (min-width: 500px) {
   /* For desktop: */
   .comingsoon {
@@ -811,7 +827,8 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 #section6 {
   overflow: hidden;
-  background-color: #000000;
+  background-image: url("../images/sniper_bg.png");
+  background-repeat: repeat;
   height: 800px;
   cursor: none; }
 
@@ -846,6 +863,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 .scene5 {
   height: 1000px;
   width: 100%;
+  clip-path: circle(200px);
   background-image: url("../images/skills_bg.png");
   background-position: center;
   -moz-background-size: cover;
@@ -1696,7 +1714,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   left: 50px;
   top: 200px;
   border-radius: 4px;
-  filter: brightness(300%); }
+  filter: brightness(300%);
+  pointer-events: none; }
 
 #canvas {
   width: 100%;
@@ -1717,60 +1736,191 @@ header, section, footer, aside, nav, article, hgroup, img {
   animation: fly 10s infinite; }
   .d1 .dbody {
     animation: lean 10s infinite; }
-  .d1 .skill_wrapper {
+  .d1 .rocking {
     animation: rock 10s infinite; }
-  .d1 .skill {
-    background-color: #e483b5; }
 
 .d2 {
   margin-left: 15px;
   animation: fly 10s infinite 1s; }
   .d2 .dbody {
     animation: lean 10s infinite 1s; }
-  .d2 .skill_wrapper {
+  .d2 .rocking {
     animation: rock 10s infinite 1s; }
-  .d2 .skill {
-    background-color: #8372e4; }
 
 .d3 {
   margin-left: 15px;
   animation: fly 10s infinite 2s; }
   .d3 .dbody {
     animation: lean 10s infinite 2s; }
-  .d3 .skill_wrapper {
+  .d3 .rocking {
     animation: rock 10s infinite 2s; }
-  .d3 .skill {
-    background-color: #5ee423; }
 
 .d4 {
-  margin-left: -383px;
-  animation: fly 10s infinite; }
+  margin-left: 15px;
+  animation: fly 10s infinite 3s; }
   .d4 .dbody {
-    animation: lean 10s infinite; }
-  .d4 .skill_wrapper {
-    animation: rock 10s infinite; }
-  .d4 .skill {
-    background-color: #e4a066; }
+    animation: lean 10s infinite 3s; }
+  .d4 .rocking {
+    animation: rock 10s infinite 3s; }
 
 .d5 {
-  margin-left: -383px;
-  animation: fly 10s infinite 1s; }
+  margin-left: 15px;
+  animation: fly 10s infinite 4s; }
   .d5 .dbody {
-    animation: lean 10s infinite 1s; }
-  .d5 .skill_wrapper {
-    animation: rock 10s infinite 1s; }
-  .d5 .skill {
-    background-color: #1edbb2; }
+    animation: lean 10s infinite 4s; }
+  .d5 .rocking {
+    animation: rock 10s infinite 4s; }
 
 .d6 {
+  margin-left: 15px;
+  animation: fly 10s infinite 5s; }
+  .d6 .dbody {
+    animation: lean 10s infinite 5s; }
+  .d6 .rocking {
+    animation: rock 10s infinite 5s; }
+
+.d7 {
+  margin-left: 15px;
+  animation: fly 10s infinite 6s; }
+  .d7 .dbody {
+    animation: lean 10s infinite 6s; }
+  .d7 .rocking {
+    animation: rock 10s infinite 6s; }
+
+.d8 {
+  margin-left: 15px;
+  animation: fly 10s infinite 7s; }
+  .d8 .dbody {
+    animation: lean 10s infinite 7s; }
+  .d8 .rocking {
+    animation: rock 10s infinite 7s; }
+
+.d9 {
+  margin-left: 15px;
+  animation: fly 10s infinite 8s; }
+  .d9 .dbody {
+    animation: lean 10s infinite 8s; }
+  .d9 .rocking {
+    animation: rock 10s infinite 8s; }
+
+.d10 {
+  margin-left: 15px;
+  animation: fly 10s infinite 9s; }
+  .d10 .dbody {
+    animation: lean 10s infinite 9s; }
+  .d10 .rocking {
+    animation: rock 10s infinite 9s; }
+
+.d11 {
+  margin-left: -383px;
+  animation: fly 10s infinite; }
+  .d11 .dbody {
+    animation: lean 10s infinite; }
+  .d11 .rocking {
+    animation: rock 10s infinite; }
+
+.d12 {
+  margin-left: -383px;
+  animation: fly 10s infinite 1s; }
+  .d12 .dbody {
+    animation: lean 10s infinite 1s; }
+  .d12 .rocking {
+    animation: rock 10s infinite 1s; }
+
+.d13 {
   margin-left: -383px;
   animation: fly 10s infinite 2s; }
-  .d6 .dbody {
+  .d13 .dbody {
     animation: lean 10s infinite 2s; }
-  .d6 .skill_wrapper {
+  .d13 .rocking {
     animation: rock 10s infinite 2s; }
-  .d6 .skill {
-    background-color: #e47330; }
+
+.d14 {
+  margin-left: -383px;
+  animation: fly 10s infinite 3s; }
+  .d14 .dbody {
+    animation: lean 10s infinite 3s; }
+  .d14 .rocking {
+    animation: rock 10s infinite 3s; }
+
+.d15 {
+  margin-left: -383px;
+  animation: fly 10s infinite 4s; }
+  .d15 .dbody {
+    animation: lean 10s infinite 4s; }
+  .d15 .rocking {
+    animation: rock 10s infinite 4s; }
+
+.d16 {
+  margin-left: -383px;
+  animation: fly 10s infinite 5s; }
+  .d16 .dbody {
+    animation: lean 10s infinite 5s; }
+  .d16 .rocking {
+    animation: rock 10s infinite 5s; }
+
+.d17 {
+  margin-left: -383px;
+  animation: fly 10s infinite 6s; }
+  .d17 .dbody {
+    animation: lean 10s infinite 6s; }
+  .d17 .rocking {
+    animation: rock 10s infinite 6s; }
+
+.d18 {
+  margin-left: -383px;
+  animation: fly 10s infinite 7s; }
+  .d18 .dbody {
+    animation: lean 10s infinite 7s; }
+  .d18 .rocking {
+    animation: rock 10s infinite 7s; }
+
+.d19 {
+  margin-left: -383px;
+  animation: fly 10s infinite 8s; }
+  .d19 .dbody {
+    animation: lean 10s infinite 8s; }
+  .d19 .rocking {
+    animation: rock 10s infinite 8s; }
+
+.d20 {
+  margin-left: -383px;
+  animation: fly 10s infinite 9s; }
+  .d20 .dbody {
+    animation: lean 10s infinite 9s; }
+  .d20 .rocking {
+    animation: rock 10s infinite 9s; }
+
+/** ==SKILL COLOURS== **/
+.colour1 {
+  background-color: #a992e4; }
+
+.colour2 {
+  background-color: #e4593a; }
+
+.colour3 {
+  background-color: #1edbb2; }
+
+.colour4 {
+  background-color: #e4b82f; }
+
+.colour5 {
+  background-color: #5ee423; }
+
+.colour6 {
+  background-color: #e48d66; }
+
+.colour7 {
+  background-color: #5bc3e4; }
+
+.colour8 {
+  background-color: #655de4; }
+
+.colour9 {
+  background-color: #a7db48; }
+
+.colour10 {
+  background-color: #000000; }
 
 .dbody {
   background-image: url("../images/dbody.png");
@@ -1816,74 +1966,14 @@ header, section, footer, aside, nav, article, hgroup, img {
   padding: 6px;
   font-size: 16px;
   font-family: "Ariel", sans-serif;
-  color: #f1f1f1; }
-
-/** ==SKILLS MASK STUFF== **/
-.full-size {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.blend-multiply {
-  mix-blend-mode: multiply; }
-
-.blend-screen {
-  mix-blend-mode: screen; }
-
-.animated-bg {
-  background-image: url("http://hmongouachon.com/assets/gif/timelapse.gif");
-  background-position: center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover; }
-
-.element-mask {
-  background-color: #fff; }
-
-.circle-follow {
-  position: absolute;
-  overflow: hidden;
-  background-color: black;
-  width: 480px;
-  height: 480px;
-  top: 50%;
-  left: 50%;
-  -webkit-border-radius: 240px;
-  border-radius: 240px;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
-  transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
-  opacity: 1; }
-
-.circle-follow::before {
-  content: ' ';
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.circle-follow.moving {
-  opacity: 0; }
-
-/* hack to detect ie11 and above - blend mode not supported */
-_:-ms-fullscreen, :root .letter-mask {
-  background-color: transparent; }
-
-_:-ms-fullscreen, :root .animated-bg {
-  opacity: 0.2; }
-
-_:-ms-fullscreen, :root .circle-follow {
-  background-color: #ffffff;
-  opacity: 0.2; }
+  color: #f1f1f1;
+  user-select: none; }
 
 /** ==XBOX GAME STUFF==**/
 #game_video {
   width: 800px;
   height: 450px;
-  border-radius: 8px; }
+  border-radius: 4px; }
 
 .video_wrapper {
   position: absolute;

@@ -162,6 +162,11 @@
   animation: bounce 1.5s 2.5s infinite;
 }
 
+.shot{
+  transform-origin: center center;
+  animation: shot .5s ease-in forwards;
+}
+
 /* ==KEYFRAMES== */
 
 @keyframes appear{
@@ -1001,5 +1006,21 @@
   100% {
     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
     transform: translatey(0px) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes shot {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    transition-timing-function: ease-in;
+    opacity: 1;
+  }
+  100% {
+    transition-timing-function: ease-in;
+    transform: translateY(300px) rotate(311deg);
+    opacity: 0;
   }
 }
