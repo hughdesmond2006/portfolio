@@ -732,6 +732,9 @@
     transform: translateY(300px) rotate(311deg);
     opacity: 0; } }
 
+.font_black {
+  color: #000000; }
+
 @media only screen and (min-width: 500px) {
   /* For desktop: */
   .comingsoon {
@@ -813,17 +816,22 @@ header, section, footer, aside, nav, article, hgroup, img {
   color: #ddd; }
 
 #section2 {
-  overflow: hidden; }
-
-#section3 {
-  overflow: hidden; }
+  display: block;
+  height: 1300px;
+  padding-top: 50px;
+  background-image: linear-gradient(135deg, #404040, #111111); }
 
 #section4 {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: linear-gradient(135deg, #6670b4, #454f8d); }
 
 #section5 {
+  height: 1200px;
   overflow: hidden;
-  background-color: #88e7b0; }
+  display: block;
+  background-color: #ffffff; }
 
 #section6 {
   overflow: hidden;
@@ -836,11 +844,22 @@ header, section, footer, aside, nav, article, hgroup, img {
   overflow: hidden;
   background-color: #d19bfd; }
 
+#section8 {
+  overflow: hidden; }
+
 .scene1 {
-  position: relative; }
+  display: block;
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden; }
 
 .scene2 {
-  position: relative; }
+  display: block;
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden; }
 
 .scene3 {
   position: absolute;
@@ -852,13 +871,13 @@ header, section, footer, aside, nav, article, hgroup, img {
   margin-left: -400px; }
 
 .scene4 {
-  height: 200px;
+  height: 620px;
   width: 640px;
-  position: absolute;
+  position: relative;
   left: 50%;
-  top: 50%;
+  top: 0;
   margin-left: -320px;
-  margin-top: -200px; }
+  margin-top: 140px; }
 
 .scene5 {
   height: 1000px;
@@ -894,6 +913,22 @@ header, section, footer, aside, nav, article, hgroup, img {
   top: 428px;
   color: #e49b2e; }
 
+#I {
+  top: 0; }
+
+#worked {
+  top: 73px; }
+
+#on {
+  top: 143px; }
+
+#a {
+  top: 214px; }
+
+#sales {
+  top: 288px;
+  color: #4DBA5A; }
+
 #controller {
   position: absolute;
   background-repeat: no-repeat;
@@ -913,17 +948,18 @@ header, section, footer, aside, nav, article, hgroup, img {
   display: table;
   width: 100%;
   height: 100%;
-  border-spacing: 2px; }
+  border-spacing: 2px;
+  padding: 1px; }
 
 .tr {
   display: table-row; }
 
 .td {
-  background: #ae9a96;
+  background: #8D97D2;
   display: table-cell; }
 
 .rack {
-  background: #855555; }
+  background: #6876c4; }
 
 #ball {
   position: absolute;
@@ -945,7 +981,10 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .tracks {
   position: absolute;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQYV2PMtrX9z8DAwKCppweiGBhJFwAAb3sJqY9jJiAAAAAASUVORK5CYII=) repeat;
+  background: #ac5a69;
+  /**background:url(
+  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQYV2PMtrX9z8DAwKCppweiGBhJFwAAb3sJqY9jJiAAAAAASUVORK5CYII=
+  ) repeat;**/
   border-radius: 6px;
   width: 30px;
   height: 50px;
@@ -956,7 +995,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .chassis {
   position: absolute;
-  background: #d7ca8f;
+  background: #ffe9b2;
   border-radius: 6px;
   left: 50%;
   top: 50%;
@@ -973,7 +1012,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .stem {
   position: absolute;
-  background: #000000;
+  background: #333333;
   border-radius: 2px;
   left: 50%;
   top: 50%;
@@ -983,7 +1022,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .finger {
   position: absolute;
-  background: #000000;
+  background: #333333;
   border-radius: 2px;
   top: 50%;
   height: 2px;
@@ -1051,7 +1090,7 @@ header, section, footer, aside, nav, article, hgroup, img {
     margin-left: -100%;
     margin-top: -100%;
     border-radius: 100%;
-    background-color: #e90700;
+    background-color: #ffffff;
     animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
   #pulsating-circle:after {
     content: '';
@@ -1061,7 +1100,7 @@ header, section, footer, aside, nav, article, hgroup, img {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #ff1205;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 100%;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite; }
@@ -1078,13 +1117,13 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .pad {
   position: absolute;
-  background: #d7ca8f;
+  background: #ffe9b2;
   width: 480px;
   height: 240px;
   border-radius: 16px;
   bottom: 0px;
   left: 3px;
-  box-shadow: 10px 10px #978a55;
+  box-shadow: 10px 10px #ffda7f;
   transform: scale(0);
   cursor: pointer; }
 
@@ -1099,16 +1138,16 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .arrow {
   position: absolute;
-  background: #855555;
+  background: #ac5a69;
   border-radius: 8px;
   width: 50px;
   height: 50px;
   margin: 4px;
   transform: scale(0);
-  box-shadow: 3px -3px #653e3e; }
+  box-shadow: 3px -3px #8c4753; }
 
 .clicky:hover {
-  filter: brightness(130%); }
+  filter: brightness(120%); }
 
 .highlight {
   filter: brightness(300%); }
@@ -1144,14 +1183,14 @@ header, section, footer, aside, nav, article, hgroup, img {
   transform: scale(0); }
 
 .button#left {
-  background: #2e9a42;
+  background: #45d739;
   left: 14px;
-  box-shadow: 3px 0px #217a2d; }
+  box-shadow: 3px 0px #30b825; }
 
 .button#right {
-  background: #c08431;
+  background: #ef9d35;
   right: 14px;
-  box-shadow: 3px 0px #976525; }
+  box-shadow: 3px 0px #df8512; }
 
 .slider_wrapper {
   position: relative;
@@ -1162,7 +1201,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .slider_wrapper .line {
   position: absolute;
-  background: #653e3e;
+  background: #ac5a69;
   border-radius: 1px;
   width: 180px;
   height: 4px;
@@ -1173,13 +1212,13 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .slider_wrapper .knob {
   position: absolute;
-  background: #855555;
+  background: #ac5a69;
   border-radius: 2px;
   width: 28px;
   height: 60px;
   left: 0;
   cursor: grab;
-  box-shadow: 3px 0px #653e3e;
+  box-shadow: 3px 0px #8c4753;
   transform: scale(0); }
 
 .aerial_wrapper {
@@ -1193,7 +1232,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   transform-origin: bottom; }
 
 .aerial_wrapper .stump {
-  background: #855555;
+  background: #ac5a69;
   position: absolute;
   border-radius: 100%;
   width: 60px;
@@ -1623,7 +1662,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   left: 50%;
   top: 50%;
   margin-left: -430px;
-  margin-top: -275px;
+  margin-top: -120px;
   background: black;
   border-radius: 36px;
   overflow: hidden;

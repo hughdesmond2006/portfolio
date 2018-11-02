@@ -1,7 +1,18 @@
 @import "animations";
 
-//$trim1: #58abd2;
 $trim1: #e49b2e;
+
+//robot section colours
+$robot_bg: #515CA5;
+$tile_trim: #8D97D2;
+$pad_trim1: #ffe9b2;
+$pad_trim2: #ac5a69;
+$button_left: #45d739;
+$button_right: #ef9d35;
+
+.font_black{
+  color: #000000;
+}
 
 //mobile site coming soon.. normal site is 960px
 @media only screen and (min-width:500px) {
@@ -100,20 +111,26 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #section2{
-  overflow: hidden;
-}
-
-#section3{
-  overflow: hidden;
+  display:block;
+  height: 1300px;
+  padding-top: 50px;
+  //overflow: hidden;
+  background-image: linear-gradient(135deg, #404040, #111111);
 }
 
 #section4{
   overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  //background-color: $robot_bg;
+  background-image: linear-gradient(135deg, lighten($robot_bg, 7%), darken($robot_bg, 7%));
 }
 
 #section5{
+  height: 1200px;
   overflow: hidden;
-  background-color: #88e7b0;
+  display: block;
+  background-color: #ffffff;
 }
 
 #section6{
@@ -129,12 +146,27 @@ header,section,footer,aside,nav,article,hgroup,img{
   background-color: #d19bfd;
 }
 
+#section8{
+  overflow: hidden;
+}
+
 .scene1{
+  display: block;
   position: relative;
+  height: 600px;
+  width: 100%;
+  //margin-top: 100px;
+  overflow: hidden;
+  //border: 1px solid red;
 }
 
 .scene2{
+  display: block;
   position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  //border: 1px solid blue;
 }
 
 .scene3{
@@ -148,13 +180,14 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .scene4{
-  height: 200px;
+  height: 620px;
   width: 640px;
-  position: absolute;
+  position: relative;
   left: 50%;
-  top: 50%;
+  top: 0;
   margin-left: -320px;
-  margin-top: -200px;
+  margin-top: 140px;
+  //border: 1px solid red;
 }
 
 .scene5{
@@ -199,6 +232,27 @@ header,section,footer,aside,nav,article,hgroup,img{
   color: $trim1;
 }
 
+#I{
+  top: 0;
+}
+
+#worked{
+  top: 73px;
+}
+
+#on{
+  top: 143px;
+}
+
+#a{
+  top: 214px;
+}
+
+#sales{
+  top: 288px;
+  color: #4DBA5A;
+}
+
 #controller{
   position: absolute;
   background-repeat: no-repeat;
@@ -216,26 +270,29 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 //css tables
- #table{
-   position: absolute;
-   display: table;
-   width: 100%;
-   height: 100%;
-   border-spacing: 2px
- }
+#table{
+ position: absolute;
+ display: table;
+ width: 100%;
+ height: 100%;
+ border-spacing: 2px;
+  padding: 1px;
+  //background:  darken($tile_trim, 20%);
+}
 
 .tr{
   display: table-row;
 }
 
 .td{
-  background: #ae9a96;
+  //background: #ae9a96;
+  background:  $tile_trim;
   display: table-cell;
   //animation:grow 1s .15s 1 ease forwards;
 }
 
 .rack{
-  background: #855555;
+  background: darken($tile_trim, 10%);
 }
 
 #ball{
@@ -260,11 +317,11 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .tracks{
   position: absolute;
-  //background: #855555;
+  background: $pad_trim2;
   //background: rgba(132, 133, 52, 0.38);
-  background:url(
+  /**background:url(
   data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQYV2PMtrX9z8DAwKCppweiGBhJFwAAb3sJqY9jJiAAAAAASUVORK5CYII=
-  ) repeat;
+  ) repeat;**/
   border-radius: 6px;
   width: 30px;
   height: 50px;
@@ -276,7 +333,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .chassis{
   position: absolute;
-  background: #d7ca8f;
+  background: $pad_trim1;
   border-radius: 6px;
   left: 50%;
   top: 50%;
@@ -295,7 +352,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .stem{
   position: absolute;
-  background: #000000;
+  background: #333333;
   border-radius: 2px;
   left: 50%;
   top: 50%;
@@ -307,7 +364,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .finger{
   position: absolute;
-  background: #000000;
+  background: #333333;
   border-radius: 2px;
   top: 50%;
   height: 2px;
@@ -386,7 +443,7 @@ header,section,footer,aside,nav,article,hgroup,img{
     margin-left: -100%;
     margin-top: -100%;
     border-radius: 100%;
-    background-color: #e90700;
+    background-color: #ffffff;
     animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
   }
 
@@ -398,7 +455,7 @@ header,section,footer,aside,nav,article,hgroup,img{
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #ff1205;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 100%;
     box-shadow: 0 0 8px rgba(0,0,0,.3);
     animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
@@ -419,15 +476,14 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .pad{
   position: absolute;
-  //background: #959595;
-  background: #d7ca8f;
+  background: $pad_trim1;
   //background: #a67272;
   width: 480px;
   height: 240px;
   border-radius: 16px;
   bottom: 0px;
   left: 3px;
-  box-shadow: 10px 10px #978a55;
+  box-shadow: 10px 10px darken($pad_trim1, 10%);
   transform: scale(0);   //start off hidden
   cursor: pointer;
 }
@@ -445,17 +501,17 @@ header,section,footer,aside,nav,article,hgroup,img{
 .arrow{
   position: absolute;
   //background: #555555;
-  background: #855555;
+  background: $pad_trim2;
   border-radius: 8px;
   width: 50px;
   height: 50px;
   margin: 4px;
   transform: scale(0);   //start off hidden
-  box-shadow: 3px -3px #653e3e;
+  box-shadow: 3px -3px darken($pad_trim2, 10%);
 }
 
 .clicky:hover{
-  filter: brightness(130%);
+  filter: brightness(120%);
 }
 
 .highlight{
@@ -499,15 +555,15 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .button#left{
-  background: #2e9a42;
+  background: $button_left;
   left: 14px;
-  box-shadow: 3px 0px #217a2d;
+  box-shadow: 3px 0px darken($button_left, 10%);
 }
 
 .button#right{
-  background: #c08431;
+  background: $button_right;
   right: 14px;
-  box-shadow: 3px 0px #976525;
+  box-shadow: 3px 0px darken($button_right, 10%);
 }
 
 .slider_wrapper{
@@ -520,7 +576,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .slider_wrapper .line{
   position: absolute;
-  background: #653e3e;
+  background: $pad_trim2;
   border-radius: 1px;
   width: 180px;
   height: 4px;
@@ -532,13 +588,13 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .slider_wrapper .knob{
   position: absolute;
-  background: #855555;
+  background: $pad_trim2;
   border-radius: 2px;
   width: 28px;
   height: 60px;
   left: 0;
   cursor: grab;
-  box-shadow: 3px 0px #653e3e;
+  box-shadow: 3px 0px darken($pad_trim2, 10%);
   transform: scale(0);   //start off hidden
 }
 
@@ -554,7 +610,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .aerial_wrapper .stump{
-  background: #855555;
+  background: $pad_trim2;
   position: absolute;
   border-radius: 100%;
   width: 60px;
@@ -1063,7 +1119,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 50%;
   top: 50%;
   margin-left: -430px;
-  margin-top: -275px;
+  margin-top: -120px;
   background: black;
   border-radius: 36px;
   overflow: hidden;
