@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b751d7e2-f7a1-414b-8907-73dc7a66c096" name="Default" comment="">
+    <list default="true" id="b751d7e2-f7a1-414b-8907-73dc7a66c096" name="Default" comment="colors, text and spacing 30% complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/animations.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.scss" afterDir="false" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="index.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="1164" column="21" lean-forward="true" selection-start-line="1164" selection-start-column="21" selection-end-line="1164" selection-end-column="21" />
+            <state relative-caret-position="226">
+              <caret line="732" column="44" lean-forward="true" selection-start-line="732" selection-start-column="44" selection-end-line="732" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -38,8 +37,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="1109" column="1" selection-start-line="1109" selection-start-column="1" selection-end-line="1109" selection-end-column="1" />
+            <state relative-caret-position="175">
+              <caret line="1196" column="1" selection-start-line="1196" selection-start-column="1" selection-end-line="1196" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -74,8 +73,8 @@
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="1442" lean-forward="true" selection-start-line="1442" selection-end-line="1442" />
+            <state relative-caret-position="311">
+              <caret line="292" column="9" selection-start-line="292" selection-start-column="9" selection-end-line="292" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -93,36 +92,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>crossh</find>
-      <find>highlightOn</find>
-      <find>skills</find>
-      <find>highlight</find>
-      <find>high</find>
-      <find>click</find>
-      <find>drop</find>
-      <find>cursor</find>
-      <find>cros</find>
-      <find>z-i</find>
-      <find>curso</find>
-      <find>anima</find>
-      <find>forwa</find>
+      <find>big_h</find>
+      <find>slidesh</find>
+      <find>slide</find>
+      <find>pad</find>
+      <find>swipe</find>
+      <find>sales</find>
+      <find>controll</find>
+      <find>worked</find>
+      <find>sect</find>
+      <find>warehou</find>
+      <find>wareh</find>
+      <find>border:</find>
+      <find>warehouse</find>
+      <find>section5</find>
+      <find>robo</find>
+      <find>scene</find>
+      <find>scene4</find>
+      <find>game</find>
+      <find>scene6</find>
+      <find>video_wr</find>
+      <find>univ</find>
+      <find>your</find>
+      <find>section</find>
       <find>skill_</find>
-      <find>#</find>
-      <find>rock</find>
-      <find>ball</find>
-      <find>crossha</find>
-      <find>cross</find>
-      <find>audio</find>
-      <find>sectio</find>
-      <find>scene5</find>
-      <find>clip</find>
-      <find>shoot</find>
-      <find>shot</find>
-      <find>co</find>
+      <find>section6</find>
+      <find>url</find>
+      <find>test</find>
+      <find>skills</find>
       <find>skill</find>
-      <find>d1</find>
-      <find>colour</find>
-      <find>drone</find>
+      <find>pin</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -170,7 +169,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="565" />
+    <option name="x" value="571" />
+    <option name="y" value="3" />
     <option name="width" value="1365" />
     <option name="height" value="1031" />
   </component>
@@ -416,14 +416,28 @@
       <option name="project" value="LOCAL" />
       <updated>1540840998213</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="skills section 100% complete">
+      <created>1540924443058</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1540924443058</updated>
+    </task>
+    <task id="LOCAL-00022" summary="colors, text and spacing 30% complete">
+      <created>1541192346644</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1541192346644</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394086000" />
+    <option name="totallyTimeSpent" value="432668000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="377" y="0" width="910" height="687" extended-state="0" />
+    <frame x="381" y="2" width="910" height="687" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910554" weight="0.32480818" />
@@ -510,7 +524,9 @@
     <MESSAGE value="clear out some shite!!" />
     <MESSAGE value="eliminate crap!" />
     <MESSAGE value="skills section 85% complete &#10;(needs kill anim, highlight, kill sound, shoot shake and more skills) optional: more detailed scope.." />
-    <option name="LAST_COMMIT_MESSAGE" value="skills section 85% complete &#10;(needs kill anim, highlight, kill sound, shoot shake and more skills) optional: more detailed scope.." />
+    <MESSAGE value="skills section 100% complete" />
+    <MESSAGE value="colors, text and spacing 30% complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="colors, text and spacing 30% complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -870,13 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="1109" column="1" selection-start-line="1109" selection-start-column="1" selection-end-line="1109" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/animations.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -884,17 +893,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="1196" column="1" selection-start-line="1196" selection-start-column="1" selection-end-line="1196" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="1442" lean-forward="true" selection-start-line="1442" selection-end-line="1442" />
+        <state relative-caret-position="311">
+          <caret line="292" column="9" selection-start-line="292" selection-start-column="9" selection-end-line="292" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="1164" column="21" lean-forward="true" selection-start-line="1164" selection-start-column="21" selection-end-line="1164" selection-end-column="21" />
+        <state relative-caret-position="226">
+          <caret line="732" column="44" lean-forward="true" selection-start-line="732" selection-start-column="44" selection-end-line="732" selection-end-column="44" />
         </state>
       </provider>
     </entry>

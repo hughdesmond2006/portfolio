@@ -805,15 +805,14 @@ header, section, footer, aside, nav, article, hgroup, img {
 .section {
   position: relative;
   width: 100%;
-  height: 100%; }
-
-.section-light {
-  background-color: #bfdef4;
-  color: #666; }
+  color: #e1e1e1; }
 
 .section-dark {
-  background-color: #282e34;
-  color: #ddd; }
+  background-color: #282e34; }
+
+#section1 {
+  background-image: linear-gradient(225deg, #a0e9a5, #4ed557);
+  height: 100%; }
 
 #section2 {
   display: block;
@@ -822,10 +821,10 @@ header, section, footer, aside, nav, article, hgroup, img {
   background-image: linear-gradient(135deg, #404040, #111111); }
 
 #section4 {
-  overflow: hidden;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-image: linear-gradient(135deg, #6670b4, #454f8d); }
+  display: block;
+  padding-top: 150px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(135deg, #6973b6, #444d8a); }
 
 #section5 {
   height: 1200px;
@@ -841,10 +840,13 @@ header, section, footer, aside, nav, article, hgroup, img {
   cursor: none; }
 
 #section7 {
-  overflow: hidden;
-  background-color: #d19bfd; }
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #FFDF6A; }
 
 #section8 {
+  background-image: linear-gradient(135deg, #a1e3e6, #61d0d4);
+  height: 100%;
   overflow: hidden; }
 
 .scene1 {
@@ -862,12 +864,10 @@ header, section, footer, aside, nav, article, hgroup, img {
   overflow: hidden; }
 
 .scene3 {
-  position: absolute;
+  position: relative;
   width: 800px;
-  height: 436px;
-  top: 50%;
+  height: 800px;
   left: 50%;
-  margin-top: -216px;
   margin-left: -400px; }
 
 .scene4 {
@@ -880,6 +880,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   margin-top: 140px; }
 
 .scene5 {
+  position: relative;
   height: 1000px;
   width: 100%;
   clip-path: circle(200px);
@@ -891,7 +892,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   background-size: cover; }
 
 .scene6 {
-  height: 100%;
+  position: relative;
+  height: 820px;
   width: 100%; }
 
 .big_heading {
@@ -929,6 +931,51 @@ header, section, footer, aside, nav, article, hgroup, img {
   top: 288px;
   color: #4DBA5A; }
 
+#tested {
+  top: 70px; }
+
+#ware {
+  top: 143px; }
+
+#robotics {
+  top: 217px;
+  color: #FFDF6A; }
+
+#created {
+  top: 72px; }
+
+#a2 {
+  top: 145px; }
+
+#game {
+  top: 217px;
+  color: #941cd2; }
+
+#test {
+  top: 0px; }
+
+#your {
+  top: 73px; }
+
+#skills {
+  top: 173px;
+  color: #3b38c7; }
+
+#against {
+  top: 246px; }
+
+#mine {
+  top: 320px;
+  color: #49cad0; }
+
+.skill_text_wrapper {
+  height: 450px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -225px; }
+
 #controller {
   position: absolute;
   background-repeat: no-repeat;
@@ -939,6 +986,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 #warehouse {
   position: absolute;
   right: 20px;
+  bottom: 0px;
   margin-left: -216px;
   width: 436px;
   height: 436px; }
@@ -995,7 +1043,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .chassis {
   position: absolute;
-  background: #ffe9b2;
+  background: #ffefbe;
   border-radius: 6px;
   left: 50%;
   top: 50%;
@@ -1117,13 +1165,13 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .pad {
   position: absolute;
-  background: #ffe9b2;
+  background: #ffefbe;
   width: 480px;
   height: 240px;
   border-radius: 16px;
   bottom: 0px;
   left: 3px;
-  box-shadow: 10px 10px #ffda7f;
+  box-shadow: 10px 10px #ffd658;
   transform: scale(0);
   cursor: pointer; }
 
@@ -1740,7 +1788,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   left: 50%;
   top: 50%;
   margin-left: -145px;
-  margin-top: 50px;
+  margin-top: 200px;
   transform: rotate(-20deg);
   opacity: 0; }
 
@@ -1755,10 +1803,6 @@ header, section, footer, aside, nav, article, hgroup, img {
   border-radius: 4px;
   filter: brightness(300%);
   pointer-events: none; }
-
-#canvas {
-  width: 100%;
-  height: 100%; }
 
 .drone {
   display: table;
@@ -2019,9 +2063,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   width: 800px;
   height: 450px;
   margin-left: -300px;
-  margin-top: -225px;
   left: 50%;
-  top: 50%; }
+  bottom: 0; }
 
 .game_cover {
   background-image: url("../images/xbox_cover.png");

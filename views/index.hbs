@@ -4,13 +4,13 @@
     </div>
 </div>
 
-<div class="pimg1">
+<!--<div class="pimg1">
     <div class="ptext">
         <span class="border">
             Hugh Desmond
         </span>
     </div>
-</div>
+</div>-->
 
 
 <!-- data-aos="flip-right"
@@ -19,7 +19,7 @@
          data-aos-easing="ease-in-out"
          data-aos-anchor-placement="top-bottom"
          data-aos-offset="200"-->
-<section class="section section-light">
+<section class="section section-light" id="section1">
     <div id="hugh1" >
         <div class="body">
             <div class="head_container">
@@ -241,11 +241,13 @@
 
 <section id="section5" class="section">
     <div class="scene4">
-        <div class="big_heading font_black" id="I">I</div>
-        <div class="big_heading font_black" id="worked">Worked</div>
-        <div class="big_heading font_black" id="on">on</div>
-        <div class="big_heading font_black" id="a">a</div>
-        <div class="big_heading font_black" id="sales">Sales App</div>
+        <div class="sales_text_wrapper">
+            <div class="big_heading font_black" id="I">I</div>
+            <div class="big_heading font_black" id="worked">Worked</div>
+            <div class="big_heading font_black" id="on">on</div>
+            <div class="big_heading font_black" id="a">a</div>
+            <div class="big_heading font_black" id="sales">Sales App</div>
+        </div>
         <div id="lemonade_stand"></div>
         <div id="jim" >
             <div class="body">
@@ -299,6 +301,10 @@
 
 <section id="section4" class="section section-dark">
     <div class="scene3">
+        <div class="big_heading" id="I">I</div>
+        <div class="big_heading font_black" id="ware">Warehouse</div>
+        <div class="big_heading" id="tested">Tested</div>
+        <div class="big_heading font_black" id="robotics">Robotics</div>
         <div id="warehouse">
             <div id="table">
                 <div class="tr">
@@ -419,7 +425,32 @@
     </div>
 </section>
 
+<section id="section7" class="section">
+    <div class="scene6">
+        <div class="big_heading font_black" id="I">I</div>
+        <div class="big_heading font_black" id="created">Created</div>
+        <div class="big_heading font_black" id="a2">a</div>
+        <div class="big_heading font_black" id="game">Game</div>
+        <div class="video_wrapper">
+            <video id="game_video" muted autoplay loop>
+                <source src="../images/trailer1.mp4">
+            </video>
+            <a href="#" class="speaker">
+                <span></span>
+            </a>
+            <div class="game_cover"></div>
+        </div>
+    </div>
+</section>
+
 <section id="section6" class="section" onmousedown="fire()">
+    <div class="skill_text_wrapper">
+        <div class="big_heading" id="test">Test</div>
+        <div class="big_heading" id="your">your</div>
+        <div class="big_heading" id="against">against</div>
+        <div class="big_heading" id="skills">Skills</div>
+        <div class="big_heading" id="mine">Mine</div>
+    </div>
     <div class="scene5">
         <div class="drone d1">
             <div class="skill_wrapper rocking">
@@ -626,20 +657,6 @@
     <audio id="audio" src="../images/gun_shot.mp3"></audio>
 </section>
 
-<section id="section7" class="section">
-    <div class="scene6">
-        <div class="video_wrapper">
-            <video id="game_video" muted autoplay loop>
-                <source src="../images/trailer1.mp4">
-            </video>
-            <a href="#" class="speaker">
-                <span></span>
-            </a>
-            <div class="game_cover"></div>
-        </div>
-    </div>
-</section>
-
 <!--<div class="pimg3">
     <div class="ptext">
         <span class="border">
@@ -679,13 +696,13 @@
     </div>
 </section>
 
-<div class="pimg1">
+<!--<div class="pimg1">
     <div class="ptext">
         <span class="border">
             Hugh Desmond
         </span>
     </div>
-</div>
+</div>-->
 
 
 
@@ -698,8 +715,30 @@
         TweenMax.to("#slideshow", 0, {opacity: 1});
         let tabletAnim = TweenMax.from("#slideshow", 1.2, {opacity: 1, scaleX: .07, scaleY: .085, skewX: 20, x:14, y: -82, ease:Power1.easeOut}, 1);
 
-        new ScrollMagic.Scene({triggerElement: "#slideshow", offset: 0})
+        new ScrollMagic.Scene({triggerElement: "#section5",offset: 750})
                 .setTween(tabletAnim)
+                .addTo(controller);
+
+        //fade out sales text
+        let textFadeAnim = TweenMax.to(".sales_text_wrapper", .4, {opacity: 0});
+
+        new ScrollMagic.Scene({triggerElement: "#section5", offset: 750})
+                .setTween(textFadeAnim)
+                .addTo(controller);
+
+        //fade out skills text
+        let skillTextFadeAnim = TweenMax.to(".skill_text_wrapper", .4, {opacity: 0});
+
+        new ScrollMagic.Scene({triggerElement: "#section6", offset: 100})
+                .setTween(skillTextFadeAnim)
+                .triggerHook(0)
+                .addTo(controller);
+
+        //pin section6
+        new ScrollMagic.Scene({triggerElement: "#section6",offset: 100, duration: 150})
+                .setPin("#section6")
+                //.addIndicators()
+                .triggerHook(0)
                 .addTo(controller);
 
         //build skate jump tween
@@ -756,7 +795,7 @@
 
         //set trigger for robot section grows
         const roboTrigger = "#section4";
-        const offsetValue = 200;
+        const offsetValue = 500;
 
         new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
                 .setClassToggle(".pad","grow_pad")
@@ -871,11 +910,11 @@
                 .addTo(controller);
 
         //pin section5 until slideshow ends
-        /**new ScrollMagic.Scene({triggerElement: "#section5", duration: 1000})
+        new ScrollMagic.Scene({triggerElement: "#section5",offset: 450, duration: 1000})
                 .setPin("#section5")
                 //.addIndicators()
                 .triggerHook(0)
-                .addTo(controller);**/
+                .addTo(controller);
 
         //screenshot slide anim
         //let slideAnim = TweenMax.to(".slide_reel", .5, {left: -768, ease:Power3.easeInOut});
@@ -892,7 +931,7 @@
                 .to(".slide_reel" , 4.5, {x: -2304, ease:Power1.easeInOut})
                 .to(".slide_reel" , 5, {x: -2304});
 
-        new ScrollMagic.Scene({triggerElement: "#section5", duration: 1000, offset: 100})
+        new ScrollMagic.Scene({triggerElement: "#section5",offset: 550, duration: 1000})
                 .setTween(slideTimeLine)
                 //.addIndicators()
                 .triggerHook(0)
@@ -907,7 +946,7 @@
                 .to(".swipe_hand" , 4, {x: -500, ease:Power1.easeInOut})
                 .to(".swipe_hand" , 5, {opacity: 0, x: 384, ease:Power1.easeOut});
 
-        new ScrollMagic.Scene({triggerElement: "#section5", duration: 1000, offset: 100})
+        new ScrollMagic.Scene({triggerElement: "#section5",offset: 550, duration: 1000})
                 .setTween(swipeTimeLine)
                 //.addIndicators()
                 .triggerHook(0)

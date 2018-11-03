@@ -5,7 +5,7 @@ $trim1: #e49b2e;
 //robot section colours
 $robot_bg: #515CA5;
 $tile_trim: #8D97D2;
-$pad_trim1: #ffe9b2;
+$pad_trim1: #ffefbe;
 $pad_trim2: #ac5a69;
 $button_left: #45d739;
 $button_right: #ef9d35;
@@ -97,17 +97,18 @@ header,section,footer,aside,nav,article,hgroup,img{
 .section{
   position: relative;
   width: 100%;
-  height: 100%;
-}
-
-.section-light{
-  background-color: #bfdef4;
-  color:#666;
+  color: #e1e1e1;
+  //height: 100%;
 }
 
 .section-dark{
   background-color:#282e34;
-  color:#ddd;
+}
+
+#section1{
+  //background-color: #77df7e;
+  background-image: linear-gradient(225deg, lighten(#77df7e, 10%), darken(#77df7e, 10%));
+  height: 100%;
 }
 
 #section2{
@@ -119,11 +120,11 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #section4{
-  overflow: hidden;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  display: block;
+  padding-top: 150px;
+  padding-bottom: 200px;
   //background-color: $robot_bg;
-  background-image: linear-gradient(135deg, lighten($robot_bg, 7%), darken($robot_bg, 7%));
+  background-image: linear-gradient(135deg, lighten($robot_bg, 8%), darken($robot_bg, 8%));
 }
 
 #section5{
@@ -142,11 +143,14 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #section7{
-  overflow: hidden;
-  background-color: #d19bfd;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #FFDF6A;
 }
 
 #section8{
+  background-image: linear-gradient(135deg, lighten(#89dcdf, 6%), darken(#89dcdf, 10%));
+  height: 100%;
   overflow: hidden;
 }
 
@@ -155,9 +159,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: relative;
   height: 600px;
   width: 100%;
-  //margin-top: 100px;
   overflow: hidden;
-  //border: 1px solid red;
 }
 
 .scene2{
@@ -166,16 +168,13 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 600px;
   width: 100%;
   overflow: hidden;
-  //border: 1px solid blue;
 }
 
 .scene3{
-  position: absolute;
+  position: relative;
   width: 800px;
-  height: 436px;
-  top:50%;
+  height: 800px;
   left: 50%;
-  margin-top: -216px;
   margin-left: -400px;
 }
 
@@ -187,10 +186,10 @@ header,section,footer,aside,nav,article,hgroup,img{
   top: 0;
   margin-left: -320px;
   margin-top: 140px;
-  //border: 1px solid red;
 }
 
 .scene5{
+  position: relative;
   height: 1000px;
   width: 100%;
   clip-path: circle(200px);
@@ -203,7 +202,8 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .scene6{
-  height: 100%;
+  position: relative;
+  height: 820px;
   width: 100%;
 }
 
@@ -214,9 +214,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   font-weight: bolder;
   text-align: center;
   line-height: 1em;
-  //letter-spacing: -.05em;
   width: 100%;
-  //text-transform: uppercase;
 }
 
 #years{
@@ -253,6 +251,63 @@ header,section,footer,aside,nav,article,hgroup,img{
   color: #4DBA5A;
 }
 
+#tested{
+  top: 70px;
+}
+
+#ware{
+  top: 143px;
+}
+
+#robotics{
+  top: 217px;
+  color: #FFDF6A;
+}
+
+#created{
+  top: 72px;
+}
+
+#a2{
+  top: 145px;
+}
+
+#game{
+  top: 217px;
+  color: #941cd2;
+}
+
+#test{
+  top: 0px;
+}
+
+#your{
+  top: 73px;
+}
+
+#skills{
+  top: 173px;
+  color: #3b38c7;
+}
+
+#against{
+  top: 246px;
+}
+
+#mine{
+  top: 320px;
+  color: #49cad0;
+}
+
+.skill_text_wrapper{
+  height: 450px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  top:50%;
+  margin-top: -225px;
+}
+
 #controller{
   position: absolute;
   background-repeat: no-repeat;
@@ -264,6 +319,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 #warehouse{
   position: absolute;
   right: 20px;
+  bottom: 0px;
   margin-left: -216px;
   width: 436px;    //60 x 60 px per tile with 2px border
   height: 436px;
@@ -483,7 +539,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   border-radius: 16px;
   bottom: 0px;
   left: 3px;
-  box-shadow: 10px 10px darken($pad_trim1, 10%);
+  box-shadow: 10px 10px darken($pad_trim1, 20%);
   transform: scale(0);   //start off hidden
   cursor: pointer;
 }
@@ -1207,7 +1263,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 50%;
   top: 50%;
   margin-left: -145px;
-  margin-top: 50px;
+  margin-top: 200px;
   transform: rotate(-20deg);
   opacity: 0;
 }
@@ -1224,11 +1280,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   filter: brightness(300%);
   //z-index: 0;
   pointer-events: none;
-}
-
-#canvas{
-  width: 100%;
-  height: 100%;
 }
 
 .drone{
@@ -1610,9 +1661,8 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 800px;
   height: 450px;
   margin-left: -300px;
-  margin-top: -225px;
   left: 50%;
-  top: 50%;
+  bottom: 0;
 }
 
 .game_cover{
