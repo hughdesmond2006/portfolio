@@ -889,7 +889,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  opacity: 0; }
 
 .scene6 {
   position: relative;
@@ -959,14 +960,19 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 #skills {
   top: 173px;
-  color: #3b38c7; }
+  color: #4451d6; }
 
 #against {
   top: 246px; }
 
 #mine {
-  top: 320px;
+  top: 345px;
   color: #49cad0; }
+
+#mouse {
+  top: 465px;
+  font-family: "Droid Sans Mono", sans-serif;
+  font-size: 16px; }
 
 .skill_text_wrapper {
   height: 450px;
@@ -1171,7 +1177,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   border-radius: 16px;
   bottom: 0px;
   left: 3px;
-  box-shadow: 10px 10px #ffd658;
+  box-shadow: 10px 10px #d9cba7;
   transform: scale(0);
   cursor: pointer; }
 

@@ -302,7 +302,7 @@
 <section id="section4" class="section section-dark">
     <div class="scene3">
         <div class="big_heading" id="I">I</div>
-        <div class="big_heading font_black" id="ware">Warehouse</div>
+        <div class="big_heading font_black" id="ware">warehouse</div>
         <div class="big_heading" id="tested">Tested</div>
         <div class="big_heading font_black" id="robotics">Robotics</div>
         <div id="warehouse">
@@ -450,6 +450,7 @@
         <div class="big_heading" id="against">against</div>
         <div class="big_heading" id="skills">Skills</div>
         <div class="big_heading" id="mine">Mine</div>
+        <div class="big_heading" id="mouse">(scroll and aim!)</div>
     </div>
     <div class="scene5">
         <div class="drone d1">
@@ -729,13 +730,21 @@
         //fade out skills text
         let skillTextFadeAnim = TweenMax.to(".skill_text_wrapper", .4, {opacity: 0});
 
-        new ScrollMagic.Scene({triggerElement: "#section6", offset: 100})
+        new ScrollMagic.Scene({triggerElement: "#section6", offset: 120})
                 .setTween(skillTextFadeAnim)
                 .triggerHook(0)
                 .addTo(controller);
 
+        //show sniper view
+        let skillSceneFadeAnim = TweenMax.fromTo(".scene5", .4, {opacity: 0}, {opacity: 1});
+
+        new ScrollMagic.Scene({triggerElement: "#section6", offset: 120})
+                .setTween(skillSceneFadeAnim)
+                .triggerHook(0)
+                .addTo(controller);
+
         //pin section6
-        new ScrollMagic.Scene({triggerElement: "#section6",offset: 100, duration: 150})
+        new ScrollMagic.Scene({triggerElement: "#section6",offset: 120, duration: 150})
                 .setPin("#section6")
                 //.addIndicators()
                 .triggerHook(0)
