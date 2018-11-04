@@ -12,5 +12,6 @@
 # limitations under the License.
 #
 # [START runtime]
-runtime: nodejs10
+env: flex
+runtime: nodejs
 # [END runtime]
