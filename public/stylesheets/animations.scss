@@ -8,6 +8,15 @@
   animation-iteration-count: infinite;
 }
 
+.anim_blow2 {
+  -webkit-animation-name: hinge3;
+  animation-name: hinge3;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
 //skateboard wheels spin
 .anim_spin {
   -webkit-animation: rotating 1s linear infinite;
@@ -39,6 +48,31 @@
 #hugh1 .arm#left{
   animation: left-arm-jump 2.5s infinite;
 }
+
+//TEMP FOR TESTING DIV/SVG ANIMATIONS--------------------------
+//hugh1 jumps off the skateboard
+.body_div{
+  animation: body-jump 2.5s infinite;
+}
+
+//hugh1 feet and head tilt when he jumps
+.shoe_div#left{
+  animation: left-shoe-jump 2.5s infinite;
+}
+
+.shoe_div#right{
+  animation: right-shoe-jump 2.5s infinite;
+}
+
+.head_wrap_div{
+  animation: head-jump 2.5s infinite;
+}
+
+//hugh1 waves at us
+.arm_div#left{
+  animation: left-arm-jump 2.5s infinite;
+}
+//END TEMP-------------------------------------------------------
 
 //hugh2 and hugh3 arms shake for balance
 #hugh2 .arm, #hugh3 .arm{
@@ -285,6 +319,32 @@
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     opacity: 1;
+  }
+}
+
+@keyframes hinge3 {
+  0% {
+    transform: rotate3d(0, 0, 1, 315deg);
+    transform-origin: bottom right;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%,
+  60% {
+    transform: rotate3d(0, 0, 1, 300deg);
+    transform-origin: bottom right;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%,
+  80% {
+    transform: rotate3d(0, 0, 1, 305deg);
+    transform-origin: bottom right;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+  100%{
+    transform: rotate3d(0, 0, 1, 315deg);
   }
 }
 

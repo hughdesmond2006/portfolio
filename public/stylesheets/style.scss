@@ -14,6 +14,10 @@ $button_right: #ef9d35;
   color: #000000;
 }
 
+#symbol_definitions{
+  display: none;
+}
+
 //mobile site coming soon.. normal site is 960px
 @media only screen and (min-width:500px) {
   /* For desktop: */
@@ -136,7 +140,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 #section6{
   overflow: hidden;
-  background-image: url('../images/sniper_bg.png');
+  background-image: url('../images/build/sniper_bg.png');
   background-repeat: repeat;
   height: 800px;
   cursor: none;
@@ -193,7 +197,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 1000px;
   width: 100%;
   clip-path: circle(200px);
-  background-image: url('../images/skills_bg.png');
+  background-image: url('../images/build/skills_bg.png');
   background-position:center;
   -moz-background-size:cover;
   -o-background-size:cover;
@@ -362,7 +366,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   width: 60px;
   height: 60px;
-  background-image: url('../images/ball.png');
+  background-image: url('../images/build/ball.png');
   background-repeat: no-repeat;
   background-size: 53px 51px;
   background-position: center;
@@ -743,7 +747,16 @@ header,section,footer,aside,nav,article,hgroup,img{
   display: table;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 25%;
+  margin-left: -105px;
+  margin-top: -100px;
+}
+
+#hugh_div{
+  display: table;
+  position: absolute;
+  left: 50%;
+  top: 75%;
   margin-left: -105px;
   margin-top: -100px;
 }
@@ -786,29 +799,63 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==BODY== */
 .body{
-  background-image: url('../images/body.png');
+  background-image: url('../images/build/body.png');
   background-repeat: no-repeat;
   width: 210px;
   height: 164px;
   position: relative;   //attach parts relative from the top left of the body
 }
 
+.body_div{
+  width: 210px;
+  height: 164px;
+  position: absolute;   //attach parts relative from the top left of the body
+  //border: 1px solid blue;
+}
+
+.torso_div{
+  width: 108px;
+  height: 108px;
+  //border-radius: 54px;
+  margin-left: 51px;
+  margin-top: 48px;
+  //background: white;
+  fill: white;
+}
+
 #jim .body{
-  background-image: url('../images/jim_body.png');
+  background-image: url('../images/build/jim_body.png');
 }
 
 #tim .body{
-  background-image: url('../images/tim_body.png');
+  background-image: url('../images/build/tim_body.png');
 }
 
 /* ==HEAD== */
 .head{
-  background-image: url('../images/head.png');
+  background-image: url('../images/build/head.png');
   width: 84px;
   height: 72px;
   position: absolute;
   top: 12px;
   left: 73px;
+}
+
+.head_div{
+  //background-image: url('../images/build/head.png');
+  //background: #FDC689;
+  //border-radius: 8px;
+  width: 84px;
+  height: 72px;
+  position: absolute;
+}
+
+.head_wrap_div{
+  position: absolute;
+  top: 12px;
+  left: 73px;
+  width: 84px;
+  height: 72px;
 }
 
 #hugh2 .head{
@@ -826,6 +873,12 @@ header,section,footer,aside,nav,article,hgroup,img{
   top: -12px;
 }
 
+.hairs_div {
+  position: relative;
+  left: 24px;
+  top: -16px;
+}
+
 //hugh2 hairs blow in opposite direction
 #hugh2 .hairs {
   left: -12px;
@@ -833,7 +886,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #jim .hairs{
-  background-image: url('../images/jim_hair.png');
+  background-image: url('../images/build/jim_hair.png');
   width: 30px;
   height: 9px;
   position: absolute;
@@ -842,7 +895,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #tim .hairs{
-  background-image: url('../images/tim_hair.png');
+  background-image: url('../images/build/tim_hair.png');
   width: 50px;
   height: 8px;
   position: absolute;
@@ -855,6 +908,17 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 14px;
   height: 16px;
   position: absolute;
+}
+
+.hair_div {
+  //background-image: url('../images/hair.png');
+  //background: #845C35;
+  width: 2px;
+  height: 19px;
+  //border-radius: 1px;
+  position: absolute;
+  transform-origin: bottom right;
+  transform: rotate(315deg);
 }
 
 //set position and delays for blowing hair
@@ -905,9 +969,24 @@ header,section,footer,aside,nav,article,hgroup,img{
   animation-delay: 50ms;
 }
 
+//temp
+.hair_div{
+  //animation: none;
+}
+
 /* ==EYES== */
 .eye{
-  background-image: url('../images/eye.png');
+  background-image: url('../images/build/eye.png');
+  width: 10px;
+  height: 28px;
+  position: absolute;
+  top:20px;
+}
+
+.eye_div{
+  //background-image: url('../images/build/eye.png');
+  background: #464646;
+  border-radius: 2px;
   width: 10px;
   height: 28px;
   position: absolute;
@@ -922,6 +1001,14 @@ header,section,footer,aside,nav,article,hgroup,img{
   left:64px;
 }
 
+.eye_div#left{
+  left:20px;
+}
+
+.eye_div#right{
+  left:64px;
+}
+
 //hugh2 and tim face left
 #hugh2 .eye#left, #tim .eye#left{
   left:10px;
@@ -933,15 +1020,29 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==ARMS== */
 .arm{
-  background-image: url('../images/arm.png');
+  background-image: url('../images/build/arm.png');
   width: 48px;
   height: 48px;
+  //background: #FDC689;
+  //border-radius: 24px;
   position: absolute;
   top: 84px;
 }
 
+.arm_div{
+  //background-image: url('../images/build/arm.png');
+  width: 48px;
+  height: 48px;
+  //background: #FDC689;
+  //border-radius: 24px;
+  position: absolute;
+  top: 84px;
+  fill: #FDC689;
+}
+
 #tim .arm{
   width: 50px;
+  background: none;
 }
 
 .arm#left{
@@ -952,15 +1053,23 @@ header,section,footer,aside,nav,article,hgroup,img{
   left:146px;
 }
 
+.arm_div#left{
+  left:17px;
+}
+
+.arm_div#right{
+  left:146px;
+}
+
 #tim .arm#left{
-  background-image: url('../images/tim_arml.png');
+  background-image: url('../images/build/tim_arml.png');
   transform: rotate(90deg);
   left:13px;
   top: 80px;
 }
 
 #tim .arm#right{
-  background-image: url('../images/tim_armr.png');
+  background-image: url('../images/build/tim_armr.png');
   transform: rotate(330deg);
   left: 138px;
   transform-origin: center 15px;
@@ -978,22 +1087,12 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .cup{
-  background-image: url('../images/cup.png');
+  background-image: url('../images/build/cup.png');
   width: 24px;
   height: 28px;
   position: absolute;
   top: -14px;
   left: 30%;
-}
-
-.tablet{
-  background-image: url('../images/tablet.png');
-  width: 74px;
-  height: 44px;
-  position: absolute;
-  top: 40px;
-  right: 5px;
-  transform: rotate(270deg) skewX(20deg) scaleX(.7);
 }
 
 //hugh3 and hugh3 arms start higher for balance anim
@@ -1003,7 +1102,15 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==SHOES== */
 .shoe{
-  background-image: url('../images/shoe.png');
+  background-image: url('../images/build/shoe.png');
+  width: 62px;
+  height: 32px;
+  position: absolute;
+  top:132px;
+}
+
+.shoe_div{
+  //background-image: url('../images/shoe.svg');
   width: 62px;
   height: 32px;
   position: absolute;
@@ -1011,11 +1118,11 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #jim .shoe{
-  background-image: url('../images/jim_shoe.png');
+  background-image: url('../images/build/jim_shoe.png');
 }
 
 #tim .shoe{
-  background-image: url('../images/tim_shoe.png');
+  background-image: url('../images/build/tim_shoe.png');
 }
 
 .shoe#left{
@@ -1026,11 +1133,31 @@ header,section,footer,aside,nav,article,hgroup,img{
   left:115px;
 }
 
+.shoe_div#left{
+  left:33px;
+}
+
+.shoe_div#right{
+  left:115px;
+}
+
 /* ==BOARD== */
 .board{
-  background-image: url('../images/board.png');
+  background-image: url('../images/build/board.png');
   width: 210px;
   height: 24px;
+  position: absolute;
+  top:146px;
+}
+
+.board_div{
+  //background-image: url('../images/board.svg');
+  width: 210px;
+  height: 24px;
+  position: absolute;
+}
+
+.board_wrap_div{
   position: absolute;
   top:146px;
 }
@@ -1043,14 +1170,36 @@ header,section,footer,aside,nav,article,hgroup,img{
   top:26px;
 }
 
+.wheel_div{
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top:26px;
+}
+
 .wheel#left{
-  background-image: url('../images/wheel_left.png');
+  background-image: url('../images/build/wheel_left.png');
   left:33px;
 }
 
 .wheel#right{
-  background-image: url('../images/wheel_right.png');
+  background-image: url('../images/build/wheel_right.png');
   left:149px;
+}
+
+.wheel_div#left{
+  //background-image: url('../images/wheel.svg');
+  left:33px;
+}
+
+.wheel_div#right{
+  //background-image: url('../images/wheel.svg');
+  left:149px;
+}
+
+#flipped{
+  transform-origin: center center;
+  transform: scaleX(-1);
 }
 
 .turtle_container{
@@ -1113,7 +1262,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==TBODY== */
 .tbody{
-  background-image: url('../images/tbody.png');
+  background-image: url('../images/build/tbody.png');
   background-repeat: no-repeat;
   background-position: center;
   width: 120px;
@@ -1123,7 +1272,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==THEAD== */
 .thead{
-  background-image: url('../images/thead.png');
+  background-image: url('../images/build/thead.png');
   width: 50px;
   height: 43px;
   position: absolute;
@@ -1133,7 +1282,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==TEYES== */
 .teye{
-  background-image: url('../images/teye.png');
+  background-image: url('../images/build/teye.png');
   width: 6px;
   height: 17px;
   position: absolute;
@@ -1150,7 +1299,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==TFEET== */
 .tfoot{
-  background-image: url('../images/tfoot.png');
+  background-image: url('../images/build/tfoot.png');
   width: 52px;
   height: 26px;
   position: absolute;
@@ -1167,7 +1316,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 //special scene4 stuff
 #lemonade_stand{
-  background-image: url('../images/lemonade_stand.png');
+  background-image: url('../images/build/lemonade_stand.png');
   width: 160px;
   height: 188px;
   position: absolute;
@@ -1214,31 +1363,31 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .slide.s1{
-  background-image: url('../images/screen_home.jpg');
+  background-image: url('../images/build/screen_home.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slide.s2{
-  background-image: url('../images/screen_history.jpg');
+  background-image: url('../images/build/screen_history.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slide.s3{
-  background-image: url('../images/screen_calls.jpg');
+  background-image: url('../images/build/screen_calls.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slide.s4{
-  background-image: url('../images/screen_orders.jpg');
+  background-image: url('../images/build/screen_orders.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .bar{
-  background-image: url('../images/screen_bar.jpg');
+  background-image: url('../images/build/screen_bar.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
@@ -1262,7 +1411,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .swipe_hand{
   position: absolute;
-  background-image: url('../images/swipe_hand.png');
+  background-image: url('../images/build/swipe_hand.png');
   background-repeat: no-repeat;
   background-size: contain;
   width: 290px;
@@ -1602,7 +1751,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .dbody{
-  background-image: url('../images/dbody.png');
+  background-image: url('../images/build/dbody.png');
   background-repeat: no-repeat;
   width: 168px;
   height: 52px;
@@ -1611,7 +1760,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .dwing{
-  background-image: url('../images/dwing.png');
+  background-image: url('../images/build/dwing.png');
   width: 55px;
   height: 5px;
   position: absolute;
@@ -1673,7 +1822,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .game_cover{
-  background-image: url('../images/xbox_cover.png');
+  background-image: url('../images/build/xbox_cover.png');
   background-size: contain;
   background-repeat: no-repeat;
   width: 243px;
