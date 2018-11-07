@@ -383,8 +383,8 @@
             </div>
         </div>
     </div>
-    <div id="slideshow">
-        <div class="slide_container">
+    <!--<div id="slideshow">
+        <div class="slide_container">-->
             <div class="slide_reel">
                 <div class="slide s1"></div>
                 <div class="slide s2"></div>
@@ -392,9 +392,9 @@
                 <div class="slide s4"></div>
             </div>
         </div>
-        <div class="bar"></div>
+        <!--<div class="bar"></div>
         <div class="overlay"></div>
-    </div>
+    </div>-->
     <div class="swipe_hand"></div>
 </section>
 
@@ -813,12 +813,13 @@
 
         //throw tablet to fullscreen
         TweenMax.to("#slideshow", 0, {opacity: 1});
-        let tabletAnim = TweenMax.from("#slideshow", 1.2, {opacity: 1, scaleX: .07, scaleY: .085, skewX: 20, x:14, y: -82, ease:Power1.easeOut}, 1);
+        /**let tabletAnim = TweenMax.from("#slideshow", 1.2, {opacity: 1, scaleX: .07, scaleY: .085, skewX: 20, x:14, y: -82, ease:Power1.easeOut}, 1);
 
         new ScrollMagic.Scene({triggerElement: "#section5",offset: 750})
                 .setTween(tabletAnim)
-                .addTo(controller);
+                .addTo(controller);**/
 
+        /**
         //fade out sales text
         let textFadeAnim = TweenMax.to(".sales_text_wrapper", .4, {opacity: 0});
 
@@ -850,7 +851,7 @@
                 .addTo(controller);
 
         //build skate jump tween
-        var skateTween = TweenMax.to("#hugh2",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0} /**, {x:-1440, y:0}**/ ], autoRotate:180}, ease:Power0.easeNone});
+        var skateTween = TweenMax.to("#hugh2",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0} ], autoRotate:180}, ease:Power0.easeNone});
 
         //build skate jump scene
         new ScrollMagic.Scene({triggerElement: ".turtle_container", duration: 400, offset: -200})
@@ -876,8 +877,8 @@
                 .addTo(controller);
 
         //2nd skate jump tween & scene
-        var skateTween2 = TweenMax.to("#hugh3",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0} /**, {x:-1440, y:0}**/ ], autoRotate:180}, ease:Power0.easeNone});
-        skateTween2.reverse();
+        var skateTween2 = TweenMax.to("#hugh3",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0}], autoRotate:180}, ease:Power0.easeNone});
+       skateTween2.reverse();
 
         new ScrollMagic.Scene({triggerElement: ".turtle_container2", duration: 400, offset: -200})
                 .setTween(skateTween2)
@@ -1015,7 +1016,7 @@
         new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
                 .setTween(tileAnim)
                 .reverse(false)
-                .addTo(controller);
+                .addTo(controller);**/
 
         //pin section5 until slideshow ends
         new ScrollMagic.Scene({triggerElement: "#section5",offset: 450, duration: 1000})
@@ -1039,13 +1040,18 @@
                 .to(".slide_reel" , 4.5, {x: -2304, ease:Power1.easeInOut})
                 .to(".slide_reel" , 5, {x: -2304});
 
+        //timeline
+        /**let slideTimeLine = new TimelineMax();
+        slideTimeLine.to(".slide_reel" , 0, {x: 0})
+                .to(".slide_reel" , 5, {x: -2304, ease:Power1.easeInOut});**/
+
         new ScrollMagic.Scene({triggerElement: "#section5",offset: 550, duration: 1000})
                 .setTween(slideTimeLine)
                 //.addIndicators()
                 .triggerHook(0)
                 .addTo(controller);
 
-        let swipeTimeLine = new TimelineMax();
+        /**let swipeTimeLine = new TimelineMax();
         swipeTimeLine.to(".swipe_hand" , .5, {opacity: 1, x: 384})
                 .to(".swipe_hand" , 1, {x: -500, ease:Power1.easeInOut})
                 .to(".swipe_hand" , 2, {x: 384, ease:Power1.easeOut})
@@ -1058,7 +1064,7 @@
                 .setTween(swipeTimeLine)
                 //.addIndicators()
                 .triggerHook(0)
-                .addTo(controller);
+                .addTo(controller);**/
 
         //------skill game sniper mask stuff--------
         /**let timer;

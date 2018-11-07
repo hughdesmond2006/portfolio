@@ -8,6 +8,7 @@
   animation-iteration-count: infinite; }
 
 .anim_blow2 {
+  will-change: transform;
   -webkit-animation-name: hinge3;
   animation-name: hinge3;
   -webkit-animation-duration: 1s;
@@ -16,6 +17,7 @@
   animation-iteration-count: infinite; }
 
 .anim_spin {
+  will-change: transform;
   -webkit-animation: rotating 1s linear infinite;
   -moz-animation: rotating 1s linear infinite;
   -ms-animation: rotating 1s linear infinite;
@@ -38,18 +40,23 @@
   animation: left-arm-jump 2.5s infinite; }
 
 .body_div {
+  will-change: transform;
   animation: body-jump 2.5s infinite; }
 
 .shoe_div#left {
+  will-change: transform;
   animation: left-shoe-jump 2.5s infinite; }
 
 .shoe_div#right {
+  will-change: transform;
   animation: right-shoe-jump 2.5s infinite; }
 
 .head_wrap_div {
+  will-change: transform;
   animation: head-jump 2.5s infinite; }
 
 .arm_div#left {
+  will-change: transform;
   animation: left-arm-jump 2.5s infinite; }
 
 #hugh2 .arm, #hugh3 .arm {
@@ -302,28 +309,24 @@
 
 @keyframes head-shakex {
   20% {
-    animation-timing-function: ease-in;
     transform: translateX(20px); }
   50% {
     transform: translateX(0px); } }
 
 @keyframes head-shakey {
   20% {
-    animation-timing-function: ease-out;
     transform: translateY(-20px); }
   50% {
     transform: translateY(0px); } }
 
 @-webkit-keyframes head-shakex {
   20% {
-    -webkit-animation-timing-function: ease-in;
     -webkit-transform: translateX(20px); }
   50% {
     -webkit-transform: translateX(0px); } }
 
 @-webkit-keyframes head-shakey {
   20% {
-    -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(-20px); }
   50% {
     -webkit-transform: translateY(0px); } }
@@ -350,36 +353,28 @@
 
 @keyframes body-jump {
   3% {
-    animation-timing-function: ease-in;
     transform-origin: 50% 100%;
-    transform: translateY(2px) scaleY(0.95); }
+    transform: translateY(2px); }
   6% {
-    animation-timing-function: linear;
-    transform: translateY(0px) scaleY(1); }
+    transform: translateY(0px); }
   12% {
-    animation-timing-function: ease-out;
     transform: translateY(-50px); }
   18% {
-    animation-timing-function: ease-in;
-    transform: translateY(0px) scaleY(1); }
+    transform: translateY(0px); }
   21% {
-    animation-timing-function: linear;
-    transform: translateY(2px) scaleY(0.95); }
+    transform: translateY(2px); }
   24% {
-    animation-timing-function: ease-out;
-    transform: translateY(0px) scaleY(1); } }
+    transform: translateY(0px); } }
 
 @keyframes left-shoe-jump {
   6% {
     transform-origin: 41px 6px;
     transform: rotate(0deg); }
   9% {
-    animation-timing-function: ease-out;
     transform: rotate(-12deg); }
   15% {
     transform: rotate(-12deg); }
   18% {
-    animation-timing-function: ease-in;
     transform: rotate(0deg); } }
 
 @keyframes right-shoe-jump {
@@ -387,22 +382,18 @@
     transform-origin: 21px 6px;
     transform: rotate(0deg); }
   9% {
-    animation-timing-function: ease-out;
     transform: rotate(12deg); }
   15% {
     transform: rotate(12deg); }
   18% {
-    animation-timing-function: ease-in;
     transform: rotate(0deg); } }
 
 @keyframes left-arm-jump {
   6% {
     transform: translateY(0px); }
   12% {
-    animation-timing-function: ease-out;
     transform: translateY(-60px); }
   18% {
-    animation-timing-function: ease-in;
     transform: translateY(0px); } }
 
 @keyframes arm-balance {
@@ -425,10 +416,8 @@
   6% {
     transform: rotate(0deg); }
   12% {
-    animation-timing-function: ease-out;
     transform: rotate(8deg); }
   18% {
-    animation-timing-function: ease-in;
     transform: rotate(0deg); } }
 
 @keyframes grow {
@@ -1449,7 +1438,8 @@ header, section, footer, aside, nav, article, hgroup, img {
 .body_div {
   width: 210px;
   height: 164px;
-  position: absolute; }
+  position: absolute;
+  will-change: transform; }
 
 .torso_div {
   width: 108px;
@@ -1876,7 +1866,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   top: 50%;
   margin-left: -384px;
   margin-top: -235px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  border: 1px solid blue; }
 
 .slide_reel {
   position: absolute;

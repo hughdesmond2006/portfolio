@@ -9,6 +9,7 @@
 }
 
 .anim_blow2 {
+  will-change: transform;
   -webkit-animation-name: hinge3;
   animation-name: hinge3;
   -webkit-animation-duration: 1s;
@@ -19,6 +20,7 @@
 
 //skateboard wheels spin
 .anim_spin {
+  will-change: transform;
   -webkit-animation: rotating 1s linear infinite;
   -moz-animation: rotating 1s linear infinite;
   -ms-animation: rotating 1s linear infinite;
@@ -52,24 +54,29 @@
 //TEMP FOR TESTING DIV/SVG ANIMATIONS--------------------------
 //hugh1 jumps off the skateboard
 .body_div{
+  will-change: transform;
   animation: body-jump 2.5s infinite;
 }
 
 //hugh1 feet and head tilt when he jumps
 .shoe_div#left{
+  will-change: transform;
   animation: left-shoe-jump 2.5s infinite;
 }
 
 .shoe_div#right{
+  will-change: transform;
   animation: right-shoe-jump 2.5s infinite;
 }
 
 .head_wrap_div{
+  will-change: transform;
   animation: head-jump 2.5s infinite;
 }
 
 //hugh1 waves at us
 .arm_div#left{
+  will-change: transform;
   animation: left-arm-jump 2.5s infinite;
 }
 //END TEMP-------------------------------------------------------
@@ -404,7 +411,7 @@
 @keyframes head-shakex
 {
   20% {
-    animation-timing-function: ease-in;
+    //animation-timing-function: ease-in;
     transform: translateX(20px);
   }
   50% {
@@ -415,7 +422,7 @@
 @keyframes head-shakey
 {
   20% {
-    animation-timing-function: ease-out;
+    //animation-timing-function: ease-out;
     transform: translateY(-20px);
   }
   50% {
@@ -426,7 +433,7 @@
 @-webkit-keyframes head-shakex
 {
   20% {
-    -webkit-animation-timing-function: ease-in;
+    //-webkit-animation-timing-function: ease-in;
     -webkit-transform: translateX(20px);
   }
   50% {
@@ -437,7 +444,7 @@
 @-webkit-keyframes head-shakey
 {
   20% {
-    -webkit-animation-timing-function: ease-out;
+    //-webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(-20px);
   }
   50% {
@@ -480,29 +487,29 @@
 @keyframes body-jump
 {
   3% {
-    animation-timing-function: ease-in;
+    //animation-timing-function: ease-in;
     transform-origin: 50% 100%;
-    transform: translateY(2px) scaleY(0.95);
+    transform: translateY(2px) /**scaleY(0.95)**/;
   }
   6% {
-    animation-timing-function: linear;
-    transform: translateY(0px) scaleY(1);
+    //animation-timing-function: linear;
+    transform: translateY(0px) /**scaleY(1)**/;
   }
   12% {
-    animation-timing-function: ease-out;
+    //animation-timing-function: ease-out;
     transform: translateY(-50px);
   }
   18% {
-    animation-timing-function: ease-in;
-    transform: translateY(0px) scaleY(1);
+    //animation-timing-function: ease-in;
+    transform: translateY(0px) /**scaleY(1)**/;
   }
   21% {
-    animation-timing-function: linear;
-    transform: translateY(2px) scaleY(0.95);
+    //animation-timing-function: linear;
+    transform: translateY(2px) /**scaleY(0.95)**/;
   }
   24% {
-    animation-timing-function: ease-out;
-    transform: translateY(0px) scaleY(1);
+    //animation-timing-function: ease-out;
+    transform: translateY(0px) /**scaleY(1)**/;
   }
 }
 
@@ -513,14 +520,14 @@
     transform: rotate(0deg);
   }
   9% {
-    animation-timing-function: ease-out;
+    //animation-timing-function: ease-out;
     transform: rotate(-12deg);
   }
   15% {
     transform: rotate(-12deg);
   }
   18% {
-    animation-timing-function: ease-in;
+    //animation-timing-function: ease-in;
     transform: rotate(0deg);
   }
 }
@@ -532,14 +539,14 @@
     transform: rotate(0deg);
   }
   9% {
-    animation-timing-function: ease-out;
+    //animation-timing-function: ease-out;
     transform: rotate(12deg);
   }
   15% {
     transform: rotate(12deg);
   }
   18% {
-    animation-timing-function: ease-in;
+    //animation-timing-function: ease-in;
     transform: rotate(0deg);
   }
 }
@@ -550,11 +557,11 @@
     transform: translateY(0px);
   }
   12% {
-    animation-timing-function: ease-out;
+    //animation-timing-function: ease-out;
     transform: translateY(-60px);
   }
   18% {
-    animation-timing-function: ease-in;
+    //animation-timing-function: ease-in;
     transform: translateY(0px);
   }
 }
@@ -589,11 +596,11 @@
     transform: rotate(0deg);
   }
   12% {
-    animation-timing-function: ease-out;
+    //animation-timing-function: ease-out;
     transform: rotate(8deg);
   }
   18% {
-    animation-timing-function: ease-in;
+    //animation-timing-function: ease-in;
     transform: rotate(0deg);
   }
 }
