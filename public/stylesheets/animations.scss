@@ -8,16 +8,6 @@
   animation-iteration-count: infinite;
 }
 
-.anim_blow2 {
-  will-change: transform;
-  -webkit-animation-name: hinge3;
-  animation-name: hinge3;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
 //skateboard wheels spin
 .anim_spin {
   will-change: transform;
@@ -42,7 +32,7 @@
   animation: right-shoe-jump 2.5s infinite;
 }
 
-#hugh1 .head{
+#hugh1 .head_wrap{
   animation: head-jump 2.5s infinite;
 }
 
@@ -50,36 +40,6 @@
 #hugh1 .arm#left{
   animation: left-arm-jump 2.5s infinite;
 }
-
-//TEMP FOR TESTING DIV/SVG ANIMATIONS--------------------------
-//hugh1 jumps off the skateboard
-.body_div{
-  will-change: transform;
-  animation: body-jump 2.5s infinite;
-}
-
-//hugh1 feet and head tilt when he jumps
-.shoe_div#left{
-  will-change: transform;
-  animation: left-shoe-jump 2.5s infinite;
-}
-
-.shoe_div#right{
-  will-change: transform;
-  animation: right-shoe-jump 2.5s infinite;
-}
-
-.head_wrap_div{
-  will-change: transform;
-  animation: head-jump 2.5s infinite;
-}
-
-//hugh1 waves at us
-.arm_div#left{
-  will-change: transform;
-  animation: left-arm-jump 2.5s infinite;
-}
-//END TEMP-------------------------------------------------------
 
 //hugh2 and hugh3 arms shake for balance
 #hugh2 .arm, #hugh3 .arm{
@@ -263,73 +223,7 @@
   }
 }
 
-@-webkit-keyframes hinge2 {
-  0% {
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-  }
-
-  20%,
-  60% {
-    -webkit-transform: rotate3d(0, 0, 1, -15deg);
-    transform: rotate3d(0, 0, 1, -15deg);
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-  }
-
-  40%,
-  80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    opacity: 1;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 700px, 0);
-    transform: translate3d(0, 700px, 0);
-    opacity: 0;
-  }
-}
-
 @keyframes hinge2 {
-  0% {
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-  }
-
-  20%,
-  60% {
-    -webkit-transform: rotate3d(0, 0, 1, -15deg);
-    transform: rotate3d(0, 0, 1, -15deg);
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-  }
-
-  40%,
-  80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    opacity: 1;
-  }
-}
-
-@keyframes hinge3 {
   0% {
     transform: rotate3d(0, 0, 1, 315deg);
     transform-origin: bottom right;

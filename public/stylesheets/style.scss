@@ -10,6 +10,21 @@ $pad_trim2: #ac5a69;
 $button_left: #45d739;
 $button_right: #ef9d35;
 
+.green_scheme{
+  --color_sole: #197b30;
+  --color_shoe: #00a651;
+}
+
+.brown_scheme{
+  --color_sole: #996f47;
+  --color_shoe: #ba8551;
+}
+
+.black_scheme{
+  --color_sole: #555555;
+  --color_shoe: #000000;
+}
+
 .font_black{
   color: #000000;
 }
@@ -83,21 +98,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   padding: 15px;
 }
 
-.pimg1 {
-  background-image: url('../images/bg1.jpeg');
-  min-height:100%;
-}
-
-.pimg2 {
-  background-image: url('../images/bg2.jpeg');
-  min-height:400px;
-}
-
-.pimg3 {
-  background-image: url('../images/bg3.jpeg');
-  min-height:400px;
-}
-
 .section{
   position: relative;
   width: 100%;
@@ -119,7 +119,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   display:block;
   height: 1300px;
   padding-top: 50px;
-  //overflow: hidden;
+  overflow: hidden;
   background-image: linear-gradient(135deg, #404040, #111111);
 }
 
@@ -127,6 +127,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   display: block;
   padding-top: 150px;
   padding-bottom: 200px;
+  overflow: hidden;
   //background-color: $robot_bg;
   background-image: linear-gradient(135deg, lighten($robot_bg, 8%), darken($robot_bg, 8%));
 }
@@ -134,7 +135,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 #section5{
   height: 1200px;
   overflow: hidden;
-  display: block;
+  //display: block;
   background-color: #ffffff;
 }
 
@@ -150,6 +151,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   padding-top: 150px;
   padding-bottom: 150px;
   background-color: #FFDF6A;
+  overflow: hidden;
 }
 
 #section8{
@@ -185,7 +187,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 .scene4{
   height: 620px;
   width: 640px;
-  position: relative;
+  position: absolute;
   left: 50%;
   top: 0;
   margin-left: -320px;
@@ -355,7 +357,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   //background: #ae9a96;
   background:  $tile_trim;
   display: table-cell;
-  //animation:grow 1s .15s 1 ease forwards;
+  animation:grow 1s .15s 1 ease forwards;
 }
 
 .rack{
@@ -385,10 +387,6 @@ header,section,footer,aside,nav,article,hgroup,img{
 .tracks{
   position: absolute;
   background: $pad_trim2;
-  //background: rgba(132, 133, 52, 0.38);
-  /**background:url(
-  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQYV2PMtrX9z8DAwKCppweiGBhJFwAAb3sJqY9jJiAAAAAASUVORK5CYII=
-  ) repeat;**/
   border-radius: 6px;
   width: 30px;
   height: 50px;
@@ -744,25 +742,14 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #hugh1{
-  display: table;
   position: absolute;
   left: 50%;
-  top: 25%;
-  margin-left: -105px;
-  margin-top: -100px;
-}
-
-#hugh_div{
-  display: table;
-  position: absolute;
-  left: 50%;
-  top: 75%;
+  top: 50%;
   margin-left: -105px;
   margin-top: -100px;
 }
 
 #hugh2{
-  display: table;
   position: absolute;
   left: 50%;
   top: 55px;
@@ -773,7 +760,6 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #hugh3{
-  display: table;
   position: absolute;
   left: 50%;
   top: 55px;
@@ -788,6 +774,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   left: 90px;
   bottom: 0;
+  border: 1px solid blue;
 }
 
 #tim{
@@ -795,37 +782,28 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   right: 90px;
   bottom: 0;
+  border: 1px solid red;
 }
 
 /* ==BODY== */
 .body{
-  background-image: url('../images/build/body.png');
-  background-repeat: no-repeat;
-  width: 210px;
-  height: 164px;
-  position: relative;   //attach parts relative from the top left of the body
-}
-
-.body_div{
   width: 210px;
   height: 164px;
   position: absolute;   //attach parts relative from the top left of the body
-  //border: 1px solid blue;
   will-change: transform;
 }
 
-.torso_div{
+.torso{
   width: 108px;
   height: 108px;
-  //border-radius: 54px;
   margin-left: 51px;
   margin-top: 48px;
-  //background: white;
   fill: white;
+  contain:strict;
 }
 
-#jim .body{
-  background-image: url('../images/build/jim_body.png');
+#jim .torso{
+  fill: #4dba5a;
 }
 
 #tim .body{
@@ -833,48 +811,32 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 /* ==HEAD== */
+.head_wrap{
+  position: absolute;
+  top: 12px;
+  left: 73px;
+  width: 84px;
+  height: 72px;
+}
+
 .head{
-  background-image: url('../images/build/head.png');
   width: 84px;
   height: 72px;
   position: absolute;
-  top: 12px;
-  left: 73px;
+  fill: #FDC689;
+  contain:strict;
 }
 
-.head_div{
-  //background-image: url('../images/build/head.png');
-  //background: #FDC689;
-  //border-radius: 8px;
-  width: 84px;
-  height: 72px;
-  position: absolute;
-}
-
-.head_wrap_div{
-  position: absolute;
-  top: 12px;
-  left: 73px;
-  width: 84px;
-  height: 72px;
-}
-
-#hugh2 .head{
+#hugh2 .head_wrap{
   left: 59px;
 }
 
-#tim .head{
+#tim .head_wrap{
   left: 52px;
 }
 
 /* ==HAIR== */
 .hairs {
-  position: relative;
-  left: 12px;
-  top: -12px;
-}
-
-.hairs_div {
   position: relative;
   left: 24px;
   top: -16px;
@@ -882,7 +844,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 //hugh2 hairs blow in opposite direction
 #hugh2 .hairs {
-  left: -12px;
+  left: -24px;
   transform: scaleX(-1);
 }
 
@@ -905,21 +867,12 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .hair {
-  background-image: url('../images/hair.png');
-  width: 14px;
-  height: 16px;
-  position: absolute;
-}
-
-.hair_div {
-  //background-image: url('../images/hair.png');
-  //background: #845C35;
   width: 2px;
   height: 19px;
-  //border-radius: 1px;
   position: absolute;
   transform-origin: bottom right;
   transform: rotate(315deg);
+  contain:strict;
 }
 
 //set position and delays for blowing hair
@@ -970,28 +923,13 @@ header,section,footer,aside,nav,article,hgroup,img{
   animation-delay: 50ms;
 }
 
-//temp
-.hair_div{
-  //animation: none;
-}
-
 /* ==EYES== */
 .eye{
-  background-image: url('../images/build/eye.png');
   width: 10px;
   height: 28px;
   position: absolute;
   top:20px;
-}
-
-.eye_div{
-  //background-image: url('../images/build/eye.png');
-  background: #464646;
-  border-radius: 2px;
-  width: 10px;
-  height: 28px;
-  position: absolute;
-  top:20px;
+  contain:strict;
 }
 
 .eye#left{
@@ -999,14 +937,6 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .eye#right{
-  left:64px;
-}
-
-.eye_div#left{
-  left:20px;
-}
-
-.eye_div#right{
   left:64px;
 }
 
@@ -1021,24 +951,12 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==ARMS== */
 .arm{
-  background-image: url('../images/build/arm.png');
   width: 48px;
   height: 48px;
-  //background: #FDC689;
-  //border-radius: 24px;
-  position: absolute;
-  top: 84px;
-}
-
-.arm_div{
-  //background-image: url('../images/build/arm.png');
-  width: 48px;
-  height: 48px;
-  //background: #FDC689;
-  //border-radius: 24px;
   position: absolute;
   top: 84px;
   fill: #FDC689;
+  //contain:strict;
 }
 
 #tim .arm{
@@ -1051,14 +969,6 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .arm#right{
-  left:146px;
-}
-
-.arm_div#left{
-  left:17px;
-}
-
-.arm_div#right{
   left:146px;
 }
 
@@ -1087,6 +997,12 @@ header,section,footer,aside,nav,article,hgroup,img{
   animation: drink 5s infinite;
 }
 
+.arm_svg{
+  width: 48px;
+  height: 48px;
+  position: absolute;
+}
+
 .cup{
   background-image: url('../images/build/cup.png');
   width: 24px;
@@ -1103,27 +1019,20 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==SHOES== */
 .shoe{
-  background-image: url('../images/build/shoe.png');
   width: 62px;
   height: 32px;
   position: absolute;
   top:132px;
-}
-
-.shoe_div{
-  //background-image: url('../images/shoe.svg');
-  width: 62px;
-  height: 32px;
-  position: absolute;
-  top:132px;
+  //fill: #00A651;
+  contain:strict;
 }
 
 #jim .shoe{
-  background-image: url('../images/build/jim_shoe.png');
+  fill: #ba8551;
 }
 
 #tim .shoe{
-  background-image: url('../images/build/tim_shoe.png');
+  fill: #000000;
 }
 
 .shoe#left{
@@ -1134,33 +1043,20 @@ header,section,footer,aside,nav,article,hgroup,img{
   left:115px;
 }
 
-.shoe_div#left{
-  left:33px;
-}
-
-.shoe_div#right{
-  left:115px;
+#jim #sole_path{
+  fill: red;
 }
 
 /* ==BOARD== */
+.board_wrap{
+  position: absolute;
+  top:146px;
+}
+
 .board{
-  background-image: url('../images/build/board.png');
   width: 210px;
   height: 24px;
   position: absolute;
-  top:146px;
-}
-
-.board_div{
-  //background-image: url('../images/board.svg');
-  width: 210px;
-  height: 24px;
-  position: absolute;
-}
-
-.board_wrap_div{
-  position: absolute;
-  top:146px;
 }
 
 /* ==WHEELS== */
@@ -1169,36 +1065,18 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 28px;
   position: absolute;
   top:26px;
-}
-
-.wheel_div{
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  top:26px;
+  contain:strict;
 }
 
 .wheel#left{
-  background-image: url('../images/build/wheel_left.png');
   left:33px;
 }
 
 .wheel#right{
-  background-image: url('../images/build/wheel_right.png');
   left:149px;
 }
 
-.wheel_div#left{
-  //background-image: url('../images/wheel.svg');
-  left:33px;
-}
-
-.wheel_div#right{
-  //background-image: url('../images/wheel.svg');
-  left:149px;
-}
-
-#flipped{
+.flipped{
   transform-origin: center center;
   transform: scaleX(-1);
 }
@@ -1262,28 +1140,39 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 /* ==TBODY== */
-.tbody{
-  background-image: url('../images/build/tbody.png');
-  background-repeat: no-repeat;
-  background-position: center;
+.tbody_wrap{
   width: 120px;
   height: 86px;
   position: relative;   //attach parts relative from the top left of the body
 }
 
+.tbody{
+  width: 108px;
+  height: 74px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -54px;
+  margin-top: -37px;
+}
+
 /* ==THEAD== */
-.thead{
-  background-image: url('../images/build/thead.png');
-  width: 50px;
-  height: 43px;
+.thead_wrap{
   position: absolute;
   top: 23px;
   left: 35px;
 }
 
+.thead{
+  width: 50px;
+  height: 43px;
+  position: absolute;
+  fill: #B1C840;
+}
+
 /* ==TEYES== */
 .teye{
-  background-image: url('../images/build/teye.png');
+  //background-image: url('../images/build/teye.png');
   width: 6px;
   height: 17px;
   position: absolute;
@@ -1325,18 +1214,23 @@ header,section,footer,aside,nav,article,hgroup,img{
   bottom: 0;
 }
 
-#slideshow{
+#tablet{
   position: absolute;
-  width: 860px;
-  height: 550px;
-  left: 50%;
-  top: 50%;
-  margin-left: -430px;
-  margin-top: -120px;
-  background: black;
-  border-radius: 36px;
-  overflow: hidden;
   opacity: 0;
+  left: 50%;
+  top: 800px;
+  width: 858px;
+  height: 548px;
+  margin-left: -429px;
+  margin-top: -274px;
+}
+
+#slideshow{
+  background-image: url('../images/tablet_frame.png');
+  background-size: 100% 100%;
+  position: absolute;
+  width: 858px;
+  height: 548px;
 }
 
 .slide_container{
@@ -1348,18 +1242,22 @@ header,section,footer,aside,nav,article,hgroup,img{
   margin-left: -384px;
   margin-top: -235px;
   overflow-x: hidden;
+  contain: strict;
 }
 
 .slide_reel{
-  height: 451px;
-  left: 50%;
-  top: 50%;
+  background-image: url('../images/build/screen_reel.jpg');
+  background-size: contain;
+  height:451px;
+
+
   position: absolute;
   //height: 100%;
   width: 3072px;
-  backface-visibility: hidden;
-  perspective: 1000px;
-  transform: translateZ(0);
+  //backface-visibility: hidden;
+  //perspective: 1000px;
+  //transform: translateZ(0);
+  contain: strict;
 }
 
 .slide{
@@ -1367,30 +1265,35 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 768px;
   height: 100%;
   float: left;
+  contain: strict;
 }
 
 .slide.s1{
   background-image: url('../images/build/screen_home.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  contain: strict;
 }
 
 .slide.s2{
   background-image: url('../images/build/screen_history.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  contain: strict;
 }
 
 .slide.s3{
   background-image: url('../images/build/screen_calls.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  contain: strict;
 }
 
 .slide.s4{
   background-image: url('../images/build/screen_orders.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  contain: strict;
 }
 
 .bar{
@@ -1431,6 +1334,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   opacity: 0;
   backface-visibility: hidden;
   perspective: 1000px;
+  contain: strict;
 }
 
 /** ==SKILLS GAME STUFF== **/
@@ -1903,10 +1807,3 @@ header,section,footer,aside,nav,article,hgroup,img{
     }
   }
 }
-
-
-
-
-
-
-

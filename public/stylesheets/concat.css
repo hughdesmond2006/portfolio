@@ -7,15 +7,6 @@
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
 
-.anim_blow2 {
-  will-change: transform;
-  -webkit-animation-name: hinge3;
-  animation-name: hinge3;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
-
 .anim_spin {
   will-change: transform;
   -webkit-animation: rotating 1s linear infinite;
@@ -33,30 +24,10 @@
 #hugh1 .shoe#right {
   animation: right-shoe-jump 2.5s infinite; }
 
-#hugh1 .head {
+#hugh1 .head_wrap {
   animation: head-jump 2.5s infinite; }
 
 #hugh1 .arm#left {
-  animation: left-arm-jump 2.5s infinite; }
-
-.body_div {
-  will-change: transform;
-  animation: body-jump 2.5s infinite; }
-
-.shoe_div#left {
-  will-change: transform;
-  animation: left-shoe-jump 2.5s infinite; }
-
-.shoe_div#right {
-  will-change: transform;
-  animation: right-shoe-jump 2.5s infinite; }
-
-.head_wrap_div {
-  will-change: transform;
-  animation: head-jump 2.5s infinite; }
-
-.arm_div#left {
-  will-change: transform;
   animation: left-arm-jump 2.5s infinite; }
 
 #hugh2 .arm, #hugh3 .arm {
@@ -198,59 +169,7 @@
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
-@-webkit-keyframes hinge2 {
-  0% {
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out; }
-  20%,
-  60% {
-    -webkit-transform: rotate3d(0, 0, 1, -15deg);
-    transform: rotate3d(0, 0, 1, -15deg);
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out; }
-  40%,
-  80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    opacity: 1; }
-  to {
-    -webkit-transform: translate3d(0, 700px, 0);
-    transform: translate3d(0, 700px, 0);
-    opacity: 0; } }
-
 @keyframes hinge2 {
-  0% {
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out; }
-  20%,
-  60% {
-    -webkit-transform: rotate3d(0, 0, 1, -15deg);
-    transform: rotate3d(0, 0, 1, -15deg);
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out; }
-  40%,
-  80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
-    -webkit-transform-origin: bottom right;
-    transform-origin: bottom right;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    opacity: 1; } }
-
-@keyframes hinge3 {
   0% {
     transform: rotate3d(0, 0, 1, 315deg);
     transform-origin: bottom right;
@@ -825,18 +744,6 @@ header, section, footer, aside, nav, article, hgroup, img {
   border: 4px solid #e49b2e;
   padding: 15px; }
 
-.pimg1 {
-  background-image: url("../images/bg1.jpeg");
-  min-height: 100%; }
-
-.pimg2 {
-  background-image: url("../images/bg2.jpeg");
-  min-height: 400px; }
-
-.pimg3 {
-  background-image: url("../images/bg3.jpeg");
-  min-height: 400px; }
-
 .section {
   position: relative;
   width: 100%;
@@ -853,18 +760,19 @@ header, section, footer, aside, nav, article, hgroup, img {
   display: block;
   height: 1300px;
   padding-top: 50px;
+  overflow: hidden;
   background-image: linear-gradient(135deg, #404040, #111111); }
 
 #section4 {
   display: block;
   padding-top: 150px;
   padding-bottom: 200px;
+  overflow: hidden;
   background-image: linear-gradient(135deg, #6973b6, #444d8a); }
 
 #section5 {
   height: 1200px;
   overflow: hidden;
-  display: block;
   background-color: #ffffff; }
 
 #section6 {
@@ -877,7 +785,8 @@ header, section, footer, aside, nav, article, hgroup, img {
 #section7 {
   padding-top: 150px;
   padding-bottom: 150px;
-  background-color: #FFDF6A; }
+  background-color: #FFDF6A;
+  overflow: hidden; }
 
 #section8 {
   background-image: linear-gradient(135deg, #a1e3e6, #61d0d4);
@@ -908,7 +817,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 .scene4 {
   height: 620px;
   width: 640px;
-  position: relative;
+  position: absolute;
   left: 50%;
   top: 0;
   margin-left: -320px;
@@ -1045,7 +954,8 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .td {
   background: #8D97D2;
-  display: table-cell; }
+  display: table-cell;
+  animation: grow 1s .15s 1 ease forwards; }
 
 .rack {
   background: #6876c4; }
@@ -1071,9 +981,6 @@ header, section, footer, aside, nav, article, hgroup, img {
 .tracks {
   position: absolute;
   background: #ac5a69;
-  /**background:url(
-  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGklEQVQYV2PMtrX9z8DAwKCppweiGBhJFwAAb3sJqY9jJiAAAAAASUVORK5CYII=
-  ) repeat;**/
   border-radius: 6px;
   width: 30px;
   height: 50px;
@@ -1380,23 +1287,13 @@ header, section, footer, aside, nav, article, hgroup, img {
   opacity: 0; }
 
 #hugh1 {
-  display: table;
   position: absolute;
   left: 50%;
-  top: 25%;
-  margin-left: -105px;
-  margin-top: -100px; }
-
-#hugh_div {
-  display: table;
-  position: absolute;
-  left: 50%;
-  top: 75%;
+  top: 50%;
   margin-left: -105px;
   margin-top: -100px; }
 
 #hugh2 {
-  display: table;
   position: absolute;
   left: 50%;
   top: 55px;
@@ -1406,7 +1303,6 @@ header, section, footer, aside, nav, article, hgroup, img {
   opacity: 0; }
 
 #hugh3 {
-  display: table;
   position: absolute;
   left: 50%;
   top: 55px;
@@ -1419,81 +1315,66 @@ header, section, footer, aside, nav, article, hgroup, img {
   display: table;
   position: absolute;
   left: 90px;
-  bottom: 0; }
+  bottom: 0;
+  border: 1px solid blue; }
 
 #tim {
   display: table;
   position: absolute;
   right: 90px;
-  bottom: 0; }
+  bottom: 0;
+  border: 1px solid red; }
 
 /* ==BODY== */
 .body {
-  background-image: url("../images/build/body.png");
-  background-repeat: no-repeat;
-  width: 210px;
-  height: 164px;
-  position: relative; }
-
-.body_div {
   width: 210px;
   height: 164px;
   position: absolute;
   will-change: transform; }
 
-.torso_div {
+.torso {
   width: 108px;
   height: 108px;
   margin-left: 51px;
   margin-top: 48px;
-  fill: white; }
+  fill: white;
+  contain: strict; }
 
-#jim .body {
-  background-image: url("../images/build/jim_body.png"); }
+#jim .torso {
+  fill: #4dba5a; }
 
 #tim .body {
   background-image: url("../images/build/tim_body.png"); }
 
 /* ==HEAD== */
-.head {
-  background-image: url("../images/build/head.png");
-  width: 84px;
-  height: 72px;
-  position: absolute;
-  top: 12px;
-  left: 73px; }
-
-.head_div {
-  width: 84px;
-  height: 72px;
-  position: absolute; }
-
-.head_wrap_div {
+.head_wrap {
   position: absolute;
   top: 12px;
   left: 73px;
   width: 84px;
   height: 72px; }
 
-#hugh2 .head {
+.head {
+  width: 84px;
+  height: 72px;
+  position: absolute;
+  fill: #FDC689;
+  contain: strict; }
+
+#hugh2 .head_wrap {
   left: 59px; }
 
-#tim .head {
+#tim .head_wrap {
   left: 52px; }
 
 /* ==HAIR== */
 .hairs {
   position: relative;
-  left: 12px;
-  top: -12px; }
-
-.hairs_div {
-  position: relative;
   left: 24px;
   top: -16px; }
 
 #hugh2 .hairs {
-  left: -12px;
+  left: -24px;
   transform: scaleX(-1); }
 
 #jim .hairs {
@@ -1513,17 +1394,12 @@ header, section, footer, aside, nav, article, hgroup, img {
   left: 16px; }
 
 .hair {
-  background-image: url("../images/hair.png");
-  width: 14px;
-  height: 16px;
-  position: absolute; }
-
-.hair_div {
   width: 2px;
   height: 19px;
   position: absolute;
   transform-origin: bottom right;
-  transform: rotate(315deg); }
+  transform: rotate(315deg);
+  contain: strict; }
 
 .one {
   -webkit-animation-delay: 400ms;
@@ -1566,30 +1442,16 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 /* ==EYES== */
 .eye {
-  background-image: url("../images/build/eye.png");
   width: 10px;
   height: 28px;
   position: absolute;
-  top: 20px; }
-
-.eye_div {
-  background: #464646;
-  border-radius: 2px;
-  width: 10px;
-  height: 28px;
-  position: absolute;
-  top: 20px; }
+  top: 20px;
+  contain: strict; }
 
 .eye#left {
   left: 20px; }
 
 .eye#right {
-  left: 64px; }
-
-.eye_div#left {
-  left: 20px; }
-
-.eye_div#right {
   left: 64px; }
 
 #hugh2 .eye#left, #tim .eye#left {
@@ -1600,13 +1462,6 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 /* ==ARMS== */
 .arm {
-  background-image: url("../images/build/arm.png");
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  top: 84px; }
-
-.arm_div {
   width: 48px;
   height: 48px;
   position: absolute;
@@ -1621,12 +1476,6 @@ header, section, footer, aside, nav, article, hgroup, img {
   left: 17px; }
 
 .arm#right {
-  left: 146px; }
-
-.arm_div#left {
-  left: 17px; }
-
-.arm_div#right {
   left: 146px; }
 
 #tim .arm#left {
@@ -1650,6 +1499,11 @@ header, section, footer, aside, nav, article, hgroup, img {
   transform-origin: center bottom;
   animation: drink 5s infinite; }
 
+.arm_svg {
+  width: 48px;
+  height: 48px;
+  position: absolute; }
+
 .cup {
   background-image: url("../images/build/cup.png");
   width: 24px;
@@ -1663,23 +1517,18 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 /* ==SHOES== */
 .shoe {
-  background-image: url("../images/build/shoe.png");
   width: 62px;
   height: 32px;
   position: absolute;
-  top: 132px; }
-
-.shoe_div {
-  width: 62px;
-  height: 32px;
-  position: absolute;
-  top: 132px; }
+  top: 132px;
+  fill: #00A651;
+  contain: strict; }
 
 #jim .shoe {
-  background-image: url("../images/build/jim_shoe.png"); }
+  fill: #ba8551; }
 
 #tim .shoe {
-  background-image: url("../images/build/tim_shoe.png"); }
+  fill: #000000; }
 
 .shoe#left {
   left: 33px; }
@@ -1687,57 +1536,34 @@ header, section, footer, aside, nav, article, hgroup, img {
 .shoe#right {
   left: 115px; }
 
-.shoe_div#left {
-  left: 33px; }
-
-.shoe_div#right {
-  left: 115px; }
+#jim #sole_path {
+  fill: red; }
 
 /* ==BOARD== */
-.board {
-  background-image: url("../images/build/board.png");
-  width: 210px;
-  height: 24px;
+.board_wrap {
   position: absolute;
   top: 146px; }
 
-.board_div {
+.board {
   width: 210px;
   height: 24px;
   position: absolute; }
-
-.board_wrap_div {
-  position: absolute;
-  top: 146px; }
 
 /* ==WHEELS== */
 .wheel {
   width: 28px;
   height: 28px;
   position: absolute;
-  top: 26px; }
-
-.wheel_div {
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  top: 26px; }
+  top: 26px;
+  contain: strict; }
 
 .wheel#left {
-  background-image: url("../images/build/wheel_left.png");
   left: 33px; }
 
 .wheel#right {
-  background-image: url("../images/build/wheel_right.png");
   left: 149px; }
 
-.wheel_div#left {
-  left: 33px; }
-
-.wheel_div#right {
-  left: 149px; }
-
-#flipped {
+.flipped {
   transform-origin: center center;
   transform: scaleX(-1); }
 
@@ -1792,26 +1618,34 @@ header, section, footer, aside, nav, article, hgroup, img {
   text-align: center; }
 
 /* ==TBODY== */
-.tbody {
-  background-image: url("../images/build/tbody.png");
-  background-repeat: no-repeat;
-  background-position: center;
+.tbody_wrap {
   width: 120px;
   height: 86px;
   position: relative; }
 
+.tbody {
+  width: 108px;
+  height: 74px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -54px;
+  margin-top: -37px; }
+
 /* ==THEAD== */
-.thead {
-  background-image: url("../images/build/thead.png");
-  width: 50px;
-  height: 43px;
+.thead_wrap {
   position: absolute;
   top: 23px;
   left: 35px; }
 
+.thead {
+  width: 50px;
+  height: 43px;
+  position: absolute;
+  fill: #B1C840; }
+
 /* ==TEYES== */
 .teye {
-  background-image: url("../images/build/teye.png");
   width: 6px;
   height: 17px;
   position: absolute;
@@ -1845,18 +1679,22 @@ header, section, footer, aside, nav, article, hgroup, img {
   left: 0;
   bottom: 0; }
 
-#slideshow {
+#tablet {
   position: absolute;
-  width: 860px;
-  height: 550px;
+  opacity: 0;
   left: 50%;
-  top: 50%;
-  margin-left: -430px;
-  margin-top: -120px;
-  background: black;
-  border-radius: 36px;
-  overflow: hidden;
-  opacity: 0; }
+  top: 800px;
+  width: 858px;
+  height: 548px;
+  margin-left: -429px;
+  margin-top: -274px; }
+
+#slideshow {
+  background-image: url("../images/tablet_frame.png");
+  background-size: 100% 100%;
+  position: absolute;
+  width: 858px;
+  height: 548px; }
 
 .slide_container {
   position: absolute;
@@ -1867,38 +1705,46 @@ header, section, footer, aside, nav, article, hgroup, img {
   margin-left: -384px;
   margin-top: -235px;
   overflow-x: hidden;
-  border: 1px solid blue; }
+  contain: strict; }
 
 .slide_reel {
+  background-image: url("../images/build/screen_reel.jpg");
+  background-size: contain;
+  height: 451px;
   position: absolute;
-  height: 100%;
-  width: 3072px; }
+  width: 3072px;
+  contain: strict; }
 
 .slide {
   position: relative;
   width: 768px;
   height: 100%;
-  float: left; }
+  float: left;
+  contain: strict; }
 
 .slide.s1 {
   background-image: url("../images/build/screen_home.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  contain: strict; }
 
 .slide.s2 {
   background-image: url("../images/build/screen_history.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  contain: strict; }
 
 .slide.s3 {
   background-image: url("../images/build/screen_calls.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  contain: strict; }
 
 .slide.s4 {
   background-image: url("../images/build/screen_orders.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  contain: strict; }
 
 .bar {
   background-image: url("../images/build/screen_bar.jpg");
@@ -1932,8 +1778,11 @@ header, section, footer, aside, nav, article, hgroup, img {
   top: 50%;
   margin-left: -145px;
   margin-top: 200px;
-  transform: rotate(-20deg);
-  opacity: 0; }
+  transform: translateZ(0) rotate(-20deg);
+  opacity: 0;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  contain: strict; }
 
 /** ==SKILLS GAME STUFF== **/
 .crosshair {

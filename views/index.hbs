@@ -3,7 +3,7 @@
         <circle cx="24" cy="24" r="24"/>
     </symbol>
     <symbol id="svg_head" viewBox="0 0 84 72">
-        <path fill="#FDC689" d="M8,0h68c4.4,0,8,3.6,8,8v56c0,4.4-3.6,8-8,8H8c-4.4,0-8-3.6-8-8V8C0,3.6,3.6,0,8,0z"/>
+        <path d="M8,0h68c4.4,0,8,3.6,8,8v56c0,4.4-3.6,8-8,8H8c-4.4,0-8-3.6-8-8V8C0,3.6,3.6,0,8,0z"/>
     </symbol>
     <symbol id="svg_hair" viewBox="0 0 2.5 21.3">
         <path fill="#8C6239" d="M1.3,0L1.3,0C0.6,0,0,0.6,0,1.3L0,20c0,0.7,0.6,1.3,1.3,1.3h0c0.7,0,1.3-0.6,1.3-1.3V1.3C2.5,0.6,2,0,1.3,0z"/>
@@ -12,8 +12,8 @@
         <path fill="#464646" d="M3,0h4c1.6,0,3,1.4,3,3v22c0,1.6-1.4,3-3,3H3c-1.6,0-3-1.4-3-3L0,3C0,1.4,1.4,0,3,0z"/>
     </symbol>
     <symbol id="svg_shoe" viewBox="0 0 62 32">
-        <rect y="28" fill="#197B30" width="62" height="4"/>
-        <path fill="#00A651" d="M0.9,28C0.9,28,0,0,31,0s30.1,28,30.1,28H0.9z"/>
+        <rect id="sole_path" fill="var(--color_sole, black)" y="28" width="62" height="4"/>
+        <path id="shoe_path" fill="var(--color_shoe, pink)" d="M0.9,28C0.9,28,0,0,31,0s30.1,28,30.1,28H0.9z"/>
         <rect x="24.1" y="10" fill="#FFFFFF" width="13.8" height="2"/>
         <rect x="24.1" y="14" fill="#FFFFFF" width="13.8" height="2"/>
     </symbol>
@@ -29,6 +29,15 @@
             <path fill="#F15353" d="M27.8,11.6v4.7h-8.2c0.3-0.7,0.5-1.5,0.5-2.4s-0.2-1.6-0.5-2.4H27.8z"/>
         </g>
     </symbol>
+    <symbol id="svg_tbody" viewBox="0 0 108 74">
+        <circle fill="#306A0F" cx="54" cy="53.9" r="53.7"/>
+    </symbol>
+    <symbol id="svg_tfoot" viewBox="0 0 52 26">
+        <path fill="#B1C840" d="M0,26C0,11.6,11.6,0,26,0s26,11.6,26,26S0,40.4,0,26z"/>
+        <ellipse fill="#D1E56E" cx="27.4" cy="26" rx="6.5" ry="9.9"/>
+        <ellipse fill="#D1E56E" cx="41" cy="26" rx="5" ry="7.8"/>
+        <ellipse fill="#D1E56E" cx="13.7" cy="26" rx="5" ry="7.8"/>
+    </symbol>
 </svg>
 
 <div class="comingsoon">
@@ -37,15 +46,6 @@
     </div>
 </div>
 
-<!--<div class="pimg1">
-    <div class="ptext">
-        <span class="border">
-            Hugh Desmond
-        </span>
-    </div>
-</div>-->
-
-
 <!-- data-aos="flip-right"
          data-aos-mirror="true"
          data-aos-once="false"
@@ -53,7 +53,7 @@
          data-aos-anchor-placement="top-bottom"
          data-aos-offset="200"-->
 <section class="section section-light" id="section1">
-    <div id="hugh1" >
+    <!--<div id="hugh1" >
         <div class="body">
             <div class="head_container">
                 <div class="head">
@@ -80,83 +80,75 @@
             <div class="wheel anim_spin" id="left"></div>
             <div class="wheel anim_spin" id="right"></div>
         </div>
-    </div>
-    <div id="hugh_div" >
-        <div class="body_div">
-            <svg class="torso_div" id="left">
+    </div>-->
+    <div id="hugh1" >
+        <div class="body">
+            <svg class="torso" id="left">
                 <use xlink:href="#svg_circle" />
             </svg>
-            <div class="head_wrap_div">
-                <svg class="head_div">
+            <div class="head_wrap">
+                <svg class="head">
                     <use xlink:href="#svg_head" />
                 </svg>
-                <div class="hairs_div">
-                    <svg class="hair_div one anim_blow2">
+                <div class="hairs">
+                    <svg class="hair one anim_blow">
                         <use xlink:href="#svg_hair" />
                     </svg>
-                    <svg class="hair_div two anim_blow2">
+                    <svg class="hair two anim_blow">
                         <use xlink:href="#svg_hair" />
                     </svg>
-                    <svg class="hair_div three anim_blow2">
+                    <svg class="hair three anim_blow">
                         <use xlink:href="#svg_hair" />
                     </svg>
-                    <svg class="hair_div four anim_blow2">
+                    <svg class="hair four anim_blow">
                         <use xlink:href="#svg_hair" />
                     </svg>
-                    <svg class="hair_div five anim_blow2">
+                    <svg class="hair five anim_blow">
                         <use xlink:href="#svg_hair" />
                     </svg>
-                    <svg class="hair_div six anim_blow2">
+                    <svg class="hair six anim_blow">
                         <use xlink:href="#svg_hair" />
                     </svg>
-                    <svg class="hair_div seven anim_blow2">
+                    <svg class="hair seven anim_blow">
                         <use xlink:href="#svg_hair" />
                     </svg>
-                    <svg class="hair_div eight anim_blow2">
+                    <svg class="hair eight anim_blow">
                         <use xlink:href="#svg_hair" />
                     </svg>
                 </div>
-                <svg class="eye_div anim_blink" id="left">
+                <svg class="eye anim_blink" id="left">
                     <use xlink:href="#svg_eye" />
                 </svg>
-                <svg class="eye_div anim_blink" id="right">
+                <svg class="eye anim_blink" id="right">
                     <use xlink:href="#svg_eye" />
                 </svg>
             </div>
-            <svg class="shoe_div" id="left">
+            <svg class="shoe green_scheme" id="left">
                 <use xlink:href="#svg_shoe" />
             </svg>
-            <svg class="shoe_div" id="right">
+            <svg class="shoe green_scheme" id="right">
                 <use xlink:href="#svg_shoe" />
             </svg>
-            <svg class="arm_div" id="left">
+            <svg class="arm" id="left">
                 <use xlink:href="#svg_circle" />
             </svg>
-            <svg class="arm_div" id="right">
+            <svg class="arm" id="right">
                 <use xlink:href="#svg_circle" />
             </svg>
         </div>
-        <div class="board_wrap_div">
-            <svg class="board_div" >
+        <div class="board_wrap">
+            <svg class="board" >
                 <use xlink:href="#svg_board" />
             </svg>
-            <svg class="wheel_div anim_spin" id="left">
+            <svg class="wheel anim_spin" id="left">
                 <use xlink:href="#svg_wheel" />
             </svg>
-            <svg class="wheel_div anim_spin" id="right">
-                <use id="flipped" xlink:href="#svg_wheel" />
+            <svg class="wheel anim_spin" id="right">
+                <use class="flipped" xlink:href="#svg_wheel" />
             </svg>
         </div>
     </div>
 </section>
-
-<!--<div class="pimg2">
-    <div class="ptext">
-        <span class="border">
-            Front-End
-        </span>
-    </div>
-</div>-->
 
 <section id="section2" class="section section-dark" >
     <div class="scene1">
@@ -164,61 +156,131 @@
             <div class="turtle" id="turtle1" >
                 <div class="count" data-aos="flip-right"
                      data-aos-offset="435">5</div>
-                <div class="tbody">
-                    <div class="thead">
-                        <div class="teye anim_blink" id="left"></div>
-                        <div class="teye anim_blink" id="right"></div>
+                <div class="tbody_wrap">
+                    <svg class="tbody">
+                        <use xlink:href="#svg_tbody" />
+                    </svg>
+                    <div class="thead_wrap">
+                        <svg class="thead">
+                            <use xlink:href="#svg_head" />
+                        </svg>
+                        <svg class="teye anim_blink" id="left">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
+                        <svg class="teye anim_blink" id="right">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
                     </div>
-                    <div class="tfoot" id="left"></div>
-                    <div class="tfoot" id="right"></div>
+                    <div class="tfoot" id="left">
+                        <use xlink:href="#svg_tfoot" />
+                    </div>
+                    <div class="tfoot" id="right">
+                        <use class="flipped" xlink:href="#svg_tfoot" />
+                    </div>
                 </div>
             </div>
             <div class="turtle" id="turtle2" >
                 <div class="count" data-aos="flip-right"
                      data-aos-offset="410">4</div>
-                <div class="tbody">
-                    <div class="thead">
-                        <div class="teye anim_blink" id="left"></div>
-                        <div class="teye anim_blink" id="right"></div>
+                <div class="tbody_wrap">
+                    <svg class="tbody">
+                        <use xlink:href="#svg_tbody" />
+                    </svg>
+                    <div class="thead_wrap">
+                        <svg class="thead">
+                            <use xlink:href="#svg_head" />
+                        </svg>
+                        <svg class="teye anim_blink" id="left">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
+                        <svg class="teye anim_blink" id="right">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
                     </div>
-                    <div class="tfoot" id="left"></div>
-                    <div class="tfoot" id="right"></div>
+                    <div class="tfoot" id="left">
+                        <use xlink:href="#svg_tfoot" />
+                    </div>
+                    <div class="tfoot" id="right">
+                        <use class="flipped" xlink:href="#svg_tfoot" />
+                    </div>
                 </div>
             </div>
             <div class="turtle" id="turtle3" >
                 <div class="count" data-aos="flip-right"
                      data-aos-offset="385">3</div>
-                <div class="tbody">
-                    <div class="thead">
-                        <div class="teye anim_blink" id="left"></div>
-                        <div class="teye anim_blink" id="right"></div>
+                <div class="tbody_wrap">
+                    <svg class="tbody">
+                        <use xlink:href="#svg_tbody" />
+                    </svg>
+                    <div class="thead_wrap">
+                        <svg class="thead">
+                            <use xlink:href="#svg_head" />
+                        </svg>
+                        <svg class="teye anim_blink" id="left">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
+                        <svg class="teye anim_blink" id="right">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
                     </div>
-                    <div class="tfoot" id="left"></div>
-                    <div class="tfoot" id="right"></div>
+                    <div class="tfoot" id="left">
+                        <use xlink:href="#svg_tfoot" />
+                    </div>
+                    <div class="tfoot" id="right">
+                        <use class="flipped" xlink:href="#svg_tfoot" />
+                    </div>
                 </div>
             </div>
             <div class="turtle" id="turtle4" >
                 <div class="count" data-aos="flip-right"
                      data-aos-offset="360">2</div>
-                <div class="tbody">
-                    <div class="thead">
-                        <div class="teye anim_blink" id="left"></div>
-                        <div class="teye anim_blink" id="right"></div>
+                <div class="tbody_wrap">
+                    <svg class="tbody">
+                        <use xlink:href="#svg_tbody" />
+                    </svg>
+                    <div class="thead_wrap">
+                        <svg class="thead">
+                            <use xlink:href="#svg_head" />
+                        </svg>
+                        <svg class="teye anim_blink" id="left">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
+                        <svg class="teye anim_blink" id="right">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
                     </div>
-                    <div class="tfoot" id="left"></div>
-                    <div class="tfoot" id="right"></div>
+                    <div class="tfoot" id="left">
+                        <use xlink:href="#svg_tfoot" />
+                    </div>
+                    <div class="tfoot" id="right">
+                        <use class="flipped" xlink:href="#svg_tfoot" />
+                    </div>
                 </div>
             </div>
             <div class="turtle" id="turtle5" >
                 <div class="count" data-aos="flip-right"
                      data-aos-offset="330">1</div>
-                <div class="tbody">
-                    <div class="thead">
-                        <div class="teye anim_blink" id="left"></div>
-                        <div class="teye anim_blink" id="right"></div>
+                <div class="tbody_wrap">
+                    <svg class="tbody">
+                        <use xlink:href="#svg_tbody" />
+                    </svg>
+                    <div class="thead_wrap">
+                        <svg class="thead">
+                            <use xlink:href="#svg_head" />
+                        </svg>
+                        <svg class="teye anim_blink" id="left">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
+                        <svg class="teye anim_blink" id="right">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
                     </div>
-                    <div class="tfoot" id="left"></div>
-                    <div class="tfoot" id="right"></div>
+                    <div class="tfoot" id="left">
+                        <use xlink:href="#svg_tfoot" />
+                    </div>
+                    <div class="tfoot" id="right">
+                        <use class="flipped" xlink:href="#svg_tfoot" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -227,30 +289,69 @@
         <div class="big_heading" id="university">University</div>
         <div id="hugh2" >
             <div class="body">
-                <div class="head_container">
-                    <div class="head">
-                        <div class="hairs">
-                            <div class="hair one anim_blow"></div>
-                            <div class="hair two anim_blow"></div>
-                            <div class="hair three anim_blow"></div>
-                            <div class="hair four anim_blow"></div>
-                            <div class="hair five anim_blow"></div>
-                            <div class="hair six anim_blow"></div>
-                            <div class="hair seven anim_blow"></div>
-                            <div class="hair eight anim_blow"></div>
-                        </div>
-                        <div class="eye anim_blink" id="left"></div>
-                        <div class="eye anim_blink" id="right"></div>
+                <svg class="torso" id="left">
+                    <use xlink:href="#svg_circle" />
+                </svg>
+                <div class="head_wrap">
+                    <svg class="head">
+                        <use xlink:href="#svg_head" />
+                    </svg>
+                    <div class="hairs">
+                        <svg class="hair one anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair two anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair three anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair four anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair five anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair six anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair seven anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair eight anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
                     </div>
+                    <svg class="eye anim_blink" id="left">
+                        <use xlink:href="#svg_eye" />
+                    </svg>
+                    <svg class="eye anim_blink" id="right">
+                        <use xlink:href="#svg_eye" />
+                    </svg>
                 </div>
-                <div class="shoe" id="left"></div>
-                <div class="shoe" id="right"></div>
-                <div class="arm" id="left"></div>
-                <div class="arm" id="right"></div>
+                <svg class="shoe green_scheme" id="left">
+                    <use xlink:href="#svg_shoe" />
+                </svg>
+                <svg class="shoe green_scheme" id="right">
+                    <use xlink:href="#svg_shoe" />
+                </svg>
+                <svg class="arm" id="left">
+                    <use xlink:href="#svg_circle" />
+                </svg>
+                <svg class="arm" id="right">
+                    <use xlink:href="#svg_circle" />
+                </svg>
             </div>
-            <div class="board">
-                <div class="wheel" id="left"></div>
-                <div class="wheel" id="right"></div>
+            <div class="board_wrap">
+                <svg class="board" >
+                    <use xlink:href="#svg_board" />
+                </svg>
+                <svg class="wheel" id="left">
+                    <use xlink:href="#svg_wheel" />
+                </svg>
+                <svg class="wheel" id="right">
+                    <use class="flipped" xlink:href="#svg_wheel" />
+                </svg>
             </div>
         </div>
     </div>
@@ -259,49 +360,105 @@
             <div class="turtle" id="turtle1" >
                 <div class="count" data-aos="flip-left"
                      data-aos-offset="345">1</div>
-                <div class="tbody">
-                    <div class="thead">
-                        <div class="teye anim_blink" id="left"></div>
-                        <div class="teye anim_blink" id="right"></div>
+                <div class="tbody_wrap">
+                    <svg class="tbody">
+                        <use xlink:href="#svg_tbody" />
+                    </svg>
+                    <div class="thead_wrap">
+                        <svg class="thead">
+                            <use xlink:href="#svg_head" />
+                        </svg>
+                        <svg class="teye anim_blink" id="left">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
+                        <svg class="teye anim_blink" id="right">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
                     </div>
-                    <div class="tfoot" id="left"></div>
-                    <div class="tfoot" id="right"></div>
+                    <div class="tfoot" id="left">
+                        <use xlink:href="#svg_tfoot" />
+                    </div>
+                    <div class="tfoot" id="right">
+                        <use class="flipped" xlink:href="#svg_tfoot" />
+                    </div>
                 </div>
             </div>
             <div class="turtle" id="turtle2" >
                 <div class="count" data-aos="flip-left"
                      data-aos-offset="375">2</div>
-                <div class="tbody">
-                    <div class="thead">
-                        <div class="teye anim_blink" id="left"></div>
-                        <div class="teye anim_blink" id="right"></div>
+                <div class="tbody_wrap">
+                    <svg class="tbody">
+                        <use xlink:href="#svg_tbody" />
+                    </svg>
+                    <div class="thead_wrap">
+                        <svg class="thead">
+                            <use xlink:href="#svg_head" />
+                        </svg>
+                        <svg class="teye anim_blink" id="left">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
+                        <svg class="teye anim_blink" id="right">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
                     </div>
-                    <div class="tfoot" id="left"></div>
-                    <div class="tfoot" id="right"></div>
+                    <div class="tfoot" id="left">
+                        <use xlink:href="#svg_tfoot" />
+                    </div>
+                    <div class="tfoot" id="right">
+                        <use class="flipped" xlink:href="#svg_tfoot" />
+                    </div>
                 </div>
             </div>
             <div class="turtle" id="turtle3" >
                 <div class="count" data-aos="flip-left"
                      data-aos-offset="400">3</div>
-                <div class="tbody">
-                    <div class="thead">
-                        <div class="teye anim_blink" id="left"></div>
-                        <div class="teye anim_blink" id="right"></div>
+                <div class="tbody_wrap">
+                    <svg class="tbody">
+                        <use xlink:href="#svg_tbody" />
+                    </svg>
+                    <div class="thead_wrap">
+                        <svg class="thead">
+                            <use xlink:href="#svg_head" />
+                        </svg>
+                        <svg class="teye anim_blink" id="left">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
+                        <svg class="teye anim_blink" id="right">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
                     </div>
-                    <div class="tfoot" id="left"></div>
-                    <div class="tfoot" id="right"></div>
+                    <div class="tfoot" id="left">
+                        <use xlink:href="#svg_tfoot" />
+                    </div>
+                    <div class="tfoot" id="right">
+                        <use class="flipped" xlink:href="#svg_tfoot" />
+                    </div>
                 </div>
             </div>
             <div class="turtle" id="turtle4" >
                 <div class="count" data-aos="flip-left"
                      data-aos-offset="425">4</div>
-                <div class="tbody">
-                    <div class="thead">
-                        <div class="teye anim_blink" id="left"></div>
-                        <div class="teye anim_blink" id="right"></div>
+                <div class="tbody_wrap">
+                    <svg class="tbody">
+                        <use xlink:href="#svg_tbody" />
+                    </svg>
+                    <div class="thead_wrap">
+                        <svg class="thead">
+                            <use xlink:href="#svg_head" />
+                        </svg>
+                        <svg class="teye anim_blink" id="left">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
+                        <svg class="teye anim_blink" id="right">
+                            <use xlink:href="#svg_eye" />
+                        </svg>
                     </div>
-                    <div class="tfoot" id="left"></div>
-                    <div class="tfoot" id="right"></div>
+                    <div class="tfoot" id="left">
+                        <use xlink:href="#svg_tfoot" />
+                    </div>
+                    <div class="tfoot" id="right">
+                        <use class="flipped" xlink:href="#svg_tfoot" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -310,30 +467,69 @@
         <div class="big_heading" id="university">Industry</div>
         <div id="hugh3" >
             <div class="body">
-                <div class="head_container">
-                    <div class="head">
-                        <div class="hairs">
-                            <div class="hair one anim_blow"></div>
-                            <div class="hair two anim_blow"></div>
-                            <div class="hair three anim_blow"></div>
-                            <div class="hair four anim_blow"></div>
-                            <div class="hair five anim_blow"></div>
-                            <div class="hair six anim_blow"></div>
-                            <div class="hair seven anim_blow"></div>
-                            <div class="hair eight anim_blow"></div>
-                        </div>
-                        <div class="eye anim_blink" id="left"></div>
-                        <div class="eye anim_blink" id="right"></div>
+                <svg class="torso" id="left">
+                    <use xlink:href="#svg_circle" />
+                </svg>
+                <div class="head_wrap">
+                    <svg class="head">
+                        <use xlink:href="#svg_head" />
+                    </svg>
+                    <div class="hairs">
+                        <svg class="hair one anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair two anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair three anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair four anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair five anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair six anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair seven anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
+                        <svg class="hair eight anim_blow">
+                            <use xlink:href="#svg_hair" />
+                        </svg>
                     </div>
+                    <svg class="eye anim_blink" id="left">
+                        <use xlink:href="#svg_eye" />
+                    </svg>
+                    <svg class="eye anim_blink" id="right">
+                        <use xlink:href="#svg_eye" />
+                    </svg>
                 </div>
-                <div class="shoe" id="left"></div>
-                <div class="shoe" id="right"></div>
-                <div class="arm" id="left"></div>
-                <div class="arm" id="right"></div>
+                <svg class="shoe green_scheme" id="left">
+                    <use xlink:href="#svg_shoe" />
+                </svg>
+                <svg class="shoe green_scheme" id="right">
+                    <use xlink:href="#svg_shoe" />
+                </svg>
+                <svg class="arm" id="left">
+                    <use xlink:href="#svg_circle" />
+                </svg>
+                <svg class="arm" id="right">
+                    <use xlink:href="#svg_circle" />
+                </svg>
             </div>
-            <div class="board">
-                <div class="wheel" id="left"></div>
-                <div class="wheel" id="right"></div>
+            <div class="board_wrap">
+                <svg class="board" >
+                    <use xlink:href="#svg_board" />
+                </svg>
+                <svg class="wheel" id="left">
+                    <use xlink:href="#svg_wheel" />
+                </svg>
+                <svg class="wheel" id="right">
+                    <use class="flipped" xlink:href="#svg_wheel" />
+                </svg>
             </div>
         </div>
     </div>
@@ -351,51 +547,74 @@
         <div id="lemonade_stand"></div>
         <div id="jim" >
             <div class="body">
-                <div class="head_container">
-                    <div class="head">
-                        <div class="hairs"></div>
-                        <div class="eye anim_blink" id="left"></div>
-                        <div class="eye anim_blink" id="right"></div>
-                    </div>
+                <svg class="torso" id="left">
+                    <use xlink:href="#svg_circle" />
+                </svg>
+                <div class="head_wrap">
+                    <svg class="head">
+                        <use xlink:href="#svg_head" />
+                    </svg>
+                    <div class="hairs"></div>
+                    <svg class="eye anim_blink" id="left">
+                        <use xlink:href="#svg_eye" />
+                    </svg>
+                    <svg class="eye anim_blink" id="right">
+                        <use xlink:href="#svg_eye" />
+                    </svg>
                 </div>
-                <div class="shoe" id="left"></div>
-                <div class="shoe" id="right"></div>
-                <div class="arm" id="left"></div>
+                <svg class="shoe brown_scheme" id="left">
+                    <use xlink:href="#svg_shoe" />
+                </svg>
+                <svg class="shoe brown_scheme" id="right">
+                    <use xlink:href="#svg_shoe" />
+                </svg>
+                <svg class="arm" id="left">
+                    <use xlink:href="#svg_circle" />
+                </svg>
                 <div class="arm" id="right">
+                    <svg class="arm_svg">
+                        <use xlink:href="#svg_circle" />
+                    </svg>
                     <div class="cup"></div>
                 </div>
             </div>
         </div>
         <div id="tim" >
             <div class="body">
-                <div class="head_container">
-                    <div class="head">
-                        <div class="hairs"></div>
-                        <div class="eye anim_blink" id="left"></div>
-                        <div class="eye anim_blink" id="right"></div>
-                    </div>
+                <div class="head_wrap">
+                    <svg class="head">
+                        <use xlink:href="#svg_head" />
+                    </svg>
+                    <div class="hairs"></div>
+                    <svg class="eye anim_blink" id="left">
+                        <use xlink:href="#svg_eye" />
+                    </svg>
+                    <svg class="eye anim_blink" id="right">
+                        <use xlink:href="#svg_eye" />
+                    </svg>
                 </div>
-                <div class="shoe" id="left"></div>
-                <div class="shoe" id="right"></div>
-                <div class="arm" id="left">
-                </div>
+                <svg class="shoe black_scheme" id="left">
+                    <use xlink:href="#svg_shoe" />
+                </svg>
+                <svg class="shoe black_scheme" id="right">
+                    <use xlink:href="#svg_shoe" />
+                </svg>
+                <div class="arm" id="left"></div>
                 <div class="arm" id="right"></div>
             </div>
         </div>
     </div>
-    <!--<div id="slideshow">
-        <div class="slide_container">-->
-            <div class="slide_reel">
-                <div class="slide s1"></div>
-                <div class="slide s2"></div>
-                <div class="slide s3"></div>
-                <div class="slide s4"></div>
-            </div>
+    <div id="tablet">
+        <div class="slide_container">
+            <div class="slide_reel"></div>
         </div>
-        <!--<div class="bar"></div>
-        <div class="overlay"></div>
-    </div>-->
-    <div class="swipe_hand"></div>
+        <div id="slideshow"></div>
+    </div>
+
+        <!--<div class="bar"></div>-->
+
+    <!--<div class="overlay"></div>-->
+    <!--<div class="swipe_hand"></div>-->
 </section>
 
 <section id="section4" class="section section-dark">
@@ -532,7 +751,7 @@
         <div class="big_heading font_black" id="game">Game</div>
         <div class="video_wrapper">
             <video id="game_video" muted autoplay loop>
-                <source src="../images/trailer1.mp4">
+                <source src="../images/trailer3.mp4">
             </video>
             <a href="#" class="speaker">
                 <span></span>
@@ -757,71 +976,97 @@
     <audio id="audio" src="../images/gun_shot.mp3"></audio>
 </section>
 
-<!--<div class="pimg3">
-    <div class="ptext">
-        <span class="border">
-            Back-End
-        </span>
-    </div>
-</div>-->
-
 <section id="section8" class="section section-light">
     <div id="hugh1" >
         <div class="body">
-            <div class="head_container">
-                <div class="head">
-                    <div class="hairs">
-                        <div class="hair one anim_blow"></div>
-                        <div class="hair two anim_blow"></div>
-                        <div class="hair three anim_blow"></div>
-                        <div class="hair four anim_blow"></div>
-                        <div class="hair five anim_blow"></div>
-                        <div class="hair six anim_blow"></div>
-                        <div class="hair seven anim_blow"></div>
-                        <div class="hair eight anim_blow"></div>
-                    </div>
-                    <div class="eye anim_blink" id="left"></div>
-                    <div class="eye anim_blink" id="right"></div>
+            <svg class="torso" id="left">
+                <use xlink:href="#svg_circle" />
+            </svg>
+            <div class="head_wrap">
+                <svg class="head">
+                    <use xlink:href="#svg_head" />
+                </svg>
+                <div class="hairs">
+                    <svg class="hair one anim_blow">
+                        <use xlink:href="#svg_hair" />
+                    </svg>
+                    <svg class="hair two anim_blow">
+                        <use xlink:href="#svg_hair" />
+                    </svg>
+                    <svg class="hair three anim_blow">
+                        <use xlink:href="#svg_hair" />
+                    </svg>
+                    <svg class="hair four anim_blow">
+                        <use xlink:href="#svg_hair" />
+                    </svg>
+                    <svg class="hair five anim_blow">
+                        <use xlink:href="#svg_hair" />
+                    </svg>
+                    <svg class="hair six anim_blow">
+                        <use xlink:href="#svg_hair" />
+                    </svg>
+                    <svg class="hair seven anim_blow">
+                        <use xlink:href="#svg_hair" />
+                    </svg>
+                    <svg class="hair eight anim_blow">
+                        <use xlink:href="#svg_hair" />
+                    </svg>
                 </div>
+                <svg class="eye anim_blink" id="left">
+                    <use xlink:href="#svg_eye" />
+                </svg>
+                <svg class="eye anim_blink" id="right">
+                    <use xlink:href="#svg_eye" />
+                </svg>
             </div>
-            <div class="shoe" id="left"></div>
-            <div class="shoe" id="right"></div>
-            <div class="arm" id="left"></div>
-            <div class="arm" id="right"></div>
+            <svg class="shoe green_scheme" id="left">
+                <use xlink:href="#svg_shoe" />
+            </svg>
+            <svg class="shoe green_scheme" id="right">
+                <use xlink:href="#svg_shoe" />
+            </svg>
+            <svg class="arm" id="left">
+                <use xlink:href="#svg_circle" />
+            </svg>
+            <svg class="arm" id="right">
+                <use xlink:href="#svg_circle" />
+            </svg>
         </div>
-        <div class="board">
-            <div class="wheel anim_spin" id="left"></div>
-            <div class="wheel anim_spin" id="right"></div>
+        <div class="board_wrap">
+            <svg class="board" >
+                <use xlink:href="#svg_board" />
+            </svg>
+            <svg class="wheel anim_spin" id="left">
+                <use xlink:href="#svg_wheel" />
+            </svg>
+            <svg class="wheel anim_spin" id="right">
+                <use class="flipped" xlink:href="#svg_wheel" />
+            </svg>
         </div>
     </div>
 </section>
 
-<!--<div class="pimg1">
-    <div class="ptext">
-        <span class="border">
-            Hugh Desmond
-        </span>
-    </div>
-</div>-->
-
-
-
 <script>
     $(function () { // wait for document ready
         // init
-        var controller = new ScrollMagic.Controller();
+        let controller = new ScrollMagic.Controller({
+            container: 'body', // main container for scrolling
+            refreshInterval: 0, // set to 0 to disable
+            loglevel: 0
+        });
+
+        console.log(controller.refreshInterval);
 
         //throw tablet to fullscreen
-        TweenMax.to("#slideshow", 0, {opacity: 1});
-        /**let tabletAnim = TweenMax.from("#slideshow", 1.2, {opacity: 1, scaleX: .07, scaleY: .085, skewX: 20, x:14, y: -82, ease:Power1.easeOut}, 1);
+        //TweenMax.to("#tablet", 0, {opacity: 1});
+        //let tabletAnim = TweenMax.from("#tablet", 1.2, {opacity: 1, scaleX: .07, scaleY: .085, skewX: 20, x:14, y: -82, ease:Power1.easeOut}, 1);
 
-        new ScrollMagic.Scene({triggerElement: "#section5",offset: 750})
-                .setTween(tabletAnim)
-                .addTo(controller);**/
+        //new ScrollMagic.Scene({triggerElement: "#section5",offset: 750})
+          //      .setTween(tabletAnim)
+            //    .addTo(controller);
 
-        /**
         //fade out sales text
-        let textFadeAnim = TweenMax.to(".sales_text_wrapper", .4, {opacity: 0});
+        /**let textFadeAnim = TweenMax.to(".sales_text_wrapper", .4, {opacity: 0});
 
         new ScrollMagic.Scene({triggerElement: "#section5", offset: 750})
                 .setTween(textFadeAnim)
@@ -849,7 +1094,7 @@
                 //.addIndicators()
                 .triggerHook(0)
                 .addTo(controller);
-
+*/
         //build skate jump tween
         var skateTween = TweenMax.to("#hugh2",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0} ], autoRotate:180}, ease:Power0.easeNone});
 
@@ -901,7 +1146,7 @@
         new ScrollMagic.Scene({triggerElement: ".turtle_container2", duration: 400, offset: -200})
         .setTween(wheelSpinTween2)
         .addTo(controller);
-
+/**
         //set trigger for robot section grows
         const roboTrigger = "#section4";
         const offsetValue = 500;
@@ -1019,31 +1264,20 @@
                 .addTo(controller);**/
 
         //pin section5 until slideshow ends
-        new ScrollMagic.Scene({triggerElement: "#section5",offset: 450, duration: 1000})
-                .setPin("#section5")
-                //.addIndicators()
-                .triggerHook(0)
-                .addTo(controller);
-
-        //screenshot slide anim
-        //let slideAnim = TweenMax.to(".slide_reel", .5, {left: -768, ease:Power3.easeInOut});
-        //let slideAnim2 = TweenMax.to(".slide_reel", .5, {left: -1536, ease:Power3.easeInOut});
-        //let slideAnim3 = TweenMax.to(".slide_reel", .5, {left: -2304, ease:Power3.easeInOut});
+        //new ScrollMagic.Scene({triggerElement: "#tablet", /**offset: 275,**/ duration: 1000})
+          //      .setPin("#section5")
+            //    .addIndicators()
+              //  .addTo(controller);
 
         //timeline
         let slideTimeLine = new TimelineMax();
-        slideTimeLine.to(".slide_reel" , .5, {x: 0})
+        slideTimeLine.to(".slide_reel" , .5, {x: 0, z:0.01})
                 .to(".slide_reel" , 1.5, {x: -768, ease:Power1.easeInOut})
                 .to(".slide_reel" , 2, {x: -768})
                 .to(".slide_reel" , 3, {x: -1536, ease:Power1.easeInOut})
                 .to(".slide_reel" , 3.5, {x: -1536})
                 .to(".slide_reel" , 4.5, {x: -2304, ease:Power1.easeInOut})
                 .to(".slide_reel" , 5, {x: -2304});
-
-        //timeline
-        /**let slideTimeLine = new TimelineMax();
-        slideTimeLine.to(".slide_reel" , 0, {x: 0})
-                .to(".slide_reel" , 5, {x: -2304, ease:Power1.easeInOut});**/
 
         new ScrollMagic.Scene({triggerElement: "#section5",offset: 550, duration: 1000})
                 .setTween(slideTimeLine)
@@ -1067,7 +1301,7 @@
                 .addTo(controller);**/
 
         //------skill game sniper mask stuff--------
-        /**let timer;
+        let timer;
         let mouseX = 0, mouseY = 0;
         let xp = 0, yp =0;
         let circle = $("#circle");
@@ -1096,7 +1330,7 @@
             xp += ((mouseX - xp)/6);
             yp += ((mouseY - yp)/6);
             circle.css({left: xp +'px', top: yp +'px'});  //
-        }, 30);**/
+        }, 30);
     });
 
     //robo game code
@@ -1326,40 +1560,4 @@
             skill.classList.add('shot');
         }
     }
-
-
-
-
-    /* USEFUL STUFF MAYBE?
-    //custom trigger anim
-    var controller = new ScrollMagic.Controller();
-
-    var scene = new ScrollMagic.Scene({triggerElement: "#section2"})
-            .setClassToggle("#section2","make_orange")
-            .addIndicators({name: "1 - add a class"})
-            .addTo(controller);
-
-    //section slide effect
-    $(function () { // wait for document ready
-        // init
-        var controller = new ScrollMagic.Controller({
-            globalSceneOptions: {
-                triggerHook: 'onLeave'
-            }
-        });
-
-        // get all slides
-        var slides = document.querySelectorAll("section");
-
-        // create scene for every slide
-        for (var i=0; i<slides.length; i++) {
-            new ScrollMagic.Scene({
-                triggerElement: slides[i]
-            })
-                    .setPin(slides[i])
-                    .addIndicators() // add indicators (requires plugin)
-                    .addTo(controller);
-        }
-    });
-    */
 </script>
