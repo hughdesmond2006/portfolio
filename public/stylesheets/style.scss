@@ -133,7 +133,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #section5{
-  height: 1200px;
+  height: 2200px;
   overflow: hidden;
   //display: block;
   background-color: #ffffff;
@@ -774,22 +774,20 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   left: 90px;
   bottom: 0;
-  border: 1px solid blue;
 }
 
 #tim{
-  display: table;
+  display: block;
   position: absolute;
   right: 90px;
   bottom: 0;
-  border: 1px solid red;
 }
 
 /* ==BODY== */
 .body{
   width: 210px;
   height: 164px;
-  position: absolute;   //attach parts relative from the top left of the body
+  position: relative;   //attach parts relative from the top left of the body
   will-change: transform;
 }
 
@@ -1214,15 +1212,25 @@ header,section,footer,aside,nav,article,hgroup,img{
   bottom: 0;
 }
 
+#tablet_wrap{
+  position: absolute;
+  width: 858px;
+  height: 548px;
+  left: 50%;
+  top: 765px;
+  margin-left: -429px;
+  margin-top: -274px;
+}
+
 #tablet{
   position: absolute;
   opacity: 0;
-  left: 50%;
-  top: 800px;
+  //left: 50%;
+  //top: 765px;
   width: 858px;
   height: 548px;
-  margin-left: -429px;
-  margin-top: -274px;
+  //margin-left: -429px;
+  //margin-top: -274px;
 }
 
 #slideshow{
@@ -1327,9 +1335,10 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 290px;
   height: 294px;
   left: 50%;
-  top: 50%;
+  bottom: -70px;
+  //top: 50%;
   margin-left: -145px;
-  margin-top: 200px;
+  //margin-top: 200px;
   transform: translateZ(0) rotate(-20deg);
   opacity: 0;
   backface-visibility: hidden;
