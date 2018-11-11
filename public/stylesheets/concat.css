@@ -683,6 +683,49 @@
     transform: translateY(300px) rotate(311deg);
     opacity: 0; } }
 
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0); }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0); } }
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom; }
+
+.green_scheme {
+  --color_sole: #197b30;
+  --color_shoe: #00a651; }
+
+.brown_scheme {
+  --color_sole: #996f47;
+  --color_shoe: #ba8551; }
+
+.black_scheme {
+  --color_sole: #555555;
+  --color_shoe: #000000; }
+
 .font_black {
   color: #000000; }
 
@@ -771,7 +814,7 @@ header, section, footer, aside, nav, article, hgroup, img {
   background-image: linear-gradient(135deg, #6973b6, #444d8a); }
 
 #section5 {
-  height: 1200px;
+  height: 2200px;
   overflow: hidden;
   background-color: #ffffff; }
 
@@ -779,8 +822,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   overflow: hidden;
   background-image: url("../images/build/sniper_bg.png");
   background-repeat: repeat;
-  height: 800px;
-  cursor: none; }
+  cursor: none;
+  height: 100%; }
 
 #section7 {
   padding-top: 150px;
@@ -810,7 +853,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 .scene3 {
   position: relative;
   width: 800px;
-  height: 800px;
+  height: 820px;
   left: 50%;
   margin-left: -400px; }
 
@@ -828,13 +871,12 @@ header, section, footer, aside, nav, article, hgroup, img {
   height: 1000px;
   width: 100%;
   clip-path: circle(200px);
-  background-image: url("../images/build/skills_bg.png");
+  background-image: url("../images/build/skills_bg.jpg");
   background-position: center;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  background-size: cover;
-  opacity: 0; }
+  background-size: cover; }
 
 .scene6 {
   position: relative;
@@ -879,11 +921,14 @@ header, section, footer, aside, nav, article, hgroup, img {
 #tested {
   top: 70px; }
 
+#Iw {
+  top: -8px; }
+
 #ware {
-  top: 143px; }
+  top: 153px; }
 
 #robotics {
-  top: 217px;
+  top: 237px;
   color: #FFDF6A; }
 
 #created {
@@ -919,12 +964,12 @@ header, section, footer, aside, nav, article, hgroup, img {
   font-size: 16px; }
 
 .skill_text_wrapper {
-  height: 450px;
+  height: 500px;
   width: 100%;
   position: absolute;
   display: block;
   top: 50%;
-  margin-top: -225px; }
+  margin-top: -250px; }
 
 #controller {
   position: absolute;
@@ -954,8 +999,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .td {
   background: #8D97D2;
-  display: table-cell;
-  animation: grow 1s .15s 1 ease forwards; }
+  display: table-cell; }
 
 .rack {
   background: #6876c4; }
@@ -1315,21 +1359,19 @@ header, section, footer, aside, nav, article, hgroup, img {
   display: table;
   position: absolute;
   left: 90px;
-  bottom: 0;
-  border: 1px solid blue; }
+  bottom: 0; }
 
 #tim {
-  display: table;
+  display: block;
   position: absolute;
   right: 90px;
-  bottom: 0;
-  border: 1px solid red; }
+  bottom: 0; }
 
 /* ==BODY== */
 .body {
   width: 210px;
   height: 164px;
-  position: absolute;
+  position: relative;
   will-change: transform; }
 
 .torso {
@@ -1521,7 +1563,6 @@ header, section, footer, aside, nav, article, hgroup, img {
   height: 32px;
   position: absolute;
   top: 132px;
-  fill: #00A651;
   contain: strict; }
 
 #jim .shoe {
@@ -1659,7 +1700,6 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 /* ==TFEET== */
 .tfoot {
-  background-image: url("../images/build/tfoot.png");
   width: 52px;
   height: 26px;
   position: absolute;
@@ -1679,15 +1719,20 @@ header, section, footer, aside, nav, article, hgroup, img {
   left: 0;
   bottom: 0; }
 
+#tablet_wrap {
+  position: absolute;
+  width: 858px;
+  height: 548px;
+  left: 50%;
+  top: 765px;
+  margin-left: -429px;
+  margin-top: -274px; }
+
 #tablet {
   position: absolute;
   opacity: 0;
-  left: 50%;
-  top: 800px;
   width: 858px;
-  height: 548px;
-  margin-left: -429px;
-  margin-top: -274px; }
+  height: 548px; }
 
 #slideshow {
   background-image: url("../images/tablet_frame.png");
@@ -1713,6 +1758,9 @@ header, section, footer, aside, nav, article, hgroup, img {
   height: 451px;
   position: absolute;
   width: 3072px;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
   contain: strict; }
 
 .slide {
@@ -1722,51 +1770,6 @@ header, section, footer, aside, nav, article, hgroup, img {
   float: left;
   contain: strict; }
 
-.slide.s1 {
-  background-image: url("../images/build/screen_home.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  contain: strict; }
-
-.slide.s2 {
-  background-image: url("../images/build/screen_history.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  contain: strict; }
-
-.slide.s3 {
-  background-image: url("../images/build/screen_calls.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  contain: strict; }
-
-.slide.s4 {
-  background-image: url("../images/build/screen_orders.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  contain: strict; }
-
-.bar {
-  background-image: url("../images/build/screen_bar.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  width: 768px;
-  height: 29px;
-  left: 50%;
-  bottom: 28px;
-  margin-left: -384px; }
-
-.overlay {
-  height: 400%;
-  width: 700%;
-  position: absolute;
-  border-radius: 1000px;
-  top: -320%;
-  left: -590%;
-  /* This adds the nice overlay. */
-  background: rgba(255, 255, 255, 0.2); }
-
 .swipe_hand {
   position: absolute;
   background-image: url("../images/build/swipe_hand.png");
@@ -1775,9 +1778,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   width: 290px;
   height: 294px;
   left: 50%;
-  top: 50%;
+  bottom: -70px;
   margin-left: -145px;
-  margin-top: 200px;
   transform: translateZ(0) rotate(-20deg);
   opacity: 0;
   backface-visibility: hidden;

@@ -143,8 +143,9 @@ header,section,footer,aside,nav,article,hgroup,img{
   overflow: hidden;
   background-image: url('../images/build/sniper_bg.png');
   background-repeat: repeat;
-  height: 800px;
+  //height: 800px;
   cursor: none;
+  height: 100%;
 }
 
 #section7{
@@ -179,7 +180,7 @@ header,section,footer,aside,nav,article,hgroup,img{
 .scene3{
   position: relative;
   width: 800px;
-  height: 800px;
+  height: 820px;
   left: 50%;
   margin-left: -400px;
 }
@@ -199,13 +200,13 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 1000px;
   width: 100%;
   clip-path: circle(200px);
-  background-image: url('../images/build/skills_bg.png');
+  background-image: url('../images/build/skills_bg.jpg');
   background-position:center;
   -moz-background-size:cover;
   -o-background-size:cover;
   -webkit-background-size:cover;
   background-size:cover;
-  opacity: 0;
+  //opacity: 0;
 }
 
 .scene6{
@@ -262,12 +263,16 @@ header,section,footer,aside,nav,article,hgroup,img{
   top: 70px;
 }
 
+#Iw{
+  top: -8px;
+}
+
 #ware{
-  top: 143px;
+  top: 153px;
 }
 
 #robotics{
-  top: 217px;
+  top: 237px;
   color: #FFDF6A;
 }
 
@@ -313,12 +318,12 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .skill_text_wrapper{
-  height: 450px;
+  height: 500px;
   width: 100%;
   position: absolute;
   display: block;
   top:50%;
-  margin-top: -225px;
+  margin-top: -250px;
 }
 
 #controller{
@@ -357,7 +362,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   //background: #ae9a96;
   background:  $tile_trim;
   display: table-cell;
-  animation:grow 1s .15s 1 ease forwards;
+  //animation:grow 1s .15s 1 ease forwards;
 }
 
 .rack{
@@ -1170,7 +1175,6 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==TEYES== */
 .teye{
-  //background-image: url('../images/build/teye.png');
   width: 6px;
   height: 17px;
   position: absolute;
@@ -1187,7 +1191,6 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 /* ==TFEET== */
 .tfoot{
-  background-image: url('../images/build/tfoot.png');
   width: 52px;
   height: 26px;
   position: absolute;
@@ -1225,12 +1228,8 @@ header,section,footer,aside,nav,article,hgroup,img{
 #tablet{
   position: absolute;
   opacity: 0;
-  //left: 50%;
-  //top: 765px;
   width: 858px;
   height: 548px;
-  //margin-left: -429px;
-  //margin-top: -274px;
 }
 
 #slideshow{
@@ -1257,14 +1256,11 @@ header,section,footer,aside,nav,article,hgroup,img{
   background-image: url('../images/build/screen_reel.jpg');
   background-size: contain;
   height:451px;
-
-
   position: absolute;
-  //height: 100%;
   width: 3072px;
-  //backface-visibility: hidden;
-  //perspective: 1000px;
-  //transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
   contain: strict;
 }
 
@@ -1274,57 +1270,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 100%;
   float: left;
   contain: strict;
-}
-
-.slide.s1{
-  background-image: url('../images/build/screen_home.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  contain: strict;
-}
-
-.slide.s2{
-  background-image: url('../images/build/screen_history.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  contain: strict;
-}
-
-.slide.s3{
-  background-image: url('../images/build/screen_calls.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  contain: strict;
-}
-
-.slide.s4{
-  background-image: url('../images/build/screen_orders.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  contain: strict;
-}
-
-.bar{
-  background-image: url('../images/build/screen_bar.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  width: 768px;
-  height: 29px;
-  left: 50%;
-  bottom: 28px;
-  margin-left: -384px;
-}
-
-.overlay {
-  height: 400%;
-  width: 700%;;
-  position: absolute;
-  border-radius: 1000px;
-  top: -320%;
-  left: -590%;
-  /* This adds the nice overlay. */
-  background: rgba(255,255,255,0.2);
 }
 
 .swipe_hand{
