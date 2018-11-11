@@ -2076,8 +2076,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   height: 30px;
   width: 30px;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 50px;
+  right: 50px;
   overflow: hidden;
   display: inline-block;
   z-index: 5; }
