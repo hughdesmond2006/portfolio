@@ -8,6 +8,7 @@
   "dependencies": {
     "animate.css": "^3.7.0",
     "aos": "^2.3.4",
+    "compression": "^1.7.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "^4.16.4",

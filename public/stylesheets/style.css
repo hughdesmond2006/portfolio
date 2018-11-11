@@ -948,7 +948,8 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 #skills {
   top: 173px;
-  color: #4451d6; }
+  color: #4451d6;
+  letter-spacing: 7px; }
 
 #against {
   top: 246px; }
