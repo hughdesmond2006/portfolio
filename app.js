@@ -4,7 +4,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let sassMiddleware = require('node-sass-middleware');
-let compression = require('compression');
+//let compression = require('compression');
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
