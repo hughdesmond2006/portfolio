@@ -28,9 +28,9 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 //use gzip compression (unsupported)
-app.use(compression());
+//app.use(compression());
 
-/**app.use(express.static(
+app.use(express.static(
     path.join(__dirname, 'public'),
     {
         setHeaders: (res) => {
@@ -38,7 +38,7 @@ app.use(compression());
             res.append('User-Agent', 'gzip');
         }
     }
-));**/
+));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
