@@ -40,7 +40,7 @@ app.use(express.static(
     }
 ));
 
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 
 //host node modules...
 app.use(express.static(path.join(__dirname, 'node_modules')));
