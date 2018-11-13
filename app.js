@@ -30,7 +30,7 @@ app.use(sassMiddleware({
 //use gzip compression (unsupported)
 app.use(compression());
 
-app.use(express.static(
+/**app.use(express.static(
     path.join(__dirname, 'public'),
     {
         setHeaders: (res) => {
@@ -38,7 +38,9 @@ app.use(express.static(
             res.append('User-Agent', 'gzip');
         }
     }
-));
+));**/
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 //host node modules...
 app.use(express.static(path.join(__dirname, 'node_modules')));
