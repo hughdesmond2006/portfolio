@@ -4,7 +4,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let sassMiddleware = require('node-sass-middleware');
-//let compression = require('compression');
+let compression = require('compression');
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
@@ -28,14 +28,14 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 //use gzip compression (unsupported)
-//app.use(compression());
+app.use(compression());
 
 app.use(express.static(
     path.join(__dirname, 'public'),
     {
         setHeaders: (res) => {
             res.setHeader('Accept-Encoding', 'gzip');
-            res.setHeader('User-Agent', 'gzip');
+            res.append('User-Agent', 'gzip');
         }
     }
 ));
@@ -63,3 +63,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
