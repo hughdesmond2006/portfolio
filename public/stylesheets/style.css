@@ -1147,8 +1147,9 @@ header, section, footer, aside, nav, article, hgroup, img {
 #click_me {
   position: absolute;
   font-size: 26px;
-  font-family: "Lato", sans-serif;
-  margin-top: -23.5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  margin-top: -25.5px;
   margin-left: 24px;
   transform-origin: left center;
   opacity: 0; }
@@ -1368,11 +1369,10 @@ header, section, footer, aside, nav, article, hgroup, img {
 .speech-bubble-ds {
   background: #ffffff;
   color: #4f4f4f;
-  border: 1px solid #a7a7a7;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: -4px 4px 0 rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: -4px 4px 0 rgba(0, 0, 0, 0.1);
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
   line-height: 1.3;
@@ -1399,16 +1399,14 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .speech-bubble-ds-arrow {
   border-left: 21px solid transparent;
-  border-top: 20px solid rgba(0, 0, 0, 0.2);
-  bottom: -25px;
+  border-top: 20px solid rgba(0, 0, 0, 0.1);
+  bottom: -24px;
   position: absolute;
   transform: scaleX(-1);
   left: 15px; }
 
 .speech-bubble-ds-arrow::before {
-  border-left: 23px solid transparent;
-  border-top: 23px solid #a7a7a7;
-  bottom: 2px;
+  bottom: 4px;
   content: "";
   position: absolute;
   right: 4.5px; }
@@ -1416,7 +1414,7 @@ header, section, footer, aside, nav, article, hgroup, img {
 .speech-bubble-ds-arrow::after {
   border-left: 21px solid transparent;
   border-top: 21px solid #ffffff;
-  bottom: 5px;
+  bottom: 7px;
   content: "";
   position: absolute;
   right: 6px; }
@@ -2113,6 +2111,23 @@ header, section, footer, aside, nav, article, hgroup, img {
   left: 50%;
   bottom: 0; }
 
+#documentation {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  position: absolute;
+  right: 60px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #941cd2;
+  color: #ffffff;
+  text-decoration: none; }
+
+#documentation:hover {
+  color: #FFDF6A; }
+
 .game_cover {
   background-image: url("../images/build/xbox_cover.png");
   background-size: contain;
@@ -2186,8 +2201,8 @@ header, section, footer, aside, nav, article, hgroup, img {
   /* global button class */
   display: inline-block;
   position: absolute;
-  bottom: 60px;
-  right: 60px;
+  bottom: 8vh;
+  right: 8vw;
   cursor: pointer;
   width: 50px;
   height: 50px;
