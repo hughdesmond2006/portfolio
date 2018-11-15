@@ -19,16 +19,16 @@
 }
 
 //hugh1 jumps off the skateboard
-#hugh1 .body{
+#hugh1.hugh_goodbye .body{
   animation: body-jump 2.5s infinite;
 }
 
 //hugh1 feet and head tilt when he jumps
-#hugh1 .shoe#left{
+#hugh1.hugh_goodbye .shoe#left{
   animation: left-shoe-jump 2.5s infinite;
 }
 
-#hugh1 .shoe#right{
+#hugh1.hugh_goodbye .shoe#right{
   animation: right-shoe-jump 2.5s infinite;
 }
 
@@ -161,6 +161,10 @@
 
 .click_me_anim{
   animation: bounce 1.5s 2.5s infinite;
+}
+
+.grow_bubble{
+  animation: grow .7s .5s 1 forwards;
 }
 
 .shot{
@@ -502,6 +506,7 @@
 @keyframes grow
 {
   0% {
+    opacity: 1;
     position:absolute;
     -webkit-transform: scale(0) translateZ(0);
     transform: scale(0) translateZ(0);
@@ -515,27 +520,7 @@
     transform: scale(0.95) translateZ(0);
   }
   100% {
-    -webkit-transform: scale(1) translateZ(0);
-    transform: scale(1) translateZ(0);
-  }
-}
-
-@-webkit-keyframes grow /* Safari and Chrome */
-{
-  0% {
-    position:absolute;
-    -webkit-transform: scale(0) translateZ(0);
-    transform: scale(0) translateZ(0);
-  }
-  60% {
-    -webkit-transform: scale(1.15) translateZ(0);
-    transform: scale(1.15) translateZ(0);
-  }
-  80% {
-    -webkit-transform: scale(0.95) translateZ(0);
-    transform: scale(0.95) translateZ(0);
-  }
-  100% {
+    opacity: 1;
     -webkit-transform: scale(1) translateZ(0);
     transform: scale(1) translateZ(0);
   }
@@ -1020,8 +1005,11 @@
 }
 
 .bounce {
-  -webkit-animation-name: bounce;
   animation-name: bounce;
-  -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 16em }
 }

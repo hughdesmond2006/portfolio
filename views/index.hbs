@@ -82,6 +82,11 @@
         </div>
     </div>-->
     <div id="hugh1" >
+        <div class="speech-bubble-ds" id="bubble1">
+            <p class="stronger">Hello!</p>
+            <p>I am Hugh, welcome to my website. Let me tell you a few things about myself...</p>
+            <div class="speech-bubble-ds-arrow"></div>
+        </div>
         <div class="body">
             <svg class="torso" id="left">
                 <use xlink:href="#svg_circle" />
@@ -979,7 +984,13 @@
 </section>
 
 <section id="section8" class="section section-light">
-    <div id="hugh1" >
+    <div id="hugh1" class="hugh_goodbye" >
+        <div class="speech-bubble-ds wider" id="bubble2">
+            <p class="stronger">Goodbye!</p>
+            <p>Thanks for checking me out! I am currently looking for remote work.
+                If this website has enticed you, please visit my LinkedIn below.</p>
+            <div class="speech-bubble-ds-arrow"></div>
+        </div>
         <div class="body">
             <svg class="torso" id="left">
                 <use xlink:href="#svg_circle" />
@@ -1046,6 +1057,7 @@
             </svg>
         </div>
     </div>
+    <a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/hugh-desmond-6a631a88" ></a>
 </section>
 
 <script>
@@ -1262,6 +1274,14 @@
         new ScrollMagic.Scene({triggerElement: roboTrigger, offset: offsetValue})
                 .setTween(tileAnim)
                 .reverse(false)
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: "#section1", offset: 0})
+                .setClassToggle("#bubble1","grow_bubble")
+                .addTo(controller);
+
+        new ScrollMagic.Scene({triggerElement: ".hugh_goodbye", offset: 0})
+                .setClassToggle("#bubble2","grow_bubble")
                 .addTo(controller);
 
         //pin tablet_wrap until slideshow ends

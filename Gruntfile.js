@@ -3,7 +3,23 @@ module.exports = function(grunt) {
     // 1. All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
+        sass: {
+            dist: {
+                files: {
+                    'public/stylesheets/style.css': 'public/stylesheets/style.scss'
+                }
+            }
+        },
+        autoprefixer: {
+            options: {
+                browsers: ['last 8 versions', '> 1%']
+            },
+            dist: {
+                files: {
+                    'public/stylesheets/style.css': 'public/stylesheets/style.css'
+                }
+            }
+        },
         concat: {
             // 2. Configuration for concatinating files goes here.
             js: {
@@ -49,12 +65,25 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+            css: {
+                files: ['public/stylesheets/*.scss'],
+                tasks: ['sass']
+            },
             scripts: {
-                files: ['js/*.js'],
-                tasks: ['concat', 'uglify'],
+                files: [
+                    "node_modules/aos/dist/aos.js",
+                    "node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
+                    "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js",
+                    "node_modules/gsap/src/minified/TweenMax.min.js",
+                    "node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
+                    "node_modules/jquery/dist/jquery.js",
+                    "node_modules/gsap/src/minified/plugins/BezierPlugin.min.js"
+                ],
+                tasks: ['concat:js', 'uglify'],
                 options: {
                     spawn: false,
-                },
+                    livereload: true
+                }
             }
         }
     });
@@ -64,8 +93,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-css');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'imagemin']);
-
+    grunt.registerTask('default', ['sass','autoprefixer', 'concat', 'uglify', 'cssmin', 'imagemin']);
 };
