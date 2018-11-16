@@ -38,6 +38,23 @@
         <ellipse fill="#D1E56E" cx="41" cy="26" rx="5" ry="7.8"/>
         <ellipse fill="#D1E56E" cx="13.7" cy="26" rx="5" ry="7.8"/>
     </symbol>
+    <symbol id="svg_linkedin" viewBox="0 0 430.117 430.117" >
+        <g>
+            <path id="LinkedIn" fill="#FFFFFF" d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+                c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+                v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+                C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+                c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+                 M5.477,420.56h92.184v-277.32H5.477V420.56z"/>
+        </g>
+    </symbol>
+    <symbol id="svg_eye2" viewBox="-300.9 397.2 11.8 5.9">
+        <style type="text/css">
+            .st0{fill:#464646;}
+        </style>
+        <path class="st0" d="M-295,394.3c1.6,0,2.9,1.3,2.9,2.9h3c0-3.3-2.6-5.9-5.9-5.9s-5.9,2.7-5.9,5.9h3
+	C-297.9,395.6-296.6,394.3-295,394.3z"/>
+    </symbol>
 </svg>
 
 <div class="comingsoon">
@@ -52,7 +69,7 @@
          data-aos-easing="ease-in-out"
          data-aos-anchor-placement="top-bottom"
          data-aos-offset="200"-->
-<section class="section section-light" id="section1">
+<section id="section1" class="section">
     <!--<div id="hugh1" >
         <div class="body">
             <div class="head_container">
@@ -155,7 +172,7 @@
     </div>
 </section>
 
-<section id="section2" class="section section-dark" >
+<section id="section2" class="section" >
     <div class="scene1">
         <div class="turtle_container">
             <div class="turtle" id="turtle1" >
@@ -984,8 +1001,8 @@
     <audio id="audio" src="../images/gun_shot.mp3"></audio>
 </section>
 
-<section id="section8" class="section section-light">
-    <div id="hugh1" class="hugh_goodbye" >
+<section id="section8" class="section">
+    <div id="hugh4">
         <div class="speech-bubble-ds wider" id="bubble2">
             <p class="stronger">Goodbye!</p>
             <p>Thanks for checking me out! I am currently looking for remote work.
@@ -1026,11 +1043,11 @@
                         <use xlink:href="#svg_hair" />
                     </svg>
                 </div>
-                <svg class="eye anim_blink" id="left">
-                    <use xlink:href="#svg_eye" />
+                <svg class="eye" id="left">
+                    <use xlink:href="#svg_eye2" />
                 </svg>
-                <svg class="eye anim_blink" id="right">
-                    <use xlink:href="#svg_eye" />
+                <svg class="eye" id="right">
+                    <use xlink:href="#svg_eye2" />
                 </svg>
             </div>
             <svg class="shoe green_scheme" id="left">
@@ -1058,7 +1075,11 @@
             </svg>
         </div>
     </div>
-    <!--<a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/hugh-desmond-6a631a88" ></a>-->
+    <a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/hugh-desmond-6a631a88" >
+        <svg class="linkedin">
+            <use xlink:href="#svg_linkedin" />
+        </svg>
+    </a>
 </section>
 
 <script>
@@ -1109,7 +1130,7 @@
                 .addTo(controller);
 
         //build skate jump tween
-        var skateTween = TweenMax.to("#hugh2",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0} ], autoRotate:180}, ease:Power0.easeNone});
+        var skateTween = TweenMax.to("#hugh2",8,{bezier:{type:"soft", values:[{x:-320, y:0}, {x:-640, y:-140}, {x:-960, y:0}, {x:-1280, y:0} ], autoRotate:180},force3D:true, ease:Power0.easeNone});
 
         //build skate jump scene
         new ScrollMagic.Scene({triggerElement: ".turtle_container", duration: 400, offset: -200})

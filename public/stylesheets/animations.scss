@@ -19,21 +19,25 @@
 }
 
 //hugh1 jumps off the skateboard
-#hugh1.hugh_goodbye .body{
+#hugh1 .body{
   animation: body-jump 2.5s infinite;
 }
 
 //hugh1 feet and head tilt when he jumps
-#hugh1.hugh_goodbye .shoe#left{
+#hugh1 .shoe#left{
   animation: left-shoe-jump 2.5s infinite;
 }
 
-#hugh1.hugh_goodbye .shoe#right{
+#hugh1 .shoe#right{
   animation: right-shoe-jump 2.5s infinite;
 }
 
 #hugh1 .head_wrap{
   animation: head-jump 2.5s infinite;
+}
+
+#hugh4 .head_wrap{
+  animation: head-bob 2s infinite;
 }
 
 //hugh1 waves at us
@@ -48,6 +52,12 @@
 
 #hugh2 .arm#right, #hugh3 .arm#right{
   animation-delay: .5s;
+}
+
+//hugh4 waves bye to us
+#hugh4 .arm#left{
+  transform-origin: 70px center;
+  animation: arm-goodbye 1s infinite;
 }
 
 //make the turtles eyes blink at staggered times
@@ -461,6 +471,19 @@
   18% {
     //animation-timing-function: ease-in;
     transform: translateY(0px);
+  }
+}
+
+@keyframes arm-goodbye
+{
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -1012,4 +1035,20 @@
 @keyframes typing {
   from { width: 0 }
   to { width: 16em }
+}
+
+@keyframes head-bob {
+  0% {
+    transition-timing-function: ease-in-out;
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

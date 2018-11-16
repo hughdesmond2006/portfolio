@@ -37,6 +37,7 @@ module.exports = function(grunt) {
             css: {
                 src: [
                     "node_modules/aos/dist/aos.css",
+                    "node_modules/font-awesome/css/font-awesome.css",
                     "public/stylesheets/style.css"
                 ],
                 dest: 'public/stylesheets/concat.css'
