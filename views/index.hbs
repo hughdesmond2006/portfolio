@@ -55,6 +55,32 @@
         <path class="st0" d="M-295,394.3c1.6,0,2.9,1.3,2.9,2.9h3c0-3.3-2.6-5.9-5.9-5.9s-5.9,2.7-5.9,5.9h3
 	C-297.9,395.6-296.6,394.3-295,394.3z"/>
     </symbol>
+    <symbol id="svg_hugh_topdown" viewBox="0 0 210 204">
+        <style type="text/css">
+            .st0{fill:#474747;}
+            .st1{fill:#08A650;}
+            .st2{fill:#FFFFFF;}
+            .st3{fill:#FDC789;}
+            .st4{fill:#8D633A;}
+        </style>
+        <path id="bd" class="st0" d="M179,133H31c-17,0-31-13.9-31-31v0c0-17,13.9-31,31-31h148c17,0,31,13.9,31,31v0
+            C210,119.1,196.1,133,179,133z"/>
+        <path id="shr" class="st1" d="M149.3,132.3L149.3,132.3c13.8,0,25-11.2,25-25V96.7c0-13.7-11.2-25-25-25h0c-13.7,0-25,11.2-25,25
+            v10.5C124.3,121,135.6,132.3,149.3,132.3z"/>
+        <path id="shl" class="st1" d="M66,132.3L66,132.3c13.8,0,25-11.2,25-25V96.7c0-13.7-11.2-25-25-25h0c-13.7,0-25,11.2-25,25v10.5
+            C41,121,52.2,132.3,66,132.3z"/>
+        <circle id="by" class="st2" cx="107" cy="102" r="56"/>
+        <circle id="al" class="st3" cx="38" cy="126" r="24"/>
+        <g id="hd_x5F_g">
+            <path id="hd" class="st3" d="M77.1,70.3h59.9c3.9,0,7,3.2,7,7v49.3c0,3.9-3.2,7-7,7H77.1c-3.9,0-7-3.2-7-7V77.3
+                C70,73.5,73.2,70.3,77.1,70.3z"/>
+            <polygon id="hr" class="st4" points="85,117.4 93.5,116 101.4,117.4 112.4,115.4 119.5,116.4 129.5,115.4 133.1,117.4 130.6,106.4
+                133.1,99.6 130.6,90.6 132,83.9 122.5,85.4 112,83.9 100.9,86 94.3,83.9 89.1,86.4 83.4,83.9 86.8,93.3 82.8,100.6 85,108.4 	"/>
+        </g>
+    </symbol>
+    <symbol id="svg_hugh_topdownarm" viewBox="0 0 210 204">
+        <circle id="ar" class="st3" cx="176.3" cy="77.5" r="24"/>
+    </symbol>
 </svg>
 
 <div class="comingsoon">
@@ -643,6 +669,13 @@
         <div class="big_heading font_black" id="ware">Warehouse</div>
         <div class="big_heading" id="tested">Tested</div>
         <div class="big_heading font_black" id="robotics">Robotics</div>
+        <div id="hugh_topdown_wrap">
+            <div id="ballPlaceHolder3"></div>
+            <svg id="hugh_topdown">
+                <use xlink:href="#svg_hugh_topdown" />
+                <use xlink:href="#svg_hugh_topdownarm" id="armgrab"/>
+            </svg>
+        </div>
         <div id="warehouse">
             <div id="table">
                 <div class="tr">
@@ -655,7 +688,7 @@
                     <div class="td rack"></div>
                 </div>
                 <div class="tr">
-                    <div class="td"><div id="ball"></div></div>
+                    <div class="td"><div id="ball" class="ball_anim"></div></div>
                     <div class="td"></div>
                     <div class="td"></div>
                     <div class="td"></div>
@@ -725,7 +758,14 @@
                     </div>
                 </div>
                 <div class="tracks">
-                    <div class="chassis"></div>
+                    <div class="chassis">
+                        <svg id="robo_b1">
+                            <use xlink:href="#svg_circle" />
+                        </svg>
+                        <svg id="robo_b2">
+                            <use xlink:href="#svg_circle" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1302,7 +1342,7 @@
                 .setClassToggle("#bubble1","grow_bubble")
                 .addTo(controller);
 
-        new ScrollMagic.Scene({triggerElement: ".hugh_goodbye", offset: 0})
+        new ScrollMagic.Scene({triggerElement: "#hugh4", offset: 0})
                 .setClassToggle("#bubble2","grow_bubble")
                 .addTo(controller);
 
@@ -1408,6 +1448,16 @@
 
         TweenMax.to("#click_me", 0, {opacity:0});
 
+        let flash = new TimelineMax();
+        flash.to(".bulb", 0, {'-webkit-filter':'brightness(100%)'})
+                .to(".bulb", .001, {'-webkit-filter':'brightness(50%)'})
+                .to(".bulb", .04, {'-webkit-filter':'brightness(50%)'})
+                .to(".bulb", .001, {'-webkit-filter':'brightness(100%)'})
+                .to(".bulb", .07, {'-webkit-filter':'brightness(100%)'})
+                .to(".bulb", .001, {'-webkit-filter':'brightness(50%)'})
+                .to(".bulb", .04, {'-webkit-filter':'brightness(50%)'})
+                .to(".bulb", .001, {'-webkit-filter':'brightness(100%)'});
+
         switch (direction){
             case 1:{
                 roboPosX--;
@@ -1511,15 +1561,32 @@
 
     const ballPlaceHolderDiv = document.getElementById("ballPlaceHolder");
     const ballPlaceHolder2Div = document.getElementById("ballPlaceHolder2");
+    const ballPlaceHolder3Div = document.getElementById("ballPlaceHolder3");
     const ballDiv = document.getElementById("ball");
     const marker = document.getElementById("pulsating-circle");
+    const hughTopDown = document.getElementById("hugh_topdown_wrap");
+    const hughTopDownArm = document.getElementById("armgrab");
     let hasBall = false;
 
     //move ball into robot arm
     function grab(){
         TweenMax.to("#click_me", 0, {opacity:0});
 
+        let t0 = new TimelineMax();
+        t0.to(".line_wrapper", 0, {scaleY: 1 })
+                .to(".line_wrapper", .1, {scaleY:1.125})
+                .to(".line_wrapper", .1, {scaleY:0.975})
+                .to(".line_wrapper", .15, {scaleY:1.025})
+                .to(".line_wrapper", .1, {scaleY:0.975})
+                .to(".line_wrapper", .25, {scaleY:1});
+
+        let t = new TimelineMax();
+        t.to("#robo_b1", 0,{'-webkit-filter':'brightness(130%)'})
+                .to("#robo_b1", 0.5,{'-webkit-filter':'brightness(130%)'})
+                .to("#robo_b1", .01,{'-webkit-filter':'brightness(90%)'});
+
         if(roboPosX === 1 && roboPosY === 1 && !hasBall && rotationDegrees < 190 && rotationDegrees > 160) {
+            ballDiv.classList.remove('ball_anim');
             ballPlaceHolderDiv.appendChild(ballDiv);
             hasBall = true;
             //remove ball collision
@@ -1531,6 +1598,19 @@
     function drop(){
         TweenMax.to("#click_me", 0.2, {opacity:0});
 
+        let t0 = new TimelineMax();
+        t0.to(".line_wrapper", 0, {scaleY: 1 })
+                .to(".line_wrapper", .1, {scaleY:1.125})
+                .to(".line_wrapper", .1, {scaleY:0.975})
+                .to(".line_wrapper", .15, {scaleY:1.025})
+                .to(".line_wrapper", .1, {scaleY:0.975})
+                .to(".line_wrapper", .25, {scaleY:1});
+
+        let t1 = new TimelineMax();
+        t1.to("#robo_b2", 0,{'-webkit-filter':'brightness(130%)'})
+                .to("#robo_b2", 0.5,{'-webkit-filter':'brightness(130%)'})
+                .to("#robo_b2", .01,{'-webkit-filter':'brightness(90%)'});
+
         console.log("robo position: x" + roboPosX + " y" + roboPosY);
         console.log("rotateion: " + rotationDegrees);
 
@@ -1538,6 +1618,11 @@
             ballPlaceHolder2Div.appendChild(ballDiv);
             marker.remove();
             hasBall = false;
+            hughTopDown.classList.add('ballgrab_anim');
+            hughTopDownArm.classList.add('ballgrabarm_anim');
+            window.setTimeout(function(){
+                ballPlaceHolder3Div.appendChild(ballDiv);
+            },1800);
         }
     }
 

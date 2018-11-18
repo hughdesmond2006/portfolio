@@ -158,7 +158,7 @@
 }
 
 .spring_aerial{
-  animation: spring 1s 2.75s 1 ease forwards;
+  animation: spring 1s 2.75s 1 ease;
 }
 
 .grow_bulb{
@@ -171,6 +171,19 @@
 
 .click_me_anim{
   animation: bounce 1.5s 2.5s infinite;
+}
+
+.ball_anim{
+  animation: ballbounce .7s infinite;
+}
+
+.ballgrab_anim{
+  animation: ballgrab 4s forwards;
+}
+
+.ballgrabarm_anim{
+  transform-origin: 56px 71px;
+  animation: ballgrabarm 4s forwards;
 }
 
 .grow_bubble{
@@ -1032,9 +1045,23 @@
   transform-origin: center bottom;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 16em }
+@keyframes ballbounce {
+  from,
+  0%,
+  100%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 3px, 0) scaleY(0.9);
+  }
+
+  50%{
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -12px, 0);
+    transform: translate3d(0, -12px, 0) scaleY(1);
+  }
 }
 
 @keyframes head-bob {
@@ -1050,5 +1077,40 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes ballgrab {
+  0% {
+    opacity: 0;
+    transform: translate3d(400px,0,0) rotate(0deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  45%{
+    transition-timing-function: ease-out;
+    transform: translate3d(0px,0,0) rotate(0deg);
+  }
+  55%{
+    transform: translate3d(0px,0,0) rotate(180deg);
+  }
+  95%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transition-timing-function: ease-in;
+    transform: translate3d(400px,0,0) rotate(180deg);
+  }
+}
+
+@keyframes ballgrabarm {
+  30%{
+    transform: rotate(0deg);
+  }
+  50%,100%{
+    transition-timing-function: ease-out;
+    transform: rotate(-125deg);
   }
 }

@@ -131,6 +131,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   //background-color: #77df7e;
   background-image: linear-gradient(225deg, lighten(#77df7e, 10%), darken(#77df7e, 10%));
   height: 100%;
+  overflow: hidden;
 }
 
 #section2{
@@ -362,6 +363,20 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 436px;
 }
 
+#hugh_topdown_wrap{
+  position: absolute;
+  display: table;
+  bottom: 14px;
+  right: -120px;
+  opacity: 0;
+}
+
+#hugh_topdown{
+  position: relative;
+  width: 110px;
+  height: 142px;
+}
+
 //css tables
 #table{
  position: absolute;
@@ -430,6 +445,26 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 30px;
   margin-left: -25px;
   margin-top: -15px;
+}
+
+#robo_b1{
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  width: 5px;
+  height: 5px;
+  fill: $button_left;
+  filter: brightness(90%);
+}
+
+#robo_b2{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 5px;
+  height: 5px;
+  fill: $button_right;
+  filter: brightness(90%);
 }
 
 #robo_arm{
@@ -502,6 +537,16 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 60px;
   height: 60px;
   margin-top: -30px;
+}
+
+#ballPlaceHolder3{
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  margin-top: -35px;
+  width: 60px;
+  height: 60px;
+  z-index: 5;
 }
 
 #goal{

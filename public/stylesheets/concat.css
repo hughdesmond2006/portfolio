@@ -2485,8 +2485,8 @@
           animation: aerial-grow4 .25s 2.75s 1 linear forwards; }
 
 .spring_aerial {
-  -webkit-animation: spring 1s 2.75s 1 ease forwards;
-          animation: spring 1s 2.75s 1 ease forwards; }
+  -webkit-animation: spring 1s 2.75s 1 ease;
+          animation: spring 1s 2.75s 1 ease; }
 
 .grow_bulb {
   -webkit-animation: appear 1ms 3.15s 1 forwards;
@@ -2499,6 +2499,21 @@
 .click_me_anim {
   -webkit-animation: bounce 1.5s 2.5s infinite;
           animation: bounce 1.5s 2.5s infinite; }
+
+.ball_anim {
+  -webkit-animation: ballbounce .7s infinite;
+          animation: ballbounce .7s infinite; }
+
+.ballgrab_anim {
+  -webkit-animation: ballgrab 4s forwards;
+          animation: ballgrab 4s forwards; }
+
+.ballgrabarm_anim {
+  -webkit-transform-origin: 56px 71px;
+      -ms-transform-origin: 56px 71px;
+          transform-origin: 56px 71px;
+  -webkit-animation: ballgrabarm 4s forwards;
+          animation: ballgrabarm 4s forwards; }
 
 .grow_bubble {
   -webkit-animation: grow .7s .5s 1 forwards;
@@ -3766,17 +3781,35 @@
       -ms-transform-origin: center bottom;
           transform-origin: center bottom; }
 
-@-webkit-keyframes typing {
-  from {
-    width: 0; }
+@-webkit-keyframes ballbounce {
+  from,
+  0%,
+  100%,
   to {
-    width: 16em; } }
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 3px, 0) scaleY(0.9); }
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -12px, 0);
+    transform: translate3d(0, -12px, 0) scaleY(1); } }
 
-@keyframes typing {
-  from {
-    width: 0; }
+@keyframes ballbounce {
+  from,
+  0%,
+  100%,
   to {
-    width: 16em; } }
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 3px, 0) scaleY(0.9); }
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -12px, 0);
+    transform: translate3d(0, -12px, 0) scaleY(1); } }
 @-webkit-keyframes head-bob {
   0% {
     transition-timing-function: ease-in-out;
@@ -3805,6 +3838,64 @@
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
+@-webkit-keyframes ballgrab {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(400px, 0, 0) rotate(0deg);
+            transform: translate3d(400px, 0, 0) rotate(0deg); }
+  5% {
+    opacity: 1; }
+  45% {
+    transition-timing-function: ease-out;
+    -webkit-transform: translate3d(0px, 0, 0) rotate(0deg);
+            transform: translate3d(0px, 0, 0) rotate(0deg); }
+  55% {
+    -webkit-transform: translate3d(0px, 0, 0) rotate(180deg);
+            transform: translate3d(0px, 0, 0) rotate(180deg); }
+  95% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transition-timing-function: ease-in;
+    -webkit-transform: translate3d(400px, 0, 0) rotate(180deg);
+            transform: translate3d(400px, 0, 0) rotate(180deg); } }
+@keyframes ballgrab {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(400px, 0, 0) rotate(0deg);
+            transform: translate3d(400px, 0, 0) rotate(0deg); }
+  5% {
+    opacity: 1; }
+  45% {
+    transition-timing-function: ease-out;
+    -webkit-transform: translate3d(0px, 0, 0) rotate(0deg);
+            transform: translate3d(0px, 0, 0) rotate(0deg); }
+  55% {
+    -webkit-transform: translate3d(0px, 0, 0) rotate(180deg);
+            transform: translate3d(0px, 0, 0) rotate(180deg); }
+  95% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transition-timing-function: ease-in;
+    -webkit-transform: translate3d(400px, 0, 0) rotate(180deg);
+            transform: translate3d(400px, 0, 0) rotate(180deg); } }
+@-webkit-keyframes ballgrabarm {
+  30% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50%,100% {
+    transition-timing-function: ease-out;
+    -webkit-transform: rotate(-125deg);
+            transform: rotate(-125deg); } }
+@keyframes ballgrabarm {
+  30% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50%,100% {
+    transition-timing-function: ease-out;
+    -webkit-transform: rotate(-125deg);
+            transform: rotate(-125deg); } }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -3900,7 +3991,8 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 #section1 {
   background-image: linear-gradient(225deg, #a0e9a5, #4ed557);
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 #section2 {
   display: block;
@@ -4091,6 +4183,18 @@ header, section, footer, aside, nav, article, hgroup, img {
   width: 436px;
   height: 436px; }
 
+#hugh_topdown_wrap {
+  position: absolute;
+  display: table;
+  bottom: 14px;
+  right: -120px;
+  opacity: 0; }
+
+#hugh_topdown {
+  position: relative;
+  width: 110px;
+  height: 142px; }
+
 #table {
   position: absolute;
   display: table;
@@ -4148,6 +4252,26 @@ header, section, footer, aside, nav, article, hgroup, img {
   height: 30px;
   margin-left: -25px;
   margin-top: -15px; }
+
+#robo_b1 {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  width: 5px;
+  height: 5px;
+  fill: #45d739;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%); }
+
+#robo_b2 {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 5px;
+  height: 5px;
+  fill: #ef9d35;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%); }
 
 #robo_arm {
   position: absolute;
@@ -4216,6 +4340,15 @@ header, section, footer, aside, nav, article, hgroup, img {
   width: 60px;
   height: 60px;
   margin-top: -30px; }
+
+#ballPlaceHolder3 {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  margin-top: -35px;
+  width: 60px;
+  height: 60px;
+  z-index: 5; }
 
 #goal {
   position: relative;
