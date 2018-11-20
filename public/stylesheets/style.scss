@@ -49,13 +49,6 @@ $button_right: #ef9d35;
   display: none;
 }
 
-//mobile site coming soon.. normal site is 960px
-@media only screen and (min-width:500px) {
-  /* For desktop: */
-  .comingsoon {
-    display: none;
-  }
-}
 
 body, html {
   height: 100%;
@@ -152,7 +145,12 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 #section5{
-  height: 2200px;
+  @media not screen and (min-width: $desktopMinWidth){
+    height: 900px;
+  }
+  @media only screen and (min-width: $desktopMinWidth) {
+    height: 2200px;
+  }
   overflow: hidden;
   //display: block;
   background-color: #ffffff;
@@ -212,6 +210,10 @@ header,section,footer,aside,nav,article,hgroup,img{
   top: 0;
   margin-left: -320px;
   margin-top: 140px;
+  @media only screen and (max-width: $bigPhoneMinWidth){
+    width: 550px;
+    margin-left: -275px;
+  }
 }
 
 .scene5{
@@ -235,13 +237,25 @@ header,section,footer,aside,nav,article,hgroup,img{
 }
 
 .big_heading{
+  //display: table;
   position: absolute;
-  font-size: 132px;
-  //font-family: "Lato", sans-serif;
   font-weight: bolder;
   text-align: center;
   line-height: 1em;
   width: 100%;
+  @media only screen and (max-width: $bigPhoneMinWidth){
+    font-size: 19.5vw;
+  }
+  @media only screen and (min-width: $bigPhoneMinWidth) {
+    font-size: 18.5vw;
+  }
+  @media only screen and (min-width: $tabletMinWidth){
+    font-size: 12.5vw;
+  }
+  @media only screen and (min-width: $desktopMinWidth) {
+    font-size: 132px;
+  }
+
 }
 
 #years{
@@ -250,19 +264,35 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 #in{
   top: 356px;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 310px;
+  }
 }
 
 #university{
   top: 428px;
   color: $trim1;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 348px;
+  }
 }
 
 #I{
   top: 0;
 }
 
+#Iw{
+  top: 0;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 60px;
+  }
+}
+
 #worked{
   top: 73px;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 103px;
+  }
 }
 
 #on{
@@ -271,19 +301,31 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 #a{
   top: 214px;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 184px;
+  }
 }
 
 #sales{
   top: 288px;
   color: #4DBA5A;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 228px;
+  }
+}
+
+#It{
+  top: -8px;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 68px;
+  }
 }
 
 #tested{
   top: 70px;
-}
-
-#Iw{
-  top: -8px;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 110px;
+  }
 }
 
 #ware{
@@ -293,10 +335,23 @@ header,section,footer,aside,nav,article,hgroup,img{
 #robotics{
   top: 237px;
   color: #FFDF6A;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 204px;
+  }
+}
+
+#Ic{
+  top: 0;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 68px;
+  }
 }
 
 #created{
   top: 72px;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 107px;
+  }
 }
 
 #a2{
@@ -306,6 +361,9 @@ header,section,footer,aside,nav,article,hgroup,img{
 #game{
   top: 217px;
   color: #941cd2;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    top: 184px;
+  }
 }
 
 #test{
@@ -838,6 +896,10 @@ header,section,footer,aside,nav,article,hgroup,img{
   transform-origin: 105px 200px;
   transform: scale(.7);
   opacity: 0;
+  @media not screen and (min-width: $desktopMinWidth) {
+    animation: none;
+    transform: none;
+  }
 }
 
 #hugh4{
@@ -853,6 +915,9 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   left: 90px;
   bottom: 0;
+  @media only screen and (max-width: $bigPhoneMinWidth){
+    transform: scale(.7);
+  }
 }
 
 #tim{
@@ -860,6 +925,9 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   right: 90px;
   bottom: 0;
+  @media only screen and (max-width: $bigPhoneMinWidth){
+    transform: scale(.7);
+  }
 }
 
 .speech-bubble-ds {
@@ -876,9 +944,16 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 200px;
   padding: 10px;
   position: absolute;
-  left: 85%;
-  bottom: 80%;
-  transform-origin: left bottom;
+  @media only screen and (min-width: $desktopMinWidth) {
+    left: 85%;
+    bottom: 80%;
+    transform-origin: left bottom;
+  }
+  @media not screen and (min-width: $desktopMinWidth) {
+    left: -10px;
+    bottom: 105%;
+    transform-origin: right bottom;
+  }
   //animation: grow .7s 1s 1 forwards;
   opacity: 0;
 }
@@ -905,8 +980,13 @@ header,section,footer,aside,nav,article,hgroup,img{
   bottom: -24px;
   position: absolute;
   transform: scaleX(-1);
-  left: 15px;
-}
+  @media only screen and (min-width: $desktopMinWidth) {
+    left: 15px;
+  }
+  @media not screen and (min-width: $desktopMinWidth) {
+    right: 15px;
+  }
+  }
 
 .speech-bubble-ds-arrow::before {
   //border-left: 23px solid transparent;
@@ -1013,6 +1093,9 @@ header,section,footer,aside,nav,article,hgroup,img{
   transform-origin: bottom right;
   transform: rotate(315deg);
   contain:strict;
+  @media not screen and (min-width: $desktopMinWidth) {
+    animation: none;
+  }
 }
 
 //set position and delays for blowing hair
@@ -1244,7 +1327,15 @@ header,section,footer,aside,nav,article,hgroup,img{
   padding: 0;
   margin-left: -316px;
   transform-origin: bottom center;
-  transform: scale(.7);
+  @media only screen and (max-width: $bigPhoneMinWidth){
+    transform: scale(.4);
+  }
+  @media only screen and (min-width: $bigPhoneMinWidth) {
+    transform: scale(.6);
+  }
+  @media only screen and (min-width: $desktopMinWidth) {
+    transform: scale(.7);
+  }
 }
 
 .turtle_container2{
@@ -1256,7 +1347,15 @@ header,section,footer,aside,nav,article,hgroup,img{
   padding: 0;
   margin-left: -252px;
   transform-origin: bottom center;
-  transform: scale(.7);
+  @media only screen and (max-width: $bigPhoneMinWidth){
+    transform: scale(.4);
+  }
+  @media only screen and (min-width: $bigPhoneMinWidth) {
+    transform: scale(.6);
+  }
+  @media only screen and (min-width: $desktopMinWidth) {
+    transform: scale(.7);
+  }
 }
 
 #turtle1{
@@ -1287,10 +1386,25 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   width: 120px;
   bottom: 120px;
-  font-size: 132px;
+  @media only screen and (max-width: $bigPhoneMinWidth) {
+    font-size: 36vw;
+  }
+  @media only screen and (min-width: $bigPhoneMinWidth) {
+    font-size: 23vw;
+  }
+  @media only screen and (min-width: $tabletMinWidth){
+    font-size: 14.5vw;
+  }
+  @media only screen and (min-width: $desktopMinWidth) {
+    font-size: 132px;
+  }
   //font-family: "Lato", sans-serif;
   font-weight:bolder;
   text-align: center;
+  @media not screen and (min-width: $desktopMinWidth) {
+    animation: none;
+    transform: none;
+  }
 }
 
 /* ==TBODY== */
@@ -1364,6 +1478,14 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   left: 0;
   bottom: 0;
+  @media only screen and (max-width: $tabletMinWidth){
+    left: 50%;
+    margin-left: -80px;
+    opacity: .65;
+  }
+  @media only screen and (max-width: $bigPhoneMinWidth){
+    transform: scale(.7);
+  }
 }
 
 #tablet_wrap{
@@ -1381,6 +1503,20 @@ header,section,footer,aside,nav,article,hgroup,img{
   opacity: 0;
   width: 858px;
   height: 548px;
+}
+
+.tabletph{
+  background-image: url('../images/build/tablet.png');
+  width: 74px;
+  height: 44px;
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  transform: rotate(270deg) skewX(20deg) scaleX(.7);
+  opacity: 0;
+  @media not screen and (min-width: $desktopMinWidth){
+    opacity: 1;
+  }
 }
 
 #slideshow{
@@ -1834,12 +1970,25 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: absolute;
   width: 800px;
   height: 450px;
-  margin-left: -300px;
+  margin-left: -330px;
   left: 50%;
   bottom: 0;
+  @media only screen and (max-width: $tabletMinWidth) {
+    display:none;
+  }
+  @media only screen and (max-width: $desktopMinWidth) {
+    transform: scale(.7);
+  }
 }
 
-#documentation{
+.video_wrapper_mobile{
+  display: none;
+  @media only screen and (max-width: $tabletMinWidth) {
+    display:inline-block;
+  }
+}
+
+#documentation, #trailer{
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -1852,6 +2001,20 @@ header,section,footer,aside,nav,article,hgroup,img{
   background: #941cd2;
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
+  @media only screen and (max-width: $tabletMinWidth) {
+    width: 200px;
+    margin-left: -100px;
+    left: 50%;
+    padding: 0;
+    bottom: 0;
+  }
+}
+
+#trailer{
+  @media only screen and (max-width: $tabletMinWidth) {
+    bottom: 40px;
+  }
 }
 
 #documentation:hover{
@@ -1873,6 +2036,11 @@ header,section,footer,aside,nav,article,hgroup,img{
   margin-top:-175px;
   border-radius: 4px;
   animation: hover 15s infinite linear;
+  @media only screen and (max-width: $tabletMinWidth) {
+    left: 50%;
+    margin-left:-122px;
+    top: 550px;
+  }
 }
 
 .speaker {

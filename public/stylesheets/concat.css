@@ -2350,18 +2350,18 @@
   -webkit-animation: rotating 1s linear infinite;
   animation: rotating 1s linear infinite; }
 
-#hugh1 .body {
-  -webkit-animation: body-jump 2.5s infinite;
-          animation: body-jump 2.5s infinite; }
+@media only screen and (min-width: 1050px) {
+  #hugh1 .body {
+    -webkit-animation: body-jump 2.5s infinite;
+            animation: body-jump 2.5s infinite; }
 
-#hugh1 .shoe#left {
-  -webkit-animation: left-shoe-jump 2.5s infinite;
-          animation: left-shoe-jump 2.5s infinite; }
+  #hugh1 .shoe#left {
+    -webkit-animation: left-shoe-jump 2.5s infinite;
+            animation: left-shoe-jump 2.5s infinite; }
 
-#hugh1 .shoe#right {
-  -webkit-animation: right-shoe-jump 2.5s infinite;
-          animation: right-shoe-jump 2.5s infinite; }
-
+  #hugh1 .shoe#right {
+    -webkit-animation: right-shoe-jump 2.5s infinite;
+            animation: right-shoe-jump 2.5s infinite; } }
 #hugh1 .head_wrap {
   -webkit-animation: head-jump 2.5s infinite;
           animation: head-jump 2.5s infinite; }
@@ -3936,10 +3936,6 @@
 #symbol_definitions {
   display: none; }
 
-@media only screen and (min-width: 500px) {
-  /* For desktop: */
-  .comingsoon {
-    display: none; } }
 body, html {
   height: 100%;
   margin: 0;
@@ -4019,9 +4015,14 @@ header, section, footer, aside, nav, article, hgroup, img {
   background-image: linear-gradient(135deg, #6973b6, #444d8a); }
 
 #section5 {
-  height: 2200px;
   overflow: hidden;
   background-color: #ffffff; }
+  @media not screen and (min-width: 1050px) {
+    #section5 {
+      height: 900px; } }
+  @media only screen and (min-width: 1050px) {
+    #section5 {
+      height: 2200px; } }
 
 #section6 {
   overflow: hidden;
@@ -4088,11 +4089,19 @@ header, section, footer, aside, nav, article, hgroup, img {
 
 .big_heading {
   position: absolute;
-  font-size: 132px;
   font-weight: bolder;
   text-align: center;
   line-height: 1em;
   width: 100%; }
+  @media only screen and (max-width: 700px) {
+    .big_heading {
+      font-size: 18.5vw; } }
+  @media only screen and (min-width: 700px) {
+    .big_heading {
+      font-size: 12.5vw; } }
+  @media only screen and (min-width: 1050px) {
+    .big_heading {
+      font-size: 132px; } }
 
 #years {
   top: 258px; }
@@ -4656,6 +4665,13 @@ header, section, footer, aside, nav, article, hgroup, img {
       -ms-transform: scale(0.7);
           transform: scale(0.7);
   opacity: 0; }
+  @media not screen and (min-width: 1050px) {
+    #hugh3 {
+      -webkit-animation: none;
+              animation: none;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; } }
 
 #hugh4 {
   position: absolute;
@@ -4687,12 +4703,18 @@ header, section, footer, aside, nav, article, hgroup, img {
   width: 200px;
   padding: 10px;
   position: absolute;
-  left: 85%;
-  bottom: 80%;
   -webkit-transform-origin: left bottom;
       -ms-transform-origin: left bottom;
           transform-origin: left bottom;
   opacity: 0; }
+  @media only screen and (min-width: 1050px) {
+    .speech-bubble-ds {
+      left: 85%;
+      bottom: 80%; } }
+  @media not screen and (min-width: 1050px) {
+    .speech-bubble-ds {
+      left: 0;
+      bottom: 105%; } }
 
 .stronger {
   font-family: 'Lato', sans-serif;
@@ -4714,8 +4736,13 @@ header, section, footer, aside, nav, article, hgroup, img {
   position: absolute;
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
-          transform: scaleX(-1);
-  left: 15px; }
+          transform: scaleX(-1); }
+  @media only screen and (min-width: 1050px) {
+    .speech-bubble-ds-arrow {
+      left: 15px; } }
+  @media not screen and (min-width: 1050px) {
+    .speech-bubble-ds-arrow {
+      right: 15px; } }
 
 .speech-bubble-ds-arrow::before {
   bottom: 4px;
@@ -4812,6 +4839,10 @@ header, section, footer, aside, nav, article, hgroup, img {
       -ms-transform: rotate(315deg);
           transform: rotate(315deg);
   contain: strict; }
+  @media not screen and (min-width: 1050px) {
+    .hair {
+      -webkit-animation: none;
+              animation: none; } }
 
 .one {
   -webkit-animation-delay: 400ms;
@@ -5018,10 +5049,17 @@ header, section, footer, aside, nav, article, hgroup, img {
   margin-left: -316px;
   -webkit-transform-origin: bottom center;
       -ms-transform-origin: bottom center;
-          transform-origin: bottom center;
-  -webkit-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-          transform: scale(0.7); }
+          transform-origin: bottom center; }
+  @media only screen and (min-width: 1050px) {
+    .turtle_container {
+      -webkit-transform: scale(0.7);
+          -ms-transform: scale(0.7);
+              transform: scale(0.7); } }
+  @media not screen and (min-width: 1050px) {
+    .turtle_container {
+      -webkit-transform: scale(0.6);
+          -ms-transform: scale(0.6);
+              transform: scale(0.6); } }
 
 .turtle_container2 {
   display: table;
@@ -5033,10 +5071,17 @@ header, section, footer, aside, nav, article, hgroup, img {
   margin-left: -252px;
   -webkit-transform-origin: bottom center;
       -ms-transform-origin: bottom center;
-          transform-origin: bottom center;
-  -webkit-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-          transform: scale(0.7); }
+          transform-origin: bottom center; }
+  @media only screen and (min-width: 1050px) {
+    .turtle_container2 {
+      -webkit-transform: scale(0.7);
+          -ms-transform: scale(0.7);
+              transform: scale(0.7); } }
+  @media not screen and (min-width: 1050px) {
+    .turtle_container2 {
+      -webkit-transform: scale(0.6);
+          -ms-transform: scale(0.6);
+              transform: scale(0.6); } }
 
 #turtle1 {
   float: left; }
@@ -5061,9 +5106,24 @@ header, section, footer, aside, nav, article, hgroup, img {
   position: absolute;
   width: 120px;
   bottom: 120px;
-  font-size: 132px;
   font-weight: bolder;
   text-align: center; }
+  @media only screen and (max-width: 700px) {
+    .count {
+      font-size: 23vw; } }
+  @media only screen and (min-width: 700px) {
+    .count {
+      font-size: 14.5vw; } }
+  @media only screen and (min-width: 1050px) {
+    .count {
+      font-size: 132px; } }
+  @media not screen and (min-width: 1050px) {
+    .count {
+      -webkit-animation: none;
+              animation: none;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; } }
 
 /* ==TBODY== */
 .tbody_wrap {
@@ -5140,6 +5200,17 @@ header, section, footer, aside, nav, article, hgroup, img {
   opacity: 0;
   width: 858px;
   height: 548px; }
+
+.tabletph {
+  background-image: url("../images/build/tablet.png");
+  width: 74px;
+  height: 44px;
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  -webkit-transform: rotate(270deg) skewX(20deg) scaleX(0.7);
+      -ms-transform: rotate(270deg) skewX(20deg) scaleX(0.7);
+          transform: rotate(270deg) skewX(20deg) scaleX(0.7); }
 
 #slideshow {
   background-image: url("../images/tablet_frame.png");

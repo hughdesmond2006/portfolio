@@ -1,3 +1,7 @@
+$desktopMinWidth: 1050px;
+$tabletMinWidth: 700px;
+$bigPhoneMinWidth: 360px;
+
 //hugh's hair blows in the wind
 .anim_blow {
   -webkit-animation-name: hinge2;
@@ -18,18 +22,20 @@
   animation: rotating 1s linear infinite;
 }
 
-//hugh1 jumps off the skateboard
-#hugh1 .body{
-  animation: body-jump 2.5s infinite;
-}
+@media only screen and (min-width: $desktopMinWidth) {
+  //hugh1 jumps off the skateboard
+  #hugh1 .body{
+    animation: body-jump 2.5s infinite;
+  }
 
-//hugh1 feet and head tilt when he jumps
-#hugh1 .shoe#left{
-  animation: left-shoe-jump 2.5s infinite;
-}
+  //hugh1 feet and head tilt when he jumps
+  #hugh1 .shoe#left {
+    animation: left-shoe-jump 2.5s infinite;
+  }
 
-#hugh1 .shoe#right{
-  animation: right-shoe-jump 2.5s infinite;
+  #hugh1 .shoe#right {
+    animation: right-shoe-jump 2.5s infinite;
+  }
 }
 
 #hugh1 .head_wrap{
