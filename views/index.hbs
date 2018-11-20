@@ -1137,6 +1137,7 @@
         let src = $iframe.data('src');
         let vidLoaded = false;
 
+        //only download video if resized to tablet+ size
         function showIframe() {
             if (window.matchMedia("(min-width: 700px)").matches && !vidLoaded) {
                 $iframe.attr('src', src);

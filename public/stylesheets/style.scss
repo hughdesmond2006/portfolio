@@ -165,6 +165,9 @@ header,section,footer,aside,nav,article,hgroup,img{
   background-repeat: repeat;
   cursor: none;
   height: 100%;
+  @media not screen and (min-width: $desktopMinWidth) {
+    height: 750px;
+  }
   @media not screen and (min-width: $tabletMinWidth) {
     height: 600px;
   }
