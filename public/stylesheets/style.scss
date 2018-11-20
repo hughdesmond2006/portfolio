@@ -228,16 +228,18 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: relative;
   height: 1000px;
   width: 100%;
+  background-position:center;
+  background-size:cover;
+  @media not screen and (min-width: 400px){
+    background-image: url('../images/build/skills_bg_mobile.jpg');
+    background-size:cover;
+  }
+  @media only screen and (min-width: 400px){
+    background-image: url('../images/build/skills_bg_desktop.jpg');
+  }
   @media only screen and (min-width: $desktopMinWidth){
     clip-path: circle(200px);
   }
-  background-image: url('../images/build/skills_bg.jpg');
-  background-position:center;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  -webkit-background-size:cover;
-  background-size:cover;
-  //opacity: 0;
 }
 
 .scene6{
@@ -2087,7 +2089,12 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 
 .game_cover{
-  background-image: url('../images/build/xbox_cover.png');
+  @media only screen and (min-width: $tabletMinWidth){
+    background-image: url('../images/build/xbox_cover_desktop.png');
+  }
+  @media not screen and (min-width: $tabletMinWidth){
+    background-image: url('../images/build/xbox_cover_mobile.png');
+  }
   background-size: contain;
   background-repeat: no-repeat;
   width: 243px;
