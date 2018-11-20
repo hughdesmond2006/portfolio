@@ -159,10 +159,15 @@ header,section,footer,aside,nav,article,hgroup,img{
 #section6{
   overflow: hidden;
   background-image: url('../images/build/sniper_bg.png');
+  @media not screen and (min-width: $desktopMinWidth){
+    background-image: none;
+  }
   background-repeat: repeat;
-  //height: 800px;
   cursor: none;
   height: 100%;
+  @media not screen and (min-width: $tabletMinWidth) {
+    height: 600px;
+  }
 }
 
 #section7{
@@ -220,7 +225,9 @@ header,section,footer,aside,nav,article,hgroup,img{
   position: relative;
   height: 1000px;
   width: 100%;
-  clip-path: circle(200px);
+  @media only screen and (min-width: $desktopMinWidth){
+    clip-path: circle(200px);
+  }
   background-image: url('../images/build/skills_bg.jpg');
   background-position:center;
   -moz-background-size:cover;
@@ -255,7 +262,6 @@ header,section,footer,aside,nav,article,hgroup,img{
   @media only screen and (min-width: $desktopMinWidth) {
     font-size: 132px;
   }
-
 }
 
 #years{
@@ -410,15 +416,27 @@ header,section,footer,aside,nav,article,hgroup,img{
   transform-origin: center bottom;
   transform: scale(.8);
   bottom: -40px;
+  @media not screen and (min-width: $desktopMinWidth){
+    display: none;
+  }
 }
 
 #warehouse{
   position: absolute;
   right: 20px;
   bottom: 0px;
-  margin-left: -216px;
+  margin-left: -218px;
   width: 436px;    //60 x 60 px per tile with 2px border
   height: 436px;
+  @media not screen and (min-width: $desktopMinWidth){
+    left: 50%;
+  }
+  @media only screen and (max-width: 450px){
+    transform: scale(.8);
+  }
+  @media only screen and (max-width: $bigPhoneMinWidth){
+    transform: scale(.6);
+  }
 }
 
 #hugh_topdown_wrap{
@@ -466,6 +484,10 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 60px;
   height: 60px;
   background-image: url('../images/build/ball.png');
+  @media not screen and (min-width: $desktopMinWidth){
+    background-image: none;
+    display: none;
+  }
   background-repeat: no-repeat;
   background-size: 53px 51px;
   background-position: center;
@@ -479,6 +501,10 @@ header,section,footer,aside,nav,article,hgroup,img{
   left: 188px;
   top: 188px;
   opacity: 0;
+  @media not screen and (min-width: $desktopMinWidth){
+    opacity: 1;
+    animation: robodemo 23s infinite;
+  }
 }
 
 .tracks{
@@ -624,6 +650,12 @@ header,section,footer,aside,nav,article,hgroup,img{
   transform: translateX(-50%) translateY(-50%);
   width: 40px;
   height: 40px;
+  @media only screen and (min-width: $desktopMinWidth){
+    display: inline-block;
+  }
+  @media not screen and (min-width: $desktopMinWidth){
+    display: none;
+  }
 
   &:before {
     content: '';
@@ -944,6 +976,9 @@ header,section,footer,aside,nav,article,hgroup,img{
   width: 200px;
   padding: 10px;
   position: absolute;
+  @media only screen and (max-width: $tabletMinWidth) {
+    font-size: .9rem;
+  }
   @media only screen and (min-width: $desktopMinWidth) {
     left: 85%;
     bottom: 80%;
@@ -1521,6 +1556,9 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 #slideshow{
   background-image: url('../images/tablet_frame.png');
+  @media not screen and (min-width: $desktopMinWidth){
+    background-image: none;
+  }
   background-size: 100% 100%;
   position: absolute;
   width: 858px;
@@ -1541,6 +1579,9 @@ header,section,footer,aside,nav,article,hgroup,img{
 
 .slide_reel{
   background-image: url('../images/build/screen_reel.jpg');
+  @media not screen and (min-width: $desktopMinWidth){
+    background-image: none;
+  }
   background-size: contain;
   height:451px;
   position: absolute;
@@ -1562,6 +1603,9 @@ header,section,footer,aside,nav,article,hgroup,img{
 .swipe_hand{
   position: absolute;
   background-image: url('../images/build/swipe_hand.png');
+  @media not screen and (min-width: $desktopMinWidth){
+    background-image: none;
+  }
   background-repeat: no-repeat;
   background-size: contain;
   width: 290px;
@@ -1584,12 +1628,28 @@ header,section,footer,aside,nav,article,hgroup,img{
   height: 8px;
   position: absolute;
   background-color: rgba(255, 0, 0, 0.67);
-  left: 50px;
-  top: 200px;
+  left: -10px;
+  top: -10px;
   border-radius: 4px;
   filter: brightness(300%);
   //z-index: 0;
   pointer-events: none;
+  @media not screen and (min-width: $desktopMinWidth) {
+    display: none;
+  }
+}
+
+.drones_wrap{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-origin: center top;
+  @media not screen and (min-width: $tabletMinWidth) {
+    transform: scale(.75);
+  }
+  @media only screen and (min-width: $tabletMinWidth){
+    transform: scale(.93);
+  }
 }
 
 .drone{
@@ -2017,8 +2077,7 @@ header,section,footer,aside,nav,article,hgroup,img{
   }
 }
 
-#documentation:hover{
-  //color: #941cd2;
+#documentation:hover, #trailer:hover{
   color: #FFDF6A;
 }
 
