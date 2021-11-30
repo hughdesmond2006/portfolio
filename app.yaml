@@ -12,5 +12,9 @@
 # limitations under the License.
 #
 # [START runtime]
+- url: /favicon.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon.ico
+
 runtime: nodejs10
 # [END runtime]
